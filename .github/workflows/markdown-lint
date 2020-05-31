@@ -1,27 +1,57 @@
-#!/usr/bin/env bash
+#!/usr/bin/env node
 
-# This only checks for bad links, add `-u remark-preset-lint-recommended` for
-# markdown syntax and style linting
-ERRORS=False
-FILES=${1:-docs/**/*.md}
-for FILENAME in $FILES ; do
-  echo ">>> Checking $FILENAME ..."
-  if [[ -f "$FILENAME"  &&  "$FILENAME" != *"/_coverpage.md" ]]; then
-    npx remark \
-      -u remark-lint-no-dead-urls \
-      -u remark-validate-links \
-      -u remark-word-wrap \
-      -u remark-normalize-headings \
-      --frail \
-      --no-stdout \
-      "$FILENAME" \
-      -o \
-      2>&1 >/dev/null \
-      || ERRORS=True
-  fi
-done
+const remark = require('remark');
+const fsPromises = require('fs').promises;
+const process = require('process');
+const util = require('util');
+const glob = util.promisify(require('glob'));
+const report = require('vfile-reporter');
+const stringify = require('remark-stringify')
 
-if [[ $ERRORS == True ]]; then
-  (>&2 echo "There are problems in the markdown which need to be fixed first.")
-  exit 1;
-fi
+// linters
+const noDeadUrls = require('remark-lint-no-dead-urls');
+const validateLinks = require('remark-validate-links');
+
+// transformers
+const normalizeHeadings = require('remark-normalize-headings');
+const wordWrap = require('remark-word-wrap');
+
+// create processor
+const markdownProcessor = remark()
+  .use(validateLinks)
+  .use(noDeadUrls,  { skipOffline: true });
+
+const fix = process.argv[2] === "fix";
+if (fix) {
+  markdownProcessor
+    .use(stringify, {
+      fences: true
+    })
+    // wrap markdown at 80 characters
+    .use(wordWrap, {width: 80})
+    .use(normalizeHeadings);
+}
+
+// process the files
+(async ()=>{
+  const files = await glob("**/*.md", {
+    ignore: ["node_modules/**/*.md","_*" ]
+  });
+  for (let file of files) {
+    console.info(`>>> Checking ${fix ? "and fixing":""} ${file} ...`);
+    let vFile;
+    try {
+      vFile = await markdownProcessor.process(await fsPromises.readFile(file, "utf-8"));
+    } catch (e) {
+      console.error(e);
+      //process.exit(1);
+    }
+    let result = report(vFile);
+    if (result !== "no issues found") {
+      console.warn(result);
+      //process.exit(2);
+    } else if (fix) {
+      await fsPromises.writeFile(file, String(vFile), "utf-8");
+    }
+  }
+})();
