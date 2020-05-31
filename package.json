@@ -1,0 +1,31 @@
+{
+  "name": "@qooxdoo/documentation",
+  "version": "1.0.0",
+  "description": "The online documentation for Qooxdoo (qooxdoo.org)",
+  "main": "\"\"",
+  "scripts": {
+    "test": "\"\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qooxdoo/documentation.git"
+  },
+  "keywords": [
+    "qooxdoo",
+    "documentation"
+  ],
+  "author": "The Qooxdoo developers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qooxdoo/documentation/issues"
+  },
+  "homepage": "https://github.com/qooxdoo/documentation#readme",
+  "dependencies": {
+    "remark-cli": "^8.0.0",
+    "remark-lint-no-dead-urls": "^1.0.2",
+    "remark-normalize-headings": "^2.0.0",
+    "remark-preset-lint-recommended": "^4.0.0",
+    "remark-validate-links": "^10.0.0",
+    "remark-word-wrap": "^2.0.2"
+  }
+}
