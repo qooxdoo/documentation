@@ -1,4 +1,3 @@
-Reporting Bugs
-==============
+# Reporting Bugs
 
 (todo)

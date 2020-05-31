@@ -1,12 +1,15 @@
-Mixins
-======
+# Mixins
 
-Mixins are collections of code and variables, which can be merged into other classes. They are similar to classes but can not be instantiated. Unlike interfaces they do contain implementation code. Typically they are made up of only a few members that allow for a generic implementation of some very specific functionality.
+Mixins are collections of code and variables, which can be merged into
+other classes. They are similar to classes but can not be
+instantiated. Unlike interfaces they do contain implementation code.
+Typically they are made up of only a few members that allow for a
+generic implementation of some very specific functionality.
 
-Mixins are used to share functionality without using inheritance and to extend/patch the functionality of existing classes.
+Mixins are used to share functionality without using inheritance and
+to extend/patch the functionality of existing classes.
 
-Definition
-----------
+## Definition
 
 Example:
 
@@ -28,10 +31,10 @@ qx.Mixin.define("name",
 });
 ```
 
-Usage
------
+## Usage
 
-Here a short example to see, how to use mixins (`MMixinA`, `MMixinB`) with a class (`ClassC`).
+Here a short example to see, how to use mixins (`MMixinA`, `MMixinB`)
+with a class (`ClassC`).
 
 The first mixin:
 

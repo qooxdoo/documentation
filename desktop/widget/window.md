@@ -1,15 +1,12 @@
-Window
-======
+# Window
 
 The window widget is similar to Windows' MDI child windows.
 
-Preview Image
--------------
+## Preview Image
 
 ![window.png](window.png)
 
-Features
---------
+## Features
 
 -   Title support text and/or icon
 -   Support modal window
@@ -18,10 +15,10 @@ Features
 -   Open and close a window
 -   Resize a window
 
-Description
------------
+## Description
 
-The window widget can be used to show dialogs or to realize a MDI (Multiple Document Interface) Application.
+The window widget can be used to show dialogs or to realize a MDI
+(Multiple Document Interface) Application.
 
 The widgets implements all known metaphors from a window:
 
@@ -31,13 +28,17 @@ The widgets implements all known metaphors from a window:
 -   close
 -   and so on
 
-The package `qx.ui.window` contains two other classes that can be used to create a MDI Application:
+The package `qx.ui.window` contains two other classes that can be used
+to create a MDI Application:
 
--   The [Desktop](apps://apiviewer/#qx.ui.window.Desktop) can act as container for windows. It can be used to define a clipping region for internal windows.
--   The [Manager](apps://apiviewer/#qx.ui.window.Manager) handle the z-order and modality blocking of windows managed the connected desktop.
+-   The [Desktop](apps://apiviewer/#qx.ui.window.Desktop) can act as
+    container for windows. It can be used to define a clipping region for
+    internal windows.
+-   The [Manager](apps://apiviewer/#qx.ui.window.Manager) handle the
+    z-order and modality blocking of windows managed the connected
+    desktop.
 
-Demos
------
+## Demos
 
 Here are some links that demonstrate the usage of the widget:
 
@@ -46,8 +47,6 @@ Here are some links that demonstrate the usage of the widget:
 -   [A window containing a table demo](apps://demobrowser/#table~Table.html)
 -   [A calculator demo](apps://demobrowser/#showcase~Calculator.html)
 
-API
----
+## API
 
-Here is a link to the API of the Widget:
-[qx.ui.window.Window](apps://apiviewer/#qx.ui.window.Window)
+Here is a link to the API of the Widget: [qx.ui.window.Window](apps://apiviewer/#qx.ui.window.Window)

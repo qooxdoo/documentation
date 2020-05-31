@@ -54,7 +54,7 @@
     - [Theming](/desktop/gui/theming.md)
     - [Appearance](/desktop/gui/appearance.md)
     - [Custom themes](/desktop/gui/themes.md)
-    - [Decorators](/desktop/gui/themes.md#qooxdoo-theme-decorators)
+    - [Decorators](/desktop/gui/themes.md#Qooxdoo-theme-decorators)
 
   - Layouts
     - [Introduction](/desktop/layout/)
@@ -117,7 +117,7 @@
     - [Using Icon Fonts](/development/howto/icon_fonts.md)
     - [Memory Management](/development/howto/memory_management.md)
     - [Application Parts](/development/howto/parts.md)
-    - [Using non-qooxdoo libraries](/development/howto/using_non_qx_libs.md)
+    - [Using non-Qooxdoo libraries](/development/howto/using_non_qx_libs.md)
   - [Contributing to Qooxdoo](/development/contribute.md)
 - Deployment (tbd)
 

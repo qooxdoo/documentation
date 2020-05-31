@@ -1,38 +1,39 @@
-## Controller
+# Controller
 
-The general idea of controllers is connecting a view component to a set
-of data stored in a model. The kind of controller you need depends on
-the view component. Currently there are four types of controller
+The general idea of controllers is connecting a view component to a
+set of data stored in a model. The kind of controller you need depends
+on the view component. Currently there are four types of controller
 available:
 
-  - Object Controller
-  - List Controller
-  - Tree Controller
-  - Form Controller
+-   Object Controller
+-   List Controller
+-   Tree Controller
+-   Form Controller
 
 You may miss the table controller. The currently available table will
 not be changed and therefore will not implement data binding features.
 The new virtual table, which is currently under development, will be
 considered for data binding.
 
-In the following section, the selection will be discussed because it's a
-common feature of the list and tree controller. The delegation mechanism
-is another common feature of those two controllers and will also be
-described. After that, each of the available controllers will be
-discussed in detail.
+In the following section, the selection will be discussed because it's
+a common feature of the list and tree controller. The delegation
+mechanism is another common feature of those two controllers and will
+also be described. After that, each of the available controllers will
+be discussed in detail.
 
 ## Selection
 
 Usually the selection of view components like the tree or the list
-handle their selection with tree folder or list items. As a user of data
-binding, you don't want to convert the view widgets to the model
-widgets. Therefore, the controller does that mapping for you. There is a
-selection array available on the controller containing the currently
-selected model items. When using the selection of the controller, there
-is no need to deal with view widgets like list items. It is possible to
-change the array in place and add / remove something from the selection.
-As it is a data array, you can use all methods defined by that array to
-manipulate the selection of the corresponding controller.
+handle their selection with tree folder or list items. As a user of
+data binding, you don't want to convert the view widgets to the model
+widgets. Therefore, the controller does that mapping for you. There is
+a selection array available on the controller containing the currently
+selected model items. When using the selection of the controller,
+there is no need to deal with view widgets like list items. It is
+possible to change the array in place and add / remove something from
+the selection. As it is a data array, you can use all methods defined
+by that array to manipulate the selection of the corresponding
+controller.
 
 Here are some samples showing how to manipulate the selection:
 
@@ -46,8 +47,8 @@ Here are some samples showing how to manipulate the selection:
 ```
 
 If you want to be notified on selection changes, you can again benefit
-from the data array, which offers a change event as soon as the content
-changes.
+from the data array, which offers a change event as soon as the
+content changes.
 
 ```
     controller.getSelection().addListener("change", function(e) {});
@@ -55,9 +56,9 @@ changes.
 
 This adds a listener to the `change` event of the selection array. The
 controller also offer a `changeSelection` event which is not, like you
-might expect, an event fired as soon as any selected item changes. It is
-the change event for the selection property which holds the selection
-array.
+might expect, an event fired as soon as any selected item changes. It
+is the change event for the selection property which holds the
+selection array.
 
 For more details about the data array, check out the `models page
 data_binding/models.md#data_array`.
@@ -66,12 +67,12 @@ data_binding/models.md#data_array`.
 
 The list and tree controller are responsible for creating and binding
 the child widgets of the views. But what if you want to use something
-different in the list or bind not just the label and the icon. For that
-purpose, the delegation offers the possibility to enhance the controller
-code without having to subclass it.
+different in the list or bind not just the label and the icon. For
+that purpose, the delegation offers the possibility to enhance the
+controller code without having to subclass it.
 
-In total, there are three methods which relate to the topic of creating
-and binding the child view widgets.
+In total, there are three methods which relate to the topic of
+creating and binding the child view widgets.
 
 ### configureItem
 
@@ -84,19 +85,19 @@ change / add the binding behavior.
 ### bindItem
 
 That place is the `bindItem` method. But you don't want to use the
-single value binding all on your own and bind the stuff. Therefore, the
-controller offers you a method called `bindProperty`, which takes the
-source path to the data, the target property name and the options for
-the single value binding. The other two parameters will just mapped
-through. But keep in mind that if you use this function, the default
-binding of the label and the icon is gone and the properties used for
-those bindings do not work anymore. If you still want to have the
-default binding, use the `bindDefaultProperties` method and pass the two
-given parameters through. But keep in mind that the bindings set up with
-these two methods are unidirectional, from the model to the view. If you
-want to have b binding from the view to the model, use the
-`bindPropertyReverse` which takes the same arguments as the
-`bindProperty` method.
+single value binding all on your own and bind the stuff. Therefore,
+the controller offers you a method called `bindProperty`, which takes
+the source path to the data, the target property name and the options
+for the single value binding. The other two parameters will just
+mapped through. But keep in mind that if you use this function, the
+default binding of the label and the icon is gone and the properties
+used for those bindings do not work anymore. If you still want to have
+the default binding, use the `bindDefaultProperties` method and pass
+the two given parameters through. But keep in mind that the bindings
+set up with these two methods are unidirectional, from the model to
+the view. If you want to have b binding from the view to the model,
+use the `bindPropertyReverse` which takes the same arguments as the `
+bindProperty` method.
 
 ### createItem
 
@@ -125,22 +126,22 @@ The following code shows how such a delegate could look like.
 ```
 
 The delegate defines that `CheckBox`'es should be used as child view
-items. As the `CheckBox`'es don't have an icon, the `bindItem` function
-needs to re-specify the bindings. It binds the name and the online
-property of the model to the label and checked property of the
-`CheckBox`.
+items. As the `CheckBox`'es don't have an icon, the `bindItem`
+function needs to re-specify the bindings. It binds the name and the
+online property of the model to the label and checked property of the `
+          CheckBox`.
 
 ## Object Controller
 
-The most simple and lightweight controller is the object controller. It
-connects a model object with one or more views. The data in the model
-can be anything a property can hold, i.e. a primitive data type like
-String or Number, or a reference type like a map. With that you can for
-instance bind views like textfields, sliders and other widgets
+The most simple and lightweight controller is the object controller.
+It connects a model object with one or more views. The data in the
+model can be anything a property can hold, i.e. a primitive data type
+like String or Number, or a reference type like a map. With that you
+can for instance bind views like textfields, sliders and other widgets
 visualizing primitive JavaScript types. But you can not only use views
-as targets. A target can be anything that has a property with the proper
-type. Take a look at the following code example to see the object
-controller in action:
+as targets. A target can be anything that has a property with the
+proper type. Take a look at the following code example to see the
+object controller in action:
 
 ```
     // create two sliders
@@ -153,19 +154,19 @@ controller in action:
 ```
 
 This code snippet ensures that every value set by slider1 will
-automatically be set as value of slider two. As you can see, the object
-controller only wraps the fundamental single-value binding, trying to
-make its usage a little bit easier.
+automatically be set as value of slider two. As you can see, the
+object controller only wraps the fundamental single-value binding,
+trying to make its usage a little bit easier.
 
 ## List Controller
 
 A list controller could - as the name suggests - be used for list-like
-widgets. The supported list-like widgets in qooxdoo are List, SelectBox
-and ComboBox, all in the qx.ui.form package. The controller expects a
-data array as a data model, that contains the model objects. These
-objects are displayed in the list and can either have some primitive
-type or be real qooxdoo objects. The following code snippet shows how to
-bind an array of strings to a list widget:
+widgets. The supported list-like widgets in Qooxdoo are List,
+SelectBox and ComboBox, all in the qx.ui.form package. The controller
+expects a data array as a data model, that contains the model objects.
+These objects are displayed in the list and can either have some
+primitive type or be real Qooxdoo objects. The following code snippet
+shows how to bind an array of strings to a list widget:
 
 ```
     // create the model
@@ -187,14 +188,15 @@ results will be filtered using your given function.
 
 Of course, also the tree does have its own controller. With that
 controller the Tree widget can automatically be filled with data from
-qooxdoo objects containing the data. As model nodes for the tree, only
-qooxdoo objects are allowed containing at least two properties, one for
-holding its own children in a data array and a second one holding the
-name of the node which should be showed as the label of the tree folder
-widgets. Imagine that a model class called Node (inheriting from
-qx.core.Object) is available containing the two already mentioned
-properties called ch for the children and n for the name. The following
-code will bind a data model containing Node objects to a tree widget:
+Qooxdoo objects containing the data. As model nodes for the tree, only
+Qooxdoo objects are allowed containing at least two properties, one
+for holding its own children in a data array and a second one holding
+the name of the node which should be showed as the label of the tree
+folder widgets. Imagine that a model class called Node (inheriting
+from qx.core.Object) is available containing the two already mentioned
+properties called ch for the children and n for the name. The
+following code will bind a data model containing Node objects to a
+tree widget:
 
 ```
     // create the model
@@ -216,14 +218,14 @@ array of the controller.
 
 ## Form Controller
 
-Also forms do have a special controller. The form controller uses a
-`qx.ui.form.Form` as target and a `Object controller
+Also forms do have a special controller. The form controller uses a `
+qx.ui.form.Form` as target and a `Object controller
 data_binding/controller.md#object_controller` for the bidirectional
 bindings. The usage equals to the usage of all other controllers. The
-main properties of it are the model and target property. Given both, the
-controller connects the model and the target. An additional feature of
-the form controller is the possibility to create the model for a given
-form. See the following code to get an idea of using it.
+main properties of it are the model and target property. Given both,
+the controller connects the model and the target. An additional
+feature of the form controller is the possibility to create the model
+for a given form. See the following code to get an idea of using it.
 
 ```
     // a form is available as 'form'
@@ -240,8 +242,9 @@ model available and therefore, the controller can set up the bindings.
 
 ## Combining Controller
 
-As a more advanced example we connect the selection of a tree to a list.
-Therefore we extend the code sample of the tree controller section.
+As a more advanced example we connect the selection of a tree to a
+list. Therefore we extend the code sample of the tree controller
+section.
 
 ```
     // create a list widget
@@ -252,8 +255,8 @@ Therefore we extend the code sample of the tree controller section.
     treeController.bind("selection", listController, "model");
 ```
 
-The example shows how the controller can work pretty well together with
-the single value binding. The trick is not to set the model of the list
-controller at creation time. The model will be set by the single value
-binding from the tree controllers selection. This works because the
-selection will be provided as data array.
+The example shows how the controller can work pretty well together
+with the single value binding. The trick is not to set the model of
+the list controller at creation time. The model will be set by the
+single value binding from the tree controllers selection. This works
+because the selection will be provided as data array.

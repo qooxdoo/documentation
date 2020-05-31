@@ -1,15 +1,12 @@
-List
-====
+# List
 
 A List widget has items with plain text and/or icon.
 
-Preview Image
--------------
+## Preview Image
 
 ![List](list.png%0A%20%20%20%20%20%20%20:width:%20500%20px%0A%20%20%20%20%20%20%20:target:%20../../list.png)
 
-Features
---------
+## Features
 
 -   Horizontal and vertical orientation.
 -   Single selection.
@@ -21,20 +18,21 @@ Features
 -   Items with plain text and/or icon.
 -   Context menu support.
 
-Description
------------
+## Description
 
-A List widget can be used to show a list of items. These items could selected in different modes:
+A List widget can be used to show a list of items. These items could
+selected in different modes:
 
 -   `single`: Only one or none could be selected.
 -   `multi`: One, more or none could be selected.
--   `additive`: The same selection like `multi`, but each item, which the user taped on it is added or removed to the selection.
+-   `additive`: The same selection like `multi`, but each item, which the
+    user taped on it is added or removed to the selection.
 -   `one`: The same selection like `single`, but one must selected.
 
-The item which are added to the list are `ListItem`. For more details see: [ListItem](apps://apiviewer/#qx.ui.form.ListItem).
+The item which are added to the list are `ListItem`. For more details
+see: [ListItem](apps://apiviewer/#qx.ui.form.ListItem).
 
-Demos
------
+## Demos
 
 Here are some links that demonstrate the usage of the widget:
 
@@ -42,8 +40,6 @@ Here are some links that demonstrate the usage of the widget:
 -   [Lists with Drag and Drop](apps://demobrowser/#ui~DragDrop.html)
 -   [List with re-size support](apps://demobrowser/#widget~Resizer.html)
 
-API
----
+## API
 
-Here is a link to the API of the Widget:
-[qx.ui.form.List](apps://apiviewer/#qx.ui.form.List)
+Here is a link to the API of the Widget: [qx.ui.form.List](apps://apiviewer/#qx.ui.form.List)
