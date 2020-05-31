@@ -1,9 +1,9 @@
 # Remote I/O over HTTP
 
 This system is (as everything else in Qooxdoo) completely event based.
-It currently supports communication by **XMLHttp**, **Iframes** or **Script**
-                . The system wraps most of the differences between the
-implementations and unifies them for the user/developer.
+It currently supports communication by **XMLHttp**, **Iframes** or **Script**. 
+The system wraps most of the differences between
+the implementations and unifies them for the user/developer.
 
 For all your communication needs you need to create a new instance of
 Request:

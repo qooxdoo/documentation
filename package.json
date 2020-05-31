@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "The online documentation for Qooxdoo (qooxdoo.org)",
   "scripts": {
-    "test": ".github/workflows/markdown-lint",
-    "fix": ".github/workflows/markdown-lint fix"
+    "test": ".github/workflows/markdown-lint lint $1",
+    "fix": ".github/workflows/markdown-lint fix $1"
   },
   "repository": {
     "type": "git",

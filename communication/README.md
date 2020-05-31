@@ -8,13 +8,13 @@ feature set:
 The HTTP Request API comes in two flavours:
 
 -   [`qx.io.remote.*`](remote_io.md)  ([ApiViewer](apps://apiviewer/#qx.io.remote)
-      ) is the older, but more  featureful implementation. It supports
+        ) is the older, but more  featureful implementation. It supports
     HTTP requests over different transports (Iframe, Script and XHR), and
     a  
     [JSONRPC v2 client](rpc.md).
 
 -   [`qx.io.request.*`](request_io.md)  ([ApiViewer](apps://apiviewer/#qx.io.request)
-      ) is a more systematic  redesign aimed at providing the basic
+        ) is a more systematic  redesign aimed at providing the basic
     building block of other APIs. It is used, for example, in the REST API
     described below.
 

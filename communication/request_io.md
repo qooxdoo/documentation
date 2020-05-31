@@ -1,7 +1,7 @@
 # qx.io.request
 
 This API is an improvement over the original [`qx.io.remote.*` API](remote_io.md)
-              , but does not offer the same feature-set yet. It is
+, but does not offer the same feature-set yet. It is
 recommended to use the classes in this API for your development. The  
 [REST abstraction API](rest.md) is based  on this API.
 
@@ -202,7 +202,7 @@ preferred representation to guard against possible changes of the
 server's default behavior.
 
 For more details, see [Accept header](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1)
-               in the HTTP 1.1 specification.
+                in the HTTP 1.1 specification.
 
 ### Caching
 
@@ -213,7 +213,7 @@ modern browsers. Other caches include various kinds of proxy servers.
 Understanding caches is vital to reduce latency and save bandwidth.
 However, a detailed introduction of HTTP caching is beyond the scope
 of this section. For more information, refer to the [Caching tutorial](http://www.mnot.net/cache_docs/)
-              .
+               .
 
 To control the behavior of caches on the client-side, a number of HTTP
 Cache-Control directives can be sent as part of the request by setting

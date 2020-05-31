@@ -63,8 +63,9 @@ communication.
 Qooxdoo is not only a library, but also comes with a set of
 sophisticated tools. Some help with the development workflow, such as
 the [command line interface](cli/commands.md).  Others let you
-quickly get to know the widgets (such as the [widget browser](apps://widgetbrowser)), become fluent in the Qooxdoo API (such as the [API
-Viewer](apps://apiviewer)), or to debug or demonstrate
+quickly get to know the widgets (such as the 
+[widget browser](apps://widgetbrowser)), become fluent in the Qooxdoo API 
+(such as the [API Viewer](apps://apiviewer)), or to debug or demonstrate 
 code snippets (such as the ["Playground"](apps://playground)).
 
 ## Package system
@@ -81,8 +82,8 @@ hosters: 1&1 Internet (now part of United Internet AG). In late 2015,
 the Qooxdoo framework with all its assets, was turned over to the
 Qooxdoo association, located in Switzerland. Qooxdoo development has,
 since then, been lead by a group of dedicated developers congregating
-on [gitter](https://gitter.im/Qooxdoo/Qooxdoo) and [github](https://github.com/Qooxdoo/Qooxdoo).
-Contributions are always welcome.
+on [gitter](https://gitter.im/Qooxdoo/Qooxdoo) and [github](https://github.com/Qooxdoo/Qooxdoo)
+   . Contributions are always welcome.
 
 ## Contact
 
