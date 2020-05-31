@@ -34,9 +34,25 @@ if (fix) {
 
 // process the files
 (async ()=>{
-  const files = await glob("**/*.md", {
-    ignore: ["node_modules/**/*.md","_*" ]
-  });
+  let files=[];
+  if (process.env.CI) {
+    try {
+      files =
+        JSON.parse(await fsPromises.readFile(process.env.HOME + "/files_modified.json"))
+          .concat(JSON.parse(await fsPromises.readFile(process.env.HOME + "/files_added.json")))
+          .filter(file => file.endsWith(".md"));
+    } catch(e) {
+      console.error(e);
+    }
+  } else {
+    files = await glob("**/*.md", {
+      ignore: ["node_modules/**/*.md","_*" ]
+    });
+  }
+  if (files.length === 0) {
+    console.info("Nothing to do: no markdown files to lint.");
+    process.exit(0);
+  }
   for (let file of files) {
     console.info(`>>> Checking ${fix ? "and fixing":""} ${file} ...`);
     let vFile;
@@ -44,12 +60,12 @@ if (fix) {
       vFile = await markdownProcessor.process(await fsPromises.readFile(file, "utf-8"));
     } catch (e) {
       console.error(e);
-      //process.exit(1);
+      process.exit(1);
     }
     let result = report(vFile);
     if (result !== "no issues found") {
       console.warn(result);
-      //process.exit(2);
+      process.exit(2);
     } else if (fix) {
       await fsPromises.writeFile(file, String(vFile), "utf-8");
     }

@@ -10,10 +10,9 @@ application.
 more complex, as it started requiring OAuth even to read public
 tweets. For this basic tutorial it would be too complex to handle such
 advanced authorization. If your are interested in OAuth, check out how
-you could handle that in a Qooxdoo app by looking at the [Github demo](apps://demobrowser/#data~Github.html)
- .
+you could handle that in a Qooxdoo app by looking at the [Github demo](apps://demobrowser/#data~Github.html).
 
-So we decided to provide a simple example which dellivers some static
+So we decided to provide a simple example which delivers some static
 text.
 
 ```javascript
