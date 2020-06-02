@@ -402,3 +402,10 @@ qx.Class.define("my.eventful.Class",
   ...
 })
 ```
+
+## Annotations
+
+Annotations are the ability to add meta data to classes so that the
+meta data can be accessed at runtime; the meta data can be added to
+individual members, properties, statics, constructor, destructor, or
+the whole class. See the [dedicated documentation on Annotations](annotations.md).
