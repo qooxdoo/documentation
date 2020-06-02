@@ -30,7 +30,12 @@ const validateLinks = require('remark-validate-links');
 
 // transformers
 const normalizeHeadings = require('remark-normalize-headings');
-const wordWrap = require('remark-word-wrap');
+const prettier = require("prettier");
+const prettierOptions = {
+  parser: "markdown",
+  printWidth: 80,
+  proseWrap: "always"
+};
 
 // create processor
 const markdownProcessor = remark()
@@ -43,8 +48,6 @@ if (fix) {
     .use(stringify, {
       fences: true
     })
-    // wrap markdown at 80 characters
-    .use(wordWrap, {width: 80})
     .use(normalizeHeadings);
 }
 
@@ -93,7 +96,8 @@ let files = process.argv.slice(3);
       console.warn(result);
       process.exit(2);
     } else if (fix) {
-      await fsPromises.writeFile(file, String(vFile), "utf-8");
+      let content = prettier.format(String(vFile), prettierOptions);
+      await fsPromises.writeFile(file, content , "utf-8");
     }
   }
 })();
