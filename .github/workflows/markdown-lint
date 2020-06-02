@@ -2,11 +2,15 @@
 
 /*
 Usage:
-markdown-lint [[lint|fix] [file1, [file2, ... ]]]
+markdown-lint [[lint|fix] ["all" | file1, [file2, ... ]]]
 
 If no file is given, the script checks if there is a list of added and changed
 files as JSON-encoded data in $HOME/files_(added|modified).json as part of a
-Github CI workflow. If not, all markdown files are checked.
+Github CI workflow. Otherwise, it relies on git to get a list of added and
+changed files.
+
+If the second argument is "all", all markdown files in the repository are
+linted/fixed.
 
 If the second argument is "fix", the files are additionally reformatted
 */
@@ -17,7 +21,8 @@ const process = require('process');
 const util = require('util');
 const glob = util.promisify(require('glob'));
 const report = require('vfile-reporter');
-const stringify = require('remark-stringify')
+const stringify = require('remark-stringify');
+const exec = util.promisify(require('child_process').exec);
 
 // linters
 const noDeadUrls = require('remark-lint-no-dead-urls');
@@ -48,24 +53,27 @@ let files = process.argv.slice(3);
 
 // process the files
 (async ()=>{
+
   // if no file names have been passed, take file list  ...
   if (files.length === 0) {
     if (process.env.CI) {
       // ... a) from list of changed and added files if this is a GitHub Action triggered by a PR, or ...
       try {
-        files =
-          JSON.parse(await fsPromises.readFile(process.env.HOME + "/files_modified.json"))
-            .concat(JSON.parse(await fsPromises.readFile(process.env.HOME + "/files_added.json")))
-            .filter(file => file.endsWith(".md"));
-      } catch(e) {
+        files = JSON.parse(await fsPromises.readFile(process.env.HOME + "/files_modified.json"))
+          .concat(JSON.parse(await fsPromises.readFile(process.env.HOME + "/files_added.json")))
+          .filter(file => file.endsWith(".md"));
+      } catch (e) {
         console.error(e);
       }
     } else {
-      // ... b) from a glob of all markdown files in this repo
-      files = await glob("**/*.md", {
-        ignore: ["node_modules/**/*.md","_*" ]
-      });
+      // ... b) from a list of all added or changed files since the last commit
+      const { stdout } = await exec('git diff --name-only');
+      files = String(stdout).split("\n").filter(file => file.endsWith(".md"));
     }
+  } else if (files[0] === "all") {
+    files = await glob("**/*.md", {
+      ignore: ["node_modules/**/*.md","_*" ]
+    });
   }
   if (files.length === 0) {
     console.info("Nothing to do: no markdown files to lint.");
