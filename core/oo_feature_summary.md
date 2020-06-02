@@ -4,7 +4,7 @@
 
 A class is defined by providing its name as a string:
 
-```
+```javascript
 qx.Class.define("my.cool.Class");
 ```
 
@@ -15,7 +15,7 @@ as a second argument in the form of a map. Since the entire class
 definition is given in `qx.Class.define()`, it is called a "closed
 form" of class declaration: :
 
-```
+```javascript
 qx.Class.define("my.cool.Class", {
   // declare constructor, members, ...
 });
@@ -24,7 +24,7 @@ qx.Class.define("my.cool.Class", {
 A regular (non-static) class can simply be instantiated using the `new`
             keyword: :
 
-```
+```javascript
 var myClass = new my.cool.Class();
 ```
 
@@ -33,7 +33,7 @@ var myClass = new my.cool.Class();
 In order to derive the current class from another class, the reference
 to the super class is provided by the key `extend`: :
 
-```
+```javascript
 qx.Class.define("my.great.SuperClass", {
   // I'm the super class
 });
@@ -48,7 +48,7 @@ qx.Class.define("my.cool.Class", {
 The constructor of a regular class is provided as a function
 declaration in key `construct`:
 
-```
+```javascript
 qx.Class.define("my.cool.Class",
 {
   extend : my.great.SuperClass,
@@ -66,7 +66,7 @@ class definition and declared in a map with the `statics` key. Static _
 while all other values declare static _attributes_. Typically they are
 given in uppercase to distinguish them from instance members:
 
-```
+```javascript
 qx.Class.define("my.cool.Class",
 {
   statics :
@@ -80,7 +80,7 @@ qx.Class.define("my.cool.Class",
 Static members, both methods and attributes, can be accessed by using
 the fully-qualified class name:
 
-```
+```javascript
 my.cool.Class.FOO = 3.141;
 my.cool.Class.BAR();
 ```
@@ -93,7 +93,7 @@ my.cool.Class.BAR();
 Generic form. Requires no updates if class name changes. This code can
 optionally be optimized for performance in build versions.
 
-```
+```javascript
 qx.Class.define("my.cool.Class",
 {
   statics : {
@@ -113,7 +113,7 @@ qx.Class.define("my.cool.Class",
 Static members aren't inherited. To call a superclass static method,
 use `this.superclass`, as in this example:
 
-```
+```javascript
 qx.Class.define('A', {
   statics: {
      f: function() {}
@@ -138,7 +138,7 @@ the `this` keyword.
 Similar to static members, instance members are also part of the class
 definition, in the map referenced by the `members` key:
 
-```
+```javascript
 qx.Class.define("my.cool.Class",
 {
   members:
@@ -152,7 +152,7 @@ qx.Class.define("my.cool.Class",
 The instance members can be accessed by using an actual instance of a
 class:
 
-```
+```javascript
 var myClass1 = new my.cool.Class();
 myClass1.foo = 3.141;
 myClass1.bar();
@@ -163,7 +163,7 @@ myClass1.bar();
 Generic form. Requires no updates if super class (name) changes. This
 code can optionally be optimized for performance in build versions. :
 
-```
+```javascript
 qx.Class.define("my.cool.Class",
 {
   extend : my.great.SuperClass,
@@ -179,7 +179,7 @@ Generic form without using `prototype`. Requires no updates if super
 class (name) changes. This code can optionally be optimized for
 performance in build versions. :
 
-```
+```javascript
 qx.Class.define("my.cool.Class",
 {
   extend : my.great.SuperClass,
@@ -197,7 +197,7 @@ qx.Class.define("my.cool.Class",
 As a logical match to any existing constructor given by the key `
 construct`, a destructor is explicitly given by the `destruct` key: :
 
-```
+```javascript
 qx.Class.define("my.cool.Class",
 {
   extend : my.great.SuperClass,
@@ -216,7 +216,7 @@ Qooxdoo comes with a very powerful feature called dynamic  [properties](understa
            . A concise declaration of an `age` property may look like
 the following:
 
-```
+```javascript
 qx.Class.define(
 ...
 properties : {
@@ -234,7 +234,7 @@ more [features](property_features.md).
 A leading uppercase `I` is used as a naming convention for `interfaces
 <interfaces>`.
 
-```
+```javascript
 qx.Interface.define("my.cool.IInterface");
 ```
 
@@ -244,7 +244,7 @@ Leading uppercase `M` as a naming convention. A [mixin](mixins.md)
 can have all the things a class can have, like properties,
 constructor, destructor and members. :
 
-```
+```javascript
 qx.Mixin.define("my.cool.MMixin",
 {
   // Mixin definition
@@ -256,7 +256,7 @@ qx.Mixin.define("my.cool.MMixin",
 The `include` key contains either a reference to a single mixin, or an
 array of mixins: :
 
-```
+```javascript
 qx.Class.define("my.cool.Class",
 {
   include : [my.cool.MMixin, my.other.cool.MMixin]
@@ -266,7 +266,7 @@ qx.Class.define("my.cool.Class",
 
 ## Attaching mixins to an already defined class
 
-```
+```javascript
 qx.Class.include(qx.ui.core.Widget, qx.MWidgetExtensions);
 ```
 
@@ -289,7 +289,7 @@ Explicit declaration allows for useful checks during development. For
 example. `construct` or `members` keys are not allowed in a purely
 static class. :
 
-```
+```javascript
 qx.Class.define("my.cool.Class", {
   type : "static"
 });
@@ -300,7 +300,7 @@ qx.Class.define("my.cool.Class", {
 Declaring a class as "abstract" allows for useful checks during
 development and does not require explicit code. :
 
-```
+```javascript
 qx.Class.define("my.cool.Class", {
   type : "abstract"
 });
@@ -312,7 +312,7 @@ A "singleton" declaration allows does not require explicit code. A `
 getInstance()` method is added automatically to each singleton class.
 :
 
-```
+```javascript
 qx.Class.define("my.cool.Class",
 {
   type : "singleton",
@@ -339,7 +339,7 @@ properties`.
 > crucial features of the build process (documentation, optimization,
 > etc.).
 
-```
+```javascript
 qx.Class.define("my.cool.Class",
 {
   statics:
@@ -367,7 +367,7 @@ highly-optimized browser-specific builds. It is possible to use a
 logical _or_ directly inside a environment key. If none of the keys
 matches the variant, the "default" key is used: :
 
-```
+```javascript
 members:
 {
   foo: qx.core.Environment.select("engine.name",
@@ -391,7 +391,7 @@ event system can (optionally) check whether an event type is supported
 by the class and issue a warning if an event type is unknown. This
 ensures that each supported event must be listed in the event map. :
 
-```
+```javascript
 qx.Class.define("my.eventful.Class",
 {
   extend: qx.core.Target,
