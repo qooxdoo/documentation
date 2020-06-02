@@ -96,21 +96,21 @@
   - [JSON RPC](/communication/rpc.md)
 
 - Development
-  - [Introduction](/development/README.md)
-      - [Best Practices](/development/howto/best_practices.md)
-      - [Avoiding Antipatterns](/development/howto/antipatterns.md)
-  - [Migrating to the `qx` toolchain](/development/compiler/migration.md)
-  - ["qx" CLI commands](/development/cli/commands.md)
-  - [Package system](/development/cli/packages.md)
-  - [Compiler Configuration](/development/compiler/configuration/overview.md)
-    - [Manifest.json](/development/compiler/configuration/Manifest.md)
-    - [compile.json](/development/compiler/configuration/compile.md)
-    - [API](/development/compiler/configuration/api.md)
-  - [Advanced compiler topics](/development/compiler/internals/)
+  - [Introduction](/development/)
+  - [**"qx" CLI commands**](/development/cli/commands.md)
+  - **The Qooxdoo Compiler**
+      - [Overview](/development/compiler/)
+      - [Migrating to the `qx` toolchain](/development/compiler/migration.md)
+      - [Compiler Configuration](/development/compiler/configuration/)
+        - [Manifest.json](/development/compiler/configuration/Manifest.md)
+        - [compile.json](/development/compiler/configuration/compile.md)
+        - [API](/development/compiler/configuration/api.md)
+      - [Advanced compiler topics](/development/compiler/internals/)
+  - [Writing API Documentation](/documentation/)
   - [Testing](/development/testing/)
     - [Unit Testing](/development/testing/unit_testing.md)
-    - [Using qx test](/development/cli/testing.md)
-    - [Fake Server](/development/testing/fake_server.md)
+    - [GUI Testing](/development/cli/gui_testing.md)
+  - [Package system](/development/cli/packages.md)
   - [How to ...](/development/howto/)
     - [Logging](/development/howto/logging.md)
     - [Internationalization](/development/howto/internationalization.md)
@@ -119,7 +119,7 @@
     - [Application Parts](/development/howto/parts.md)
     - [Using non-Qooxdoo libraries](/development/howto/using_non_qx_libs.md)
   - [Contributing to Qooxdoo](/development/contribute.md)
-- Deployment (tbd)
+
 
 - Tutorials
 

@@ -152,7 +152,7 @@ makes use of Qooxdoo's core classes, and the compiler produces a large
 number of artefacts that are needed for quick recompilation and
 debugging. The compiler can also produce a deployable version of your
 app wich will be much smaller and not contain any of the debugging
-support. More on that later.
+support.
 
 ## Reading on
 
@@ -160,7 +160,7 @@ With the first mini application up and running you are now ready for
 bigger things. You can either start reading the theory parts of the  
 [documentation](contents.md) where we explore in detail how the
 Qooxdoo class system works or you can try some more hands-on by
-working through the [tutorial](tutorial/).
+working through the [tutorials](tutorial/).
 
 If you ever get stuck, feel free to open the chat window by pressing
 the button in the bottom right hand corner of the documentation.
@@ -172,6 +172,5 @@ the "Edit this page on GitHub" button). For more extensive changes
 that involve more than one page, please clone [the documentation
 repository](https://github.com/Qooxdoo/documentation) and do your
 edits. Before creating a PR with your changes, make sure to `npm
-install` and `npm run fix`. This will check your markdown and enforce
-certain style rules, plus line wrap the text for better source code
-readability.
+install` and `npm test`. This will check your markdown and enforce
+certain style rules.

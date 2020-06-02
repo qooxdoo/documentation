@@ -140,7 +140,7 @@ In situations like this, the solution is to install a private version
 of `@Qooxdoo/compiler` inside your project; from  then on, all you
 have to do is to use `npx` to execute `qx` commands.
 
-```
+```shell script
 mkdir myFirstApp
 cd myFirstApp
 npm init             # answer npm's questions
@@ -149,16 +149,34 @@ npx qx create myFirstApp --noninteractive --out=.
 npx qx compile
 ```
 
-## Generator
+## Building for Production and Deployment
 
-Previous versions of Qooxdoo used a Python v2 based tool called the
-Generator (`./generate.py`); the generator is supported in Qooxdoo v6
-but is deprecated and will be removed completely for Qooxdoo v7.  
+When you compile your application using `qx compile`, you'll notice
+that there's quite a lot of files generated and the total application
+size is quite large; most of these files are temporary files needed
+only during development, either because they speed up compilation to
+keep them around or because it's easier for you to debug.
 
-The compiler is a full equivalent as far as compiling is concerned,
-and much faster and fuller featured at that; however the generator
-included features for building and running test suites, creating API
-documentation, building  distributions, etc.  These features have not
-been replicated because there are much better (Javascript) tools 
-available, and you also have the option to customise the build process
-[using an API in compile.js](configuration/compile.md). 
+By using `qx compile --target=build`, the compiler will produce a
+completely seperate compilation with all debug code automatically
+removed and where the Javascript source code is minified and reduced
+to as small a number of files as possible.
+
+This "build target" compilation is the version you can do final
+testing on before publishing it to your users; but while this is
+minified and stripped down, there are still a number of temporary
+files which you do not want to copy  onto your webserver.
+
+When you're ready to distribute the application(s) to your web server,
+use `qx deploy`, EG:
+
+```
+  $ qx deploy --out=/var/www --source-maps
+```
+
+Note that by default source maps are not copied - this is to make sure
+that information is about filing systems is not leaked, but this will
+make it hard to debug any problems when in production.  If you want to
+include source maps, use the `--source-maps` parameter.
+
+

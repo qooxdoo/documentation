@@ -2,22 +2,19 @@
 
 The Qooxdoo CLI commands allow to conveniently create, modify,
 compile, test and publish your Qooxdoo project. To see the main
-available commands, type `qx` without any further parameters.
+available commands, type `qx` without any further parameters. 
+Here's an abridged  version of the output:
 
 ```
-Typical usage:
-  qx <commands> [options]
-
-Type qx <command> --help for options and subcommands.
-
-Commands:
   add <command> [options]                   adds new elements to an existing
                                             Qooxdoo application/library
   clean                                     cleans generated files and caches.
   compile [configFile]                      compiles the current application,
                                             using compile.json
   config <key> [value]                      gets/sets persistent configuration
-  contrib <command> [options]               manages Qooxdoo contrib libraries
+  deploy [options]                          deploys qooxdoo application(s)
+  package <command> [options]               manages qooxdoo packages
+  pkg <command> [options]                   alias for 'qx package'.
   create <application namespace> [options]  creates a new Qooxdoo project.
   lint [files...]                           runs eslint on the current
                                             application or as set of single
@@ -227,3 +224,6 @@ Note that the `qx serve` command supports exactly the same options as `
         qx compile`, with the exception of `--watch` because that is
 always enabled; for more details of the options and the compilation
 process, please see [here](../configuration/compile.md)
+
+## Deployment
+
