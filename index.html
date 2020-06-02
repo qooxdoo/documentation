@@ -35,7 +35,7 @@
     plugins: [function (hook, vm) {
       hook.beforeEach(function (html) {
         // Create automatic links of class names to APIviewer
-        html = html.replace(/<code>(qx\.[^<]+)<\/code>/g, '<a href="apps://apiviewer/#$1"');
+        html = html.replace(/`(qx\.[^`]+)`/g, '[`$1`](apps://apiviewer/#$1)');
         // resolve links with pseudo-protocol "apps:" to relative path to apps
         let app_dir = window.location.pathname.split('/').slice(0, -2).concat(['apps', '']).join('/');
         html = html.replace(/apps:\/\//g, app_dir);
