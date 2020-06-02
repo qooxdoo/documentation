@@ -59,10 +59,10 @@ the following special keys:
 qx.libraryPath` - this is the Qooxdoo library to use when compiling
 your application
 
-### Create a new project
+## Create a new project
 
 You can create new project skeletons by using the `qx create` command 
-\` It has the following options:
+It has the following options:
 
 ```
   --type, -t            Type of the application to create.              [string]
@@ -87,7 +87,7 @@ the application content into it without creating a subfolder (for
 example, in a top-level folder of a cloned empty GitHub project), use `
         --out=.`. 
 
-### Compiler
+## Compile
 
 To compile a Qooxdoo project into a state that can be opened in a
 browser, use  `qx compile`. This is the CLI frontend for the  
@@ -123,7 +123,7 @@ The compiler relies on the information contained in `compile.json`.
 Documentation for the `compile.json` format is [here](../configuration/compile.md)
         .
 
-### Lint
+## Lint
 
 To check your project with eslint you can use `qx lint`. The command
 has the following options:
@@ -159,7 +159,7 @@ necessary), use the following comments in your code:
 `// eslint-disable-next-line <name of rule>` to turn off linting for
 the next line.
 
-### Mini Web Server
+## Mini Web Server
 
 Although many applications will run perfectly well when loaded via a `
 file://` URL, browser security means that some applications _must_ use
@@ -225,5 +225,33 @@ Note that the `qx serve` command supports exactly the same options as `
 always enabled; for more details of the options and the compilation
 process, please see [here](../configuration/compile.md)
 
-## Deployment
+## Building for Production and Deployment
+
+When you compile your application using `qx compile`, you'll notice
+that there's quite a lot of files generated and the total application
+size is quite large; most of these files are temporary files needed
+only during development, either because they speed up compilation to
+keep them around or because it's easier for you to debug.
+
+By using `qx compile --target=build`, the compiler will produce a
+completely seperate compilation with all debug code automatically
+removed and where the Javascript source code is minified and reduced
+to as small a number of files as possible.
+
+This "build target" compilation is the version you can do final
+testing on before publishing it to your users; but while this is
+minified and stripped down, there are still a number of temporary
+files which you do not want to copy  onto your webserver.
+
+When you're ready to distribute the application(s) to your web server,
+use `qx deploy`, EG:
+
+```
+  $ qx deploy --out=/var/www --source-maps
+```
+
+Note that by default source maps are not copied - this is to make sure
+that information is about filing systems is not leaked, but this will
+make it hard to debug any problems when in production.  If you want to
+include source maps, use the `--source-maps` parameter.
 
