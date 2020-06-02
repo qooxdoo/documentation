@@ -157,536 +157,58 @@ The following listing shows the form widgets and their corresponding
 interfaces. To see more details about a widget, take a look at the
 widgets (/pages/desktop/widget/widget_ref) documentation.
 
-<html>
-<style type="text/css">
-table {border: 1px solid black; border-collapse:collapse; background-color: white}
-td {border: 1px solid black; padding:5px}
-</style>
+|    |IForm|IExecutable|IRange|INumberForm|IStringForm|IColorForm|IDateForm|IBooleanForm|IModel|IModelSelection
+|--- |:---:|:---:|:---:|:---:|:---:|:---:|:---:|---:|:---:|:---:|
+|Label              |   |   |   |   | X |   |   |   |   |   |
+|**Text Input**       
+|TextField          | X |   |   |   | X |   |   |   |   |   |
+|TextArea           | X |   |   |   | X |   |   |   |   |   |
+|PasswordField      | X |   |   |   | X |   |   |   |   |   |
+|**Supported Text Input**
+|ComboBox           | X |   |   |   | X |   |   |   |   |   |
+|DateField          | X |   |   |   |   |   | X |   |   |   |
+|**Number Input**
+|Slider             | X |   | X | X |   |   |   |   |   |   |
+|Spinner            | X |   | X | X |   |   |   |   |   |   |
+|Boolean Input      |   |   |   |   |   |   |   |   |   |   |
+|CheckBox           | X | X |   |   |   |   |   | X | X |   |
+|RadioButton        | X | X |   |   |   |   |   | X | X |   |
+|Color Input        |   |   |   |   |   |   |   |   |   |   |
+|ColorPopup         |   |   |   |   |   | X |   |   |   |   |
+|ColorSelector      |   |   |   |   |   | X |   |   |   |   |
+|Date Input         |   |   |   |   |   |   |   |   |   |   |
+|DateChooser        | X | X |   |   |   |   | X |   |   |   |
+|Selections         |   |   |   |   |   |   |   |   |   |   |
+|SelectBox          | X |   |   |   |   |   |   |   |   | X |
+|List               | X |   |   |   |   |   |   |   |   | X |
+|ListItem           |   |   |   |   |   |   |   |   | X |   |
+|tree.Tree          |   |   |   |   |   |   |   |   |   | X |
+|tree.TreeFolder    |   |   |   |   |   |   |   |   | X |   |
+|tree.TreeFile      |   |   |   |   |   |   |   |   | X |   |
+|**Grouping**
+|GroupBox           | X |   |   |   |   |   |   |   |   |   |
+|CheckGroupBox      | X | X |   |   |   |   |   | X |   |   |
+|RadioGroupBox      | X | X |   |   |   |   |   | X |   |   |
+|RadioGroup         | X |   |   |   |   |   |   |   |   | X |
+|RadioButtonGroup   | X |   |   |   |   |   |   |   |   | X |
+|**Buttons**
+|Button             |   | X |   |   |   |   |   |   |   |   |
+|MenuButton         |   | X |   |   |   |   |   |   |   |   |
+|RepeatButton       |   | X |   |   |   |   |   |   |   |   |
+|SplitButton        |   | X |   |   |   |   |   |   |   |   |
+|ToggleButton       |   | X |   |   |   |   |   | X |   |   |
+|tabView.Button     |   | X |   |   |   |   |   |   |   |   |
+|menu.CheckBox      |   | X |   |   |   |   |   | X |   |   |
+|menu.RedioButton   |   | X |   |   |   |   |   | X |   |   |
+|menu.Button        |   | X |   |   |   |   |   |   |   |   |
 
-<table>
-<tbody>
-  <tr>
-    <td>&nbsp;</td>
-    <td><strong>IForm</strong></td>
-    <td><strong>IExecutable</strong></td>
-    <td><strong>IRange</strong></td>
-    <td><strong>INumber<br>Form</strong></td>
-    <td><strong>IString<br>Form</strong></td>
-    <td><strong>IColor<br>Form</strong></td>
-    <td><strong>IDate<br>Form</strong></td>
-    <td><strong>IBoolean<br>Form</strong></td>
-    <td><strong>IModel</strong></td>
-    <td><strong>IModel<br>Selection</strong></td>
-  </tr>
-
-  <tr>
-    <td>Label</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td colspan="11"><strong>Text Input</strong></td>
-  </tr>
-
-  <tr>
-    <td>TextField</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td>TextArea</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td>PasswordField</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td colspan="11"><strong>Supported Text Input</strong></td>
-  </tr>
-
-  <tr>
-    <td>ComboBox</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td>DateField</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td colspan="11"><strong>Number Input</strong></td>
-  </tr>
-
-  <tr>
-    <td>Slider</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td>Spinner</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td colspan="11"><strong>Boolean Input</strong></td>
-  </tr>
-
-  <tr>
-    <td>CheckBox</td>
-    <td>X</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td>RadioButton</td>
-    <td>X</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td colspan="11"><strong>Color Input</strong></td>
-  </tr>
-
-  <tr>
-    <td>ColorPopup</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td>ColorSelector</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td colspan="11"><strong>Date Input</strong></td>
-  </tr>
-
-  <tr>
-    <td>DateChooser</td>
-    <td>X</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td colspan="11"><strong>Selections</strong></td>
-  </tr>
-
-  <tr>
-    <td>SelectBox</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-  </tr>
-
-  <tr>
-    <td>List</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-  </tr>
-
-  <tr>
-    <td>ListItem</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td>tree.Tree</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-  </tr>
-
-  <tr>
-    <td>tree.TreeFolder</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td>tree.TreeFile</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td colspan="11"><strong>Grouping</strong></td>
-  </tr>
-
-  <tr>
-    <td>GroupBox</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td>CheckGroupBox</td>
-    <td>X</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td>RadioGroupBox</td>
-    <td>X</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td>RadioGroup</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-  </tr>
-
-  <tr>
-    <td>RadioButtonGroup</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-  </tr>
-
-  <tr>
-    <td colspan="11"><strong>Buttons</strong></td>
-  </tr>
-
-  <tr>
-    <td>Button</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td>MenuButton</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td>RepeatButton</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td>SplitButton</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td>ToggleButton</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td>tabView.Button</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td>menu.CheckBox</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td>menu.RedioButton</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-  <tr>
-    <td>menu.Button</td>
-    <td>&nbsp;</td>
-    <td>X</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-
-</tbody>
-</table>
-</html>
 Sample Usage
 ------------
 
 The first example is a simple one, showing how to use two widgets
 implementing the `IStringForm` interface:
 
-```
+```javascript
 // create and add a textfield
 var textfield = new qx.ui.form.TextField();
 this.getRoot().add(textfield, {left: 10, top: 10});
@@ -704,7 +226,7 @@ The second example shows how to react on a change in a widget
 implementing the `INumberForm` interface. The value of the slider will
 be shown as a label:
 
-```
+```javascript
 // create and add a slider
 var slider = new qx.ui.form.Slider();
 slider.setWidth(200);
@@ -724,7 +246,7 @@ slider.addListener("changeValue", function(e) {
 The last example shows how to use the `IForm` interface and how to
 mark a widget as invalid:
 
-```
+```javascript
 // create and add a slider
 var slider = new qx.ui.form.Slider();
 slider.setWidth(200);
@@ -806,7 +328,7 @@ The following subsections cover some common scenarios of synchronous
 validation. See this code snippet as basis for all the examples shown
 in the subsections.
 
-```
+```javascript
 var manager = new qx.ui.form.validation.Manager();
 var textField = new qx.ui.form.TextField();
 var checkBox = new qx.ui.form.CheckBox();
@@ -819,7 +341,7 @@ This can be seen in common forms as required fields, which are easy to
 define in Qooxdoo. Just define the specific widget as required and add
 it to the validation manager without any validator.
 
-```
+```javascript
 textField.setRequired(true);
 manager.add(textField);
 ```
@@ -835,7 +357,7 @@ types like email addresses, URLs or similar. For those common checks,
 Qooxdoo offers a set of predefined validators in `qx.util.Validate`.
 The example here shows the usage of a predefined email validator.
 
-```
+```javascript
 manager.add(textField, qx.util.Validate.email());
 ```
 
@@ -850,7 +372,7 @@ containing the message to be displayed as an invalid message. The
 validation manager can handle both kinds of validators. The example
 here checks if the value of the text field has a length of at least 3.
 
-```
+```javascript
 manager.add(textField, function(value) {
   return value.length >= 3;
 });
@@ -864,7 +386,7 @@ validation. For such scenarios, the manager itself can have a
 validator too. The example here demonstrates how to ensure that the
 text field is not empty if the checkbox is checked.
 
-```
+```javascript
 manager.setValidator(function(items) {
   if (checkBox.getValue()) {
     var value = textField.getValue();
@@ -892,7 +414,7 @@ validator, the `qx.ui.form.validation.AsyncValidator`. But that does
 not mean a lot work for the application developer. Just take a look at
 the following example to see the AsyncValidator in action.
 
-```
+```javascript
 manager.add(textField, new qx.ui.form.validation.AsyncValidator(
   function(validator, value) {
     // here comes the async call
@@ -950,7 +472,7 @@ The most common scenario is to serialize a number of form items
 without any special additions. Just get the values of the entire form
 and serialize them.
 
-```
+```javascript
 // create the ui
 var name = new qx.ui.form.TextField();
 var password = new qx.ui.form.PasswordField();
@@ -974,7 +496,7 @@ This way, the serialization is separated from the form itself. So
 hidden form fields are as easy as it could be. Just add another
 property to the model.
 
-```
+```javascript
 var model = qx.data.marshal.Json.createModel(
   {name: "a", password: "b", c: "i am hidden"}
 );
@@ -987,9 +509,8 @@ You might be asking yourself "What if i want to convert the values for
 serialization? My server needs some different values...". That brings
 us to the topic of conversion. But as we have seen before, the mapping
 from the view to the model is handled by the data binding layer which
-already includes conversion. Take a look at the data binding
-documentation
-data_binding/single_value_binding.md#options_conversion_and_validation
+already includes conversion. Take a look at the [data binding
+documentation](../../core/data_binding/single_value_binding.md#options_conversion_and_validation)
 for more information on conversion.
 
 #### Need something special?
@@ -1036,7 +557,7 @@ reset all stored values are set.
 The following sample shows how to use the resetter with three input
 fields: A textfield, a checkbox and a list.
 
-```
+```javascript
 // create a textfield
 var textField = new qx.ui.form.TextField("acb");
 this.getRoot().add(textField, {left: 10, top: 10});
@@ -1163,7 +684,7 @@ another for resetting the form. So here we go...
 
 First, we need a form object.
 
-```
+```javascript
 // create the form
 var form = new qx.ui.form.Form();
 ```
@@ -1171,7 +692,7 @@ var form = new qx.ui.form.Form();
 After that, we can create the first two input fields. As these two
 fields are required, we should mark them as such.
 
-```
+```javascript
 // create the first two input fields
 var firstname = new qx.ui.form.TextField();
 firstname.setRequired(true);
@@ -1182,7 +703,7 @@ lastname.setRequired(true);
 As you can see, the input fields are text fields as described above.
 Next, we can add those input fields to the form.
 
-```
+```javascript
 // add the first group
 form.addGroupHeader("Name");
 form.add(firstname, "Firstname");
@@ -1194,7 +715,7 @@ input fields. After that, we added them with a name but without a
 validator. The required flag we set earlier is enough. We need to add
 another group of input fields for the contact data.
 
-```
+```javascript
 // add the second group
 form.addGroupHeader("Contact");
 form.add(new qx.ui.form.TextField(), "Email", qx.util.Validate.email());
@@ -1206,7 +727,7 @@ the email address, which uses a predefined email validator from the
 framework. The phone number does not get any validator at all. The
 last missing thing are the buttons. First, add the save button.
 
-```
+```javascript
 // add a save button
 var savebutton = new qx.ui.form.Button("Save");
 savebutton.addListener("execute", function() {
@@ -1221,7 +742,7 @@ The save button gets an execute listener which first validates the
 form and, if the form is valid, alerts the user. The reset button is
 analogous.
 
-```
+```javascript
 // add a reset button
 var resetbutton = new qx.ui.form.Button("Reset");
 resetbutton.addListener("execute", function() {
@@ -1233,7 +754,7 @@ form.addButton(resetbutton);
 Now the form is complete and we can use the default renderer to render
 the form and add it to the document.
 
-```
+```javascript
 // create the view and add it
 this.getRoot().add(new qx.ui.form.renderer.Single(form), {left: 10, top: 10});
 ```
@@ -1246,7 +767,7 @@ look like this:
 If you want to get a different look and feel, you can create a
 different renderer.
 
-```
+```javascript
 // create the view and add it
 this.getRoot().add(
   new qx.ui.form.renderer.SinglePlaceholder(form),
@@ -1274,7 +795,7 @@ first name and one for last name.
 
 First, we create the form:
 
-```
+```javascript
 // create the form
 var form = new qx.ui.form.Form();
 ```
@@ -1284,7 +805,7 @@ here is that if no name is given - as in the first two cases - each
 label will also be used as a name. For that, all spaces in the label
 are removed.
 
-```
+```javascript
 // add the first TextField ("Salutation" will be the property name)
 form.add(new qx.ui.form.TextField(), "Salutation");
 // add the second TextField ("FirstName" will be the property name)
@@ -1296,7 +817,7 @@ form.add(new qx.ui.form.TextField(), "Last Name", null, "last");
 After we add the text fields, we can add the view to the application
 root.
 
-```
+```javascript
 // add the form to the root
 this.getRoot().add(new qx.ui.form.renderer.Single(form));
 ```
@@ -1306,14 +827,14 @@ binding controller. We simply supply the form instance as an argument
 to the constructor. But we don't have a model yet, so we just pass `
 null` for the model.
 
-```
+```javascript
 // create the controller with the form
 var controller = new qx.data.controller.Form(null, form);
 ```
 
 The final step for data binding is to create the actual model.
 
-```
+```javascript
 // create the model
 var model = controller.createModel();
 ```
@@ -1325,7 +846,7 @@ Now we have managed to set up a form and a model connected by
 bidirectional bindings. So we can simply use the model to set values
 in the form.
 
-```
+```javascript
 // set some values in the form
 model.setSalutation("Mr.");
 model.setFirstName("Martin");
@@ -1339,6 +860,3 @@ them.
 [See the code in action](apps://playground/#%7B%22code%22%3A%20%22%252F%252F%2520create%2520the%2520form%250Avar%2520form%2520%253D%2520new%2520qx.ui.form.Form()%253B%250A%250A%252F%252F%2520add%2520the%2520first%2520TextField%2520(Salutation%2520will%2520be%2520the%2520property%2520name)%250Aform.add(new%2520qx.ui.form.TextField()%252C%2520%2522Salutation%2522)%253B%250A%252F%252F%2520add%2520the%2520second%2520TextField%2520(FirstName%2520will%2520be%2520the%2520property%2520name)%250Aform.add(new%2520qx.ui.form.TextField()%252C%2520%2522First%2520Name%2522)%253B%250A%252F%252F%2520add%2520the%2520third%2520TextField%2520(last%2520will%2520be%2520the%2520property%2520name)%250Aform.add(new%2520qx.ui.form.TextField()%252C%2520%2522Last%2520Name%2522%252C%2520null%252C%2520%2522last%2522)%253B%250A%250A%252F%252F%2520add%2520the%2520form%2520to%2520the%2520root%250Athis.getRoot().add(new%2520qx.ui.form.renderer.Single(form))%253B%250A%250A%252F%252F%2520create%2520the%2520controller%2520with%2520the%2520form%250Avar%2520controller%2520%253D%2520new%2520qx.data.controller.Form(null%252C%2520form)%253B%250A%252F%252F%2520create%2520the%2520model%250Avar%2520model%2520%253D%2520controller.createModel()%253B%250A%250A%252F%252F%2520set%2520some%2520values%2520in%2520the%2520form%250Amodel.setSalutation(%2522Mr.%2522)%253B%250Amodel.setFirstName(%2522Martin%2522)%253B%250Amodel.setLast(%2522Wittemann%2522)%253B%250A%22%7D)
            in the playground.
 
-## Still to come...
-
--   [A way to create a form out from a JSON definition](https://github.com/Qooxdoo/Qooxdoo/issues/2823)
