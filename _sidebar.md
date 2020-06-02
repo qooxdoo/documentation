@@ -41,6 +41,7 @@
 - Qooxdoo for Desktop
 
   - Qooxdoo UI
+    - [Introduction](/desktop/gui)
     - [Interaction](/desktop/gui/interaction.md)
     - [Resources](/desktop/gui/resources.md)
     - [Selection](/desktop/gui/selection.md)

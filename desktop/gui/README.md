@@ -4,21 +4,20 @@
 
 Widgets are the basic building blocks of graphical user interfaces
 (GUIs) in Qooxdoo. Each GUI component, such as a button, label or
-window, is a widget and can be placed within an existing user
-interface. Each particular type of widget is provided by a
-corresponding subclass of [Widget](apps://apiviewer/#qx.ui.core.Widget)
-          , which is itself a subclass of [LayoutItem](apps://apiviewer/#qx.ui.core.LayoutItem)
-          .
+window, is a widget and can be placed within an existing user interface.
+Each particular type of widget is provided by a corresponding subclass
+of [Widget](apps://apiviewer/#qx.ui.core.Widget), which is itself a
+subclass of [LayoutItem](apps://apiviewer/#qx.ui.core.LayoutItem).
 
 `Widget` can be subclassed with minimal effort to create custom
 widgets. The entire layout handling and children handling in this
 class is only available as "protected". It is possible to add some
 public API as needed.
 
-Another framework class which extends `LayoutItem` is [Spacer](apps://apiviewer/#qx.ui.core.Spacer)
-          . A spacer is an empty area, which may be used as a
-temporary placeholder that is to be replaced later, or explicitly as a
-flexible part in certain dynamic UI designs.
+Another framework class which extends `LayoutItem` is
+[Spacer](apps://apiviewer/#qx.ui.core.Spacer) A spacer is an empty area,
+which may be used as a temporary placeholder that is to be replaced
+later, or explicitly as a flexible part in certain dynamic UI designs.
 
 To structure an interface it is common to insert widgets into each
 other. Each child is displayed within the screen area occupied by its
@@ -35,12 +34,11 @@ public methods to manage the children. This is to allow the normal
 Widget to be used for inheritance. To allow the creation of structures
 in applications, the `Composite` was created.
 
-[Composite](apps://apiviewer/#qx.ui.container.Composite) extends `
-Widget` and publishes the whole children and layout management of the `
-          Widget` to the public. Typically it is used as a container
-for other widgets. Children can be managed through the methods `add()`
-, ` remove()`, etc. In application code Composites are used to
-structure the interface.
+[Composite](apps://apiviewer/#qx.ui.container.Composite) extends ` Widget`
+and publishes the whole children and layout management of the ` Widget`
+to the public. Typically it is used as a container for other widgets.
+Children can be managed through the methods `add()` , ` remove()`, etc.
+In application code Composites are used to structure the interface.
 
 ## Roots
 
@@ -83,15 +81,14 @@ the developer chooses to extend. The next chapter will explain the
 concept behind applications in detail.
 
 As even the `Page` root is attached to the document it would still be
-impossible to place children into a specific existing column or box
-within the existing layout. However, web page developers may use any
-number of optional isles to insert content into an existing layout
-(built with classic HTML markup). The isles are named [Inline](apps://apiviewer/#qx.ui.root.Inline)
-          . They require an existing DOM element to attach themselves
-to (usually retrieved using `getElementById`). While most content is
-added to these isles, the `Page` root is required so that dynamically
-floating elements like tooltips, menus, windows etc. can be easily
-positioned.
+impossible to place children into a specific existing column or box within the
+existing layout. However, web page developers may use any number of optional
+isles to insert content into an existing layout (built with classic HTML
+markup). The isles are named [Inline](apps://apiviewer/#qx.ui.root.Inline)
+They require an existing DOM element to attach themselves to (usually
+retrieved using `getElementById`). While most content is added to
+these isles, the `Page` root is required so that dynamically floating
+elements like tooltips, menus, windows etc. can be easily positioned.
 
 ## Applications
 

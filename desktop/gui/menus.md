@@ -26,7 +26,7 @@ use checkboxes and radiobuttons inside your menus.
 
 Here is a simple menu example:
 
-```
+```javascript
 // Create the menu
 var menu = new qx.ui.menu.Menu();
 
@@ -68,9 +68,8 @@ There are a couple of things to note here:
     creation; e.g. the callback function for the `closeButton` is provided
     in a separate method call to `addListener()`.
 -   The canonical event for the selection of a menu button is the `execute`
-               event. (This is in line with other button flavors
-    throughout the Qooxdoo framework, e.g. the regular `qx.ui.form.Button`
-    ).
+    event. (This is in line with other button flavors
+    throughout the Qooxdoo framework, e.g. the regular `qx.ui.form.Button`).
 
 ## Complex Menu Sample
 
@@ -85,7 +84,7 @@ a look in the /pages/desktop/widget/menu.
 This code snippet show how to create a "ToolBar" with to menu items
 "File" and "View":
 
-```
+```javascript
 // Create the toolbar and add to the DOM
 var toolBar = new qx.ui.toolbar.ToolBar();
 this.getRoot().add(toolBar, {
@@ -135,7 +134,7 @@ There are a couple of things to note here:
 The next code snipped should explain how to create a menu, which
 contain RadioButtons, but only one could be selected:
 
-```
+```javascript
 __getSyntaxMenu : function()
 {
   var syntaxMenu = new qx.ui.menu.Menu();

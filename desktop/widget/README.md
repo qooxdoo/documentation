@@ -1,19 +1,8 @@
 # Basic Widgets
 
-<div class="note">
-
-<div class="admonition-title">
-
-Note
-
-</div>
-
 This chapter introduces some of the widgets found in Qooxdoo. For a
 full list of widgets, please refer to the [widget ref](widget_ref.md)
         .
-
-</div>
-
 ## Labels
 
 Labels are one of the basic building blocks in applications. The

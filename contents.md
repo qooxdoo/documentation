@@ -9,7 +9,7 @@ extensive documentation that comes with it. The [sidebar](_sidebar.md)
 A dedicated class system with custom class properties, data binding
 and a  runtime environment.
 
-## [Qooxdoo UI](gui/)
+## [Qooxdoo Desktop](desktop/gui)
 
 The UI layer of Qooxdoo, providing a rich set of widgets which can be
 used to create professional web-based applications.
