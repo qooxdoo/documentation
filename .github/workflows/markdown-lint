@@ -34,7 +34,8 @@ const prettier = require("prettier");
 const prettierOptions = {
   parser: "markdown",
   printWidth: 80,
-  proseWrap: "always"
+  proseWrap: "always",
+  trailingComma: "none"
 };
 
 // create processor

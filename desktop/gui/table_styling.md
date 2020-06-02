@@ -1,63 +1,67 @@
 # Table Styling
 
-Ever wanted to style the table widget and missed an overview what can
-by styled exactly? If so, then read on and learn how to style the
-different parts of the table widget and which steps _can_ be applied
-to customize the appearance of this widget.
+Ever wanted to style the table widget and missed an overview what can by styled
+exactly? If so, then read on and learn how to style the different parts of the
+table widget and which steps _can_ be applied to customize the appearance of
+this widget.
 
-By default (talking about the _Modern_ theme) the table looks like
-this:
+By default (talking about the _Modern_ theme) the table looks like this:
 
 ![table_default_styling.png](table_styling/table_default_styling.png)
 
-This tutorial takes a look at the several _visible_ parts of the table
-such as
+This tutorial takes a look at the several _visible_ parts of the table such as
 
--   Table widget itself
--   Header
+- Table widget itself
 
- -   Header cells
- -   Column visibility button
+- Header
 
--   Pane
+- Header cells
 
- -   Row and column styling
- -   Cell styling
- -   Selection
- -   Focus Indicator
+- Column visibility button
 
--   Statusbar
--   Scrollbar
--   Editable Cells (controls like Textfield, SelectBox and ComboBox)
+- Pane
 
-This tutorial assumes you're implementing all styling changes of the
-table widget in your own application theme classes. If you're new to
-the theming layer of Qooxdoo it's a good idea to recap the manual
-section for the theming layer (ui_theming).
+- Row and column styling
 
-If you're familiar with the theming layer we can dive right into the
-first topic.
+- Cell styling
 
-> Some of the examples are using CSS3 features, so they're not
-> applicable to all browsers. If you need to achieve a styling which is
-> almost completely identical (a pixel-perfect result is impossible) you
-> have to use graphic files whenever CSS3 features are not present.
+- Selection
+
+- Focus Indicator
+
+- Statusbar
+
+- Scrollbar
+
+- Editable Cells (controls like Textfield, SelectBox and ComboBox)
+
+This tutorial assumes you're implementing all styling changes of the table
+widget in your own application theme classes. If you're new to the theming layer
+of Qooxdoo it's a good idea to recap the manual section for the theming layer
+(ui_theming).
+
+If you're familiar with the theming layer we can dive right into the first
+topic.
+
+> Some of the examples are using CSS3 features, so they're not applicable to all
+> browsers. If you need to achieve a styling which is almost completely
+> identical (a pixel-perfect result is impossible) you have to use graphic files
+> whenever CSS3 features are not present.
 
 ## Table Widget
 
 Since this widget is the container of all sub-components the styling
-possibilities are naturally limited. However, limited possibilities
-does not result in low importance. You can e.g. change the border of
-the widget which can have a great visual impact. Since the border is a
-decorator (ui_decorators) you can use all possibilities like different
-kind of borders, shadows and the like.
+possibilities are naturally limited. However, limited possibilities does not
+result in low importance. You can e.g. change the border of the widget which can
+have a great visual impact. Since the border is a decorator (ui_decorators) you
+can use all possibilities like different kind of borders, shadows and the like.
 
 Sample of a table widget using a decorator with shadow:
 
 ![table_widget_styling.png](table_styling/table_widget_styling.png)
 
-To achieve this you can re-define the `table` decorator in your
-application theme as following:
+To achieve this you can re-define the `table` decorator in your application
+theme as following:
 
 ```javascript
 "table" :
@@ -83,20 +87,18 @@ application theme as following:
 ```
 
 > To get this example working you additionally have to define the colors
-> `table-border-main` and `table-shadow` in your color theme. It's
-> considered as best practice to define all colors as named color in
-> your color theme. This way you can use these named colors all over
-> your application.
+> `table-border-main` and `table-shadow` in your color theme. It's considered as
+> best practice to define all colors as named color in your color theme. This
+> way you can use these named colors all over your application.
 
 ## Header
 
 ### Header styling
 
-The header widget is a simple widget containing the header cells and
-the column visibility button. However, if you want to change the e.g.
-the background of the whole header you're here in the right place,
-since the container does the styling of the background and not the
-header cells themselves.
+The header widget is a simple widget containing the header cells and the column
+visibility button. However, if you want to change the e.g. the background of the
+whole header you're here in the right place, since the container does the
+styling of the background and not the header cells themselves.
 
 ```javascript
 // change the whole background of the header by changing the decorator
@@ -118,23 +120,21 @@ header cells themselves.
 }
 ```
 
-> Make sure the color `table-header-background` is part of your color
-> theme.
+> Make sure the color `table-header-background` is part of your color theme.
 
 This code snippet will result in the following:
 
 ![table_header_styling.png](table_styling/table_header_styling.png)
 
-Additionally you can change the height of the whole header by using
-the `headerCellHeight` property. Changing this property might make
-sense if you also want to customize the appearance of the header cells
-(e.g. using a larger font).
+Additionally you can change the height of the whole header by using the
+`headerCellHeight` property. Changing this property might make sense if you also
+want to customize the appearance of the header cells (e.g. using a larger font).
 
 ### Removing the header
 
-You want to get rid off the whole header? That's also possible by
-setting two additional themeable properties. So you only have to drop
-those two line in your appearance theme and you're done:
+You want to get rid off the whole header? That's also possible by setting two
+additional themeable properties. So you only have to drop those two line in your
+appearance theme and you're done:
 
 ```javascript
 "table" :
@@ -158,22 +158,21 @@ to get the following result
 
 ### Header Cells
 
-Customizing the appearance of the header cells can be divided into the
-following parts:
+Customizing the appearance of the header cells can be divided into the following
+parts:
 
- -   Decorator for hover effects
- -   Padding
- -   Alignment
- -   Using a different sort icon
- -   Using a custom font
+- Decorator for hover effects
+- Padding
+- Alignment
+- Using a different sort icon
+- Using a custom font
 
 Beside the settings for alignment and paddings all other appearance
-customizations are directly applied to the header cell appearance. If
-you want to e.g. change the hover effect for the header cell you can
-easily change the decorator (and the padding if necessary) to get an
-custom styling. Exchanging the sort icon is also supported. The sort
-icons are shown whenever the user does tap at one header cell the very
-first time.
+customizations are directly applied to the header cell appearance. If you want
+to e.g. change the hover effect for the header cell you can easily change the
+decorator (and the padding if necessary) to get an custom styling. Exchanging
+the sort icon is also supported. The sort icons are shown whenever the user does
+tap at one header cell the very first time.
 
 The default appearance for each header cell looks like this:
 
@@ -196,10 +195,10 @@ The default appearance for each header cell looks like this:
  },
 ```
 
-The default decorator for the hover effect does show a 1 pixel border
-at the bottom of the hovered header cell. If you only want to change
-this color you can go ahead and add the `table-header-hovered` color
-in the color theme of your application
+The default decorator for the hover effect does show a 1 pixel border at the
+bottom of the hovered header cell. If you only want to change this color you can
+go ahead and add the `table-header-hovered` color in the color theme of your
+application
 
 ```
 "table-header-hovered" : "orange",
@@ -209,9 +208,9 @@ to get a result like this
 
 ![table_header_cell_hover.png](table_styling/table_header_cell_hover.png)
 
-A bigger change of the header cells might be to change the background
-color at hovering. To do so you can simply modify the existing `
-table-header-cell-hovered` decorator like
+A bigger change of the header cells might be to change the background color at
+hovering. To do so you can simply modify the existing
+`table-header-cell-hovered` decorator like
 
 ```
 "table-header-cell-hovered" :
@@ -227,11 +226,10 @@ and you're done!
 
 ![table_header_cell_decorator_hover.png](table_styling/table_header_cell_decorator_hover.png)
 
-Additionally, you can change the styling of the different child
-controls (label, icon and sort icon) of the header cells. So if you
-want to change the font you can simply customize the label child
-control of the header cell to change the alignment, existing padding
-and the like.
+Additionally, you can change the styling of the different child controls (label,
+icon and sort icon) of the header cells. So if you want to change the font you
+can simply customize the label child control of the header cell to change the
+alignment, existing padding and the like.
 
 The default appearance of the child controls are defined as
 
@@ -276,8 +274,8 @@ The default appearance of the child controls are defined as
 },
 ```
 
-With the minor change above to the decorator and a font setting of the
-label you can achieve the following:
+With the minor change above to the decorator and a font setting of the label you
+can achieve the following:
 
 ![table_header_cell_styling.png](table_styling/table_header_cell_styling.png)
 
@@ -285,19 +283,19 @@ label you can achieve the following:
 
 ### Pane Background
 
-The pane itself is only styled using a background color and it is
-recommended to only change the background color in order to harmonize
-the color with the used row colors. The pane widget gets only visible
-if there is more open space left than occupied by the rows to show or
-at the very end of the table pane whenever scrollbars are necessary.
+The pane itself is only styled using a background color and it is recommended to
+only change the background color in order to harmonize the color with the used
+row colors. The pane widget gets only visible if there is more open space left
+than occupied by the rows to show or at the very end of the table pane whenever
+scrollbars are necessary.
 
-One picture says more than thousand words :) The pane with red
-background color to demonstrate:
+One picture says more than thousand words :) The pane with red background color
+to demonstrate:
 
 ![table_pane_styling.png](table_styling/table_pane_styling.png)
 
-The corresponding code in the color theme of your application is a
-simple one-liner:
+The corresponding code in the color theme of your application is a simple
+one-liner:
 
 ```
 "table-pane" : "red",
@@ -307,27 +305,24 @@ simple one-liner:
 
 #### Removing The Grid Lines
 
-If you take a second look at the picture above you can already
-recognize a customization of the row and column styling: the removal
-of the row and column lines.
+If you take a second look at the picture above you can already recognize a
+customization of the row and column styling: the removal of the row and column
+lines.
 
 Basically you can choose between two solutions:
 
- -   Setting the colors for the row and column line
- -   Writing your own cellrenderer **and** rowrenderer
+- Setting the colors for the row and column line
+- Writing your own cellrenderer **and** rowrenderer
 
-The first solution path is the quick one which is done by customize
-color of the color theme and **no** additional coding. However, you have
-also limited possibilities to customize. The second solution is the
-coding one. Start right away and extend the classes `
-qx.ui.table.rowrenderer.Default` and `
-qx.ui.table.cellrenderer.Abstract`, implement the necessary interfaces
-and create your very own appearance by putting together the necessary
-CSS styles.
+The first solution path is the quick one which is done by customize color of the
+color theme and **no** additional coding. However, you have also limited
+possibilities to customize. The second solution is the coding one. Start right
+away and extend the classes `qx.ui.table.rowrenderer.Default` and
+`qx.ui.table.cellrenderer.Abstract`, implement the necessary interfaces and
+create your very own appearance by putting together the necessary CSS styles.
 
-Since the latter solution is a more complex one, I'll only explain the
-first solution which helps you in styling the table rows and columns
-in a quick way.
+Since the latter solution is a more complex one, I'll only explain the first
+solution which helps you in styling the table rows and columns in a quick way.
 
 ```javascript
 // these two lines have to inserted in your application color theme
@@ -336,25 +331,23 @@ in a quick way.
 "table-column-line" : "transparent",
 ```
 
-Okay, we're cheating here a bit by hiding and not removing them, but
-anyway the goal is achieved and this in a very quick manner, right?
+Okay, we're cheating here a bit by hiding and not removing them, but anyway the
+goal is achieved and this in a very quick manner, right?
 
 #### Text And Background Colors
 
-What about changing more than the grid lines of the cells? Like
-changing the colors of the row background and so. I'm glad you ask
-this :)
+What about changing more than the grid lines of the cells? Like changing the
+colors of the row background and so. I'm glad you ask this :)
 
-Customizing these colors is as easy as hiding the grid lines. You can
-adapt the styling of the rows and columns by just setting different
-colors. These colors are available and can be overwritten in your
-application color theme:
+Customizing these colors is as easy as hiding the grid lines. You can adapt the
+styling of the rows and columns by just setting different colors. These colors
+are available and can be overwritten in your application color theme:
 
- -   `table-pane` - background color of the pane when less entries are used
-      than available space
- -   `table-row` - text color of the cells
- -   `table-row-background-even` - background color of even rows
- -   `table-row-background-odd` - background color of odd rows
+- `table-pane` - background color of the pane when less entries are used than
+  available space
+- `table-row` - text color of the cells
+- `table-row-background-even` - background color of even rows
+- `table-row-background-odd` - background color of odd rows
 
 By changing one or more of these colors you can e.g. achieve this:
 
@@ -373,20 +366,17 @@ by defining these colors:
 
 #### Selection
 
-If you customized the colors like above this is only the first part of
-it. Now the colors for the selection join the game. If you don't adapt
-these colors the result will for sure not satisfy you. So let's dive
-into this topic.
+If you customized the colors like above this is only the first part of it. Now
+the colors for the selection join the game. If you don't adapt these colors the
+result will for sure not satisfy you. So let's dive into this topic.
 
- -   `table-row-selected` - text color for cells are selected but **not**
-      focused
- -   `table-row-background-selected` - cells are selected but **not** focused
- -   `table-row-background-focused-selected` - cells are selected **and**
-      focused
- -   `table-row-background-focused` - cells are focused but **not** selected
+- `table-row-selected` - text color for cells are selected but **not** focused
+- `table-row-background-selected` - cells are selected but **not** focused
+- `table-row-background-focused-selected` - cells are selected **and** focused
+- `table-row-background-focused` - cells are focused but **not** selected
 
-To better visualize this the following example does use colors which
-are easy to distinguish:
+To better visualize this the following example does use colors which are easy to
+distinguish:
 
 ```
 "table-row-selected" : "blue",
@@ -405,16 +395,15 @@ The same with an inactive selection:
 
 #### Cell Styling
 
-This section is rather for the sake of completeness. If you want to
-have full control over the cell styling you can create your own
-cellrenderer classes and apply them for each column of your table.
-This topic is more a programmatic one and it does not fit in this
-scope of this article. However, a short introduction and a beginners
-guide will fit in here :)
+This section is rather for the sake of completeness. If you want to have full
+control over the cell styling you can create your own cellrenderer classes and
+apply them for each column of your table. This topic is more a programmatic one
+and it does not fit in this scope of this article. However, a short introduction
+and a beginners guide will fit in here :)
 
-A list of existing cell renderer is available at the [API
-Viewer](apps://apiviewer/#qx.ui.table.cellrenderer) If one
-of these is suitable for you all you have to do to use it is
+A list of existing cell renderer is available at the
+[API Viewer](apps://apiviewer/#qx.ui.table.cellrenderer) If one of these is
+suitable for you all you have to do to use it is
 
 ```javascript
 var tcm = table.getTableColumnModel();
@@ -423,13 +412,13 @@ var tcm = table.getTableColumnModel();
 tcm.setDataCellRenderer(3, new qx.ui.table.cellrenderer.Boolean());
 ```
 
-to e.g. display a checkbox for the fourth column. This assumes the
-cell renderer fits with the provided data.
+to e.g. display a checkbox for the fourth column. This assumes the cell renderer
+fits with the provided data.
 
-If that's still no a solution for you, because you really need some extras
-for the cell rendering the solution has to be an own cell renderer. To get
-into it it's recommended to take a look at the existing cell renderers and
-the base class. So basically you should study the implementation of the
+If that's still no a solution for you, because you really need some extras for
+the cell rendering the solution has to be an own cell renderer. To get into it
+it's recommended to take a look at the existing cell renderers and the base
+class. So basically you should study the implementation of the
 `qx.ui.table.cellrenderer.Abstract` class and as first start the implementation
 of `qx.ui.table.cellrenderer.Default` to give a good overview of this topic.
 Depending on your needs you can start right away by copying the `default`
@@ -437,18 +426,18 @@ renderer and play around a bit to get a impression of how to customize it.
 
 ### Focus Indicator
 
-This widget in default visible whenever a selection is present. There
-are two ways of customzing this widget:
+This widget in default visible whenever a selection is present. There are two
+ways of customzing this widget:
 
- -   change the decorator and the colors of this widget
- -   hide this indicator completely
+- change the decorator and the colors of this widget
+- hide this indicator completely
 
-The first possibility is the fast way for customization if you decided
-to keep the focus indicator visible. The available decorator is a
-simple 2 pixel border one and the color `table-focus-indicator` is
-defining this border color of the decorator. So either replacing the
-decorator by an own one or just changing the color has a direct
-effect. So let's look at an example where the decorator is changed:
+The first possibility is the fast way for customization if you decided to keep
+the focus indicator visible. The available decorator is a simple 2 pixel border
+one and the color `table-focus-indicator` is defining this border color of the
+decorator. So either replacing the decorator by an own one or just changing the
+color has a direct effect. So let's look at an example where the decorator is
+changed:
 
 ```javascript
 "table-scroller-focus-indicator" :
@@ -471,12 +460,11 @@ effect. So let's look at an example where the decorator is changed:
 
 ![table_focus_indicator.png](table_styling/table_focus_indicator.png)
 
-Look's really weird, but for demonstration purpose is quite good
-enough :)
+Look's really weird, but for demonstration purpose is quite good enough :)
 
-> It's better to stick with decorators which are only affecting the
-> border for the focus indicator. A background-related decorator won't
-> have any impact because of the background color styling of the cells.
+> It's better to stick with decorators which are only affecting the border for
+> the focus indicator. A background-related decorator won't have any impact
+> because of the background color styling of the cells.
 
 If you want to hide the focus indicator itself this is a one-liner
 
@@ -486,11 +474,11 @@ table.setShowCellFocusIndicator(false);
 
 ### Resize Line
 
-This is a minor topic, since it only can be customized by its color.
-You may ask: what is the resize line all about? Point your input
-device to a column border and start the resizing of the column by
-tapping at the border. The vertical line which gets visible is the
-resize line. So a table with a green resize line would like this:
+This is a minor topic, since it only can be customized by its color. You may
+ask: what is the resize line all about? Point your input device to a column
+border and start the resizing of the column by tapping at the border. The
+vertical line which gets visible is the resize line. So a table with a green
+resize line would like this:
 
 ```javascript
 "table-scroller/resize-line" :
@@ -509,12 +497,12 @@ resize line. So a table with a green resize line would like this:
 
 ## Statusbar
 
-You might guessed it already: yes, the statusbar can also be hidden _
-or_ customized by changing a decorator in your decorator theme of your
-application. This kind of repetition is quite nice, because if you do
-understand those basic things you can take a look at the `Modern`
-appearance or decorator theme and you quickly know what to include in
-your own theme in order to change the styling of a component.
+You might guessed it already: yes, the statusbar can also be hidden _ or_
+customized by changing a decorator in your decorator theme of your application.
+This kind of repetition is quite nice, because if you do understand those basic
+things you can take a look at the `Modern` appearance or decorator theme and you
+quickly know what to include in your own theme in order to change the styling of
+a component.
 
 Hiding the statusbar is again an one-liner:
 
@@ -522,8 +510,7 @@ Hiding the statusbar is again an one-liner:
 table.setStatusBarVisible(false);
 ```
 
-And the default implementation of the corresponding decorator looks
-like
+And the default implementation of the corresponding decorator looks like
 
 ```javascript
 "table-statusbar" :
@@ -539,9 +526,9 @@ like
 },
 ```
 
-As you can see there is no additional background and no other fancy
-stuff. If you like to change this e.g. setting an own background
-gradient you can use the following
+As you can see there is no additional background and no other fancy stuff. If
+you like to change this e.g. setting an own background gradient you can use the
+following
 
 ```javascript
 "table-statusbar" :
@@ -569,22 +556,22 @@ The result of this little demo looks like:
 
 ## Editable Cells
 
-The table widget (respectively the cell renderer) do support inline
-editing of values. These widgets which are displayed for the inline
-editing can also be customized using the theming layer of Qooxdoo. The
-following appearances are pre-defined:
+The table widget (respectively the cell renderer) do support inline editing of
+values. These widgets which are displayed for the inline editing can also be
+customized using the theming layer of Qooxdoo. The following appearances are
+pre-defined:
 
- -   table-editor-textfield
- -   table-editor-selectbox
- -   table-editor-combobox
+- table-editor-textfield
+- table-editor-selectbox
+- table-editor-combobox
 
-Basically those appearances do include the corresponding widget
-appearance and only modify single properties. In the `Modern`
-appearance theme this looks like this:
+Basically those appearances do include the corresponding widget appearance and
+only modify single properties. In the `Modern` appearance theme this looks like
+this:
 
 ```javascript
   "table-editor-textfield": {
-    include: "textfield", 
+    include: "textfield",
     style: function (states) {
       return {
         decorator: undefined,
@@ -594,8 +581,8 @@ appearance theme this looks like this:
     }
   },
   "table-editor-selectbox": {
-    include: "selectbox", 
-    alias: "selectbox", 
+    include: "selectbox",
+    alias: "selectbox",
     style: function (states) {
       return {
         padding: [0, 2], backgroundColor: "background-light"
@@ -603,8 +590,8 @@ appearance theme this looks like this:
     }
   },
   "table-editor-combobox": {
-    include: "combobox", 
-    alias: "combobox", 
+    include: "combobox",
+    alias: "combobox",
     style: function (states) {
       return {
         decorator: undefined, backgroundColor: "background-light"
@@ -613,41 +600,38 @@ appearance theme this looks like this:
   }
 ```
 
-As you can see: only minor changes to the existing appearances. And
-that's also the hint for your customizations: start with the existing
-appearances and only modify single properties by overwriting or adding
-them.
+As you can see: only minor changes to the existing appearances. And that's also
+the hint for your customizations: start with the existing appearances and only
+modify single properties by overwriting or adding them.
 
-Here's a little example with an editable textfield with `orange`
-background color:
+Here's a little example with an editable textfield with `orange` background
+color:
 
 ![table_editable_cells.png](table_styling/table_editable_cells.png)
 
 ## Scrollbars
 
-Each widget which uses the scrolling capabilities (as the table pane
-scroller does) can use themed scrollbars. By using them you can also
-style them, since they are rendered by decorators which are now quite
-common to you, right? So this section won't dive too deep into styling
-scrollbars and just gives hints at which appearance you have to get
-your hands on. The default appearance of the scrollbars for the table
-is
+Each widget which uses the scrolling capabilities (as the table pane scroller
+does) can use themed scrollbars. By using them you can also style them, since
+they are rendered by decorators which are now quite common to you, right? So
+this section won't dive too deep into styling scrollbars and just gives hints at
+which appearance you have to get your hands on. The default appearance of the
+scrollbars for the table is
 
 ```javascript
 "table-scroller/scrollbar-x": "scrollbar",
 "table-scroller/scrollbar-y": "scrollbar",
 ```
 
-so the scrollbars of the `table-scroller` widget integrates the
-scrollbars as child controls and does use the same decorators as the
-default scrollbars. If you want to theme those scrollbars you should
-take a look at the `scrollbar` appearance and all other child controls
-of this widget. As first step you can copy this definitions and modify
-it to suit your needs. Instead of using the default scrollbars for
-the table you have to point the `table-scroller/scrollbar-x` and
-`table-scroller/scrollbar-y` to your own appearance entries and you're done.
+so the scrollbars of the `table-scroller` widget integrates the scrollbars as
+child controls and does use the same decorators as the default scrollbars. If
+you want to theme those scrollbars you should take a look at the `scrollbar`
+appearance and all other child controls of this widget. As first step you can
+copy this definitions and modify it to suit your needs. Instead of using the
+default scrollbars for the table you have to point the
+`table-scroller/scrollbar-x` and `table-scroller/scrollbar-y` to your own
+appearance entries and you're done.
 
-Here's a quick reminder how the table does look like with themed
-scrollbars:
+Here's a quick reminder how the table does look like with themed scrollbars:
 
 ![table_scrollbars.png](table_styling/table_scrollbars.png)

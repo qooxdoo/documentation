@@ -1,51 +1,60 @@
 # Tutorial: Tweets App
 
-This tutorial covers many practical aspects of developing desktop-like
-Qooxdoo apps.
+This tutorial covers many practical aspects of developing desktop-like Qooxdoo
+apps.
 
 As the headline of this tutorial says, we are building a simple tweets
-application. 
+application.
 
-[Twitter](http://twitter.com) itself made its authorization scheme
-more complex, as it started requiring OAuth even to read public
-tweets. For this basic tutorial it would be too complex to handle such
-advanced authorization. If your are interested in OAuth, check out how
-you could handle that in a Qooxdoo app by looking at the [Github demo](apps://demobrowser/#data~Github.html).
+[Twitter](http://twitter.com) itself made its authorization scheme more complex,
+as it started requiring OAuth even to read public tweets. For this basic
+tutorial it would be too complex to handle such advanced authorization. If your
+are interested in OAuth, check out how you could handle that in a Qooxdoo app by
+looking at the [Github demo](apps://demobrowser/#data~Github.html).
 
-So we decided to provide a simple example which delivers some static
-text.
+So we decided to provide a simple example which delivers some static text.
 
 ```javascript
 callback([
   {
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore", 
-    user: {profile_image_url : "http://www.gravatar.com/avatar/7c366401a0b7a57c50e5c38913ddc135.png"},
+    text:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore",
+    user: {
+      profile_image_url:
+        "http://www.gravatar.com/avatar/7c366401a0b7a57c50e5c38913ddc135.png"
+    },
     created_at: 1373541470150
   },
   {
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam", 
-    user: {profile_image_url : "http://www.gravatar.com/avatar/00000000000000000000000000000000.png"},
+    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam",
+    user: {
+      profile_image_url:
+        "http://www.gravatar.com/avatar/00000000000000000000000000000000.png"
+    },
     created_at: 1373541361356
   },
   {
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor", 
-    user: {profile_image_url : "http://www.gravatar.com/avatar/74e78850f9d01ddce817dd5f83f3ac0d.png"},
+    text:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
+    user: {
+      profile_image_url:
+        "http://www.gravatar.com/avatar/74e78850f9d01ddce817dd5f83f3ac0d.png"
+    },
     created_at: 1373541270150
   }
 ]);
 ```
 
-The following mockup shows you how the application should look at the
-end.
+The following mockup shows you how the application should look at the end.
 
 ![image](identicamockup1.png)
 
-If you take a closer look at the mockup, you see a window  containing
-a toolbar, a list, a text area and a button to post messages. This
-should cover some common scenarios of a typical Qooxdoo application.
+If you take a closer look at the mockup, you see a window containing a toolbar,
+a list, a text area and a button to post messages. This should cover some common
+scenarios of a typical Qooxdoo application.
 
-In the first part you'll learn how to create a new application and how
-to build a part of the main UI.
+In the first part you'll learn how to create a new application and how to build
+a part of the main UI.
 
 1.  [Getting Started](tutorial-part-1.md)
 2.  [Finishing the UI](tutorial-part-2.md)

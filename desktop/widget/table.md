@@ -1,7 +1,7 @@
 # Table
 
-The table package contains classes that allow you to build up virtual
-tables for showing data in a grid like view.
+The table package contains classes that allow you to build up virtual tables for
+showing data in a grid like view.
 
 ## Preview Image
 
@@ -9,13 +9,12 @@ tables for showing data in a grid like view.
 
 ## Description
 
-A `Table` is a widget to show a set of data in a column based view. It
-is based on the idea of virtual rendering. This means that only the
-visible rows will be rendered, which increases the performance of the
-widget and makes the table capable of displaying thousands of rows.
-But it is important to know that the table has only virtual rows, not
-columns. Having a huge number of columns can still decrease
-performance.
+A `Table` is a widget to show a set of data in a column based view. It is based
+on the idea of virtual rendering. This means that only the visible rows will be
+rendered, which increases the performance of the widget and makes the table
+capable of displaying thousands of rows. But it is important to know that the
+table has only virtual rows, not columns. Having a huge number of columns can
+still decrease performance.
 
 ## Features
 
@@ -50,8 +49,8 @@ performance.
 
 ### Simple
 
-The most simple table can be build in five lines of code, as you can
-see in this example:
+The most simple table can be build in five lines of code, as you can see in this
+example:
 
 ```
 // table model
@@ -64,43 +63,40 @@ var table = new qx.ui.table.Table(tableModel);
 this.getRoot().add(table);
 ```
 
-One of the important parts of the table is the table model. The first
-line creates a simple table model. In the second and third line, we
-configure the table model with some column names and data. With that
-model, we can create a table and add it to our application, as the
-example shows in the last two lines.
+One of the important parts of the table is the table model. The first line
+creates a simple table model. In the second and third line, we configure the
+table model with some column names and data. With that model, we can create a
+table and add it to our application, as the example shows in the last two lines.
 
 ### Editable Column
 
-Making for example the second column of our simple example editable
-can be done in one line:
+Making for example the second column of our simple example editable can be done
+in one line:
 
 ```
 // make second column editable
 tableModel.setColumnEditable(1, true);
 ```
 
-The first parameter here is the column (column numbering starts with
-0), and the second one is to change the editable state.
+The first parameter here is the column (column numbering starts with 0), and the
+second one is to change the editable state.
 
 ### Sorting
 
-Also adding a default sort order for the table is easy in one single
-line:
+Also adding a default sort order for the table is easy in one single line:
 
 ```
 // sort the table on startup
 tableModel.sortByColumn(0, true);
 ```
 
-Again, the first argument is the column. The second argument is
-responsible for the sort order, `true` for ascending.
+Again, the first argument is the column. The second argument is responsible for
+the sort order, `true` for ascending.
 
 ### Conditional Cell Rendering
 
-As a last addition to our example we build something more complex. We
-want to render all negative numbers in red and all positive numbers in
-green:
+As a last addition to our example we build something more complex. We want to
+render all negative numbers in red and all positive numbers in green:
 
 ```
 // conditional rendering
@@ -110,24 +106,23 @@ newRenderer.addNumericCondition("<", 0, null, "red");
 table.getTableColumnModel().setDataCellRenderer(1, newRenderer);
 ```
 
-For that purpose, Qooxdoo has a built-in conditional renderer. In the
-first line, we create such a renderer. The second and third line set
-up our conditional rules. The last line tells the table column model
-to use that renderer for the column with the index 1.
+For that purpose, Qooxdoo has a built-in conditional renderer. In the first
+line, we create such a renderer. The second and third line set up our
+conditional rules. The last line tells the table column model to use that
+renderer for the column with the index 1.
 
 ## UML Diagram
 
 ![table_uml.png](table_uml.png)
 
-This diagram shows how the table uses the different kinds of classes
-you can find in the table namespace. The diagram is divided in two
-sides. The left side is interesting for the user if he wants to extend
-the table or wants to use its custom cell renderer for example. The
-right side is usually a set of internal classes the tables uses to get
-its general tasks done.
+This diagram shows how the table uses the different kinds of classes you can
+find in the table namespace. The diagram is divided in two sides. The left side
+is interesting for the user if he wants to extend the table or wants to use its
+custom cell renderer for example. The right side is usually a set of internal
+classes the tables uses to get its general tasks done.
 
 ## Further resources
 
--   [Table demos](apps://demobrowser/#table) in the online Demobrowser.
--   [API documentation for qx.ui.table](apps://apiviewer/#qx.ui.table) in
-    the online APIViewer.
+- [Table demos](apps://demobrowser/#table) in the online Demobrowser.
+- [API documentation for qx.ui.table](apps://apiviewer/#qx.ui.table) in the
+  online APIViewer.
