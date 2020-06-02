@@ -2,12 +2,7 @@
 
 Qooxdoo comes with a rich set of sophisticated web applications that
 provide valuable resources for learning Qooxdoo and developing your
-own applications with the framework. The applications are developed as
-and shipped in separate packages and are available out-of-the box with
-the npm distribution of the  framework. They are accessible in the
-start page of Qooxdoo's built-in server when you execute `npx qx serve -S`.
-
-The applications are:
+own applications with the framework. The applications are:
 
 -   **[API Viewer](apps://apiviewer)** ([Code](https://github.com/Qooxdoo/qxl.apiviewer)):  
     The APIViewer displays the API of the Qooxdoo
@@ -34,3 +29,7 @@ The applications are:
     ([Code](https://github.com/Qooxdoo/qxl.packagebrowser)): This
     application lets you browse the extension packages that can be
     installed.
+
+The applications are developed as and shipped in separate packages. They can also be 
+locally built by executing `npx qx serve -S --config-file compile-all-apps.json` in 
+the root of the framework repository.
