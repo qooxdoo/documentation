@@ -88,7 +88,7 @@ be solved during the development of a Qooxdoo application.
 
 Once you have a good sense on how to work with Qooxdoo, review the
 notes on [Best Practices](best_practices.md) and [Antipatterns](antipatterns.md)
-       which might help you to avoid common pitfalls.
+which might help you to avoid common pitfalls.
 
 ## Debugging
 
