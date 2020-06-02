@@ -90,21 +90,17 @@ let the method work on the customized controls, and just call the super class
 method when the incoming ID is not supported. For example, such a method might
 look like:
 
-```
-_createChildControlImpl : function(id)
-{
-  var control;
-
-  switch(id)
-  {
-    case "icon":
-      control = new qx.ui.basic.Image;
-      this._add(control);
-      break;
-  }
-
-  return control || this.base(arguments, id);
-}
+```javascript
+    _createChildControlImpl(id) {
+      let control;
+      switch(id) {
+        case "icon":
+          control = new qx.ui.basic.Image;
+          this._add(control);
+          break;
+      }
+      return control || this.base(arguments, id);
+    }
 ```
 
 Each child control should directly add itself to the parent. As mentioned before
@@ -219,7 +215,7 @@ The number of constructor parameters should be kept short. Long parameter lists
 especially with optional parameters can result in code, which is very hard to
 read. As an example lets take this hypothetical LinkAtom widget:
 
-```
+```javascript
 qx.Class.define("custom.LinkAtom", {
   extend : qx.ui.basic.Atom,
 
@@ -230,9 +226,9 @@ qx.Class.define("custom.LinkAtom", {
 All parameters are optional. This can make the code using this class very hard
 to read:
 
-```
-var link = new custom.LinkAtom("Help");
-var link = new custom.LinkAtom("create", null, null, false, true, false, true);
+```javascript
+var link1 = new custom.LinkAtom("Help");
+var link2 = new custom.LinkAtom("create", null, null, false, true, false, true);
 ```
 
 While the first line is perfectly readable, it is virtually impossible to
@@ -243,18 +239,18 @@ In this case it helps to keep only those parameters, which are required or used
 with almost every instance. All other parameters should be converted into
 properties:
 
-```
+```javascript
 qx.Class.define("custom.LinkAtom", {
   extend : qx.ui.basic.Atom,
 
-  construct : function(text, icon) { ... },
+  construct : function(text, icon) { /*...*/ },
 
   properties {
-    toolTipText: { ... },
-    underline: { ... },
-    bold: { ... },
-    wrap: { ... },
-    underlineOnHover: { ... }
+    toolTipText: { /*...*/ },
+    underline: { /*...*/ },
+    bold: { /*...*/ },
+    wrap: { /*...*/ },
+    underlineOnHover: { /*...*/ }
   }
 });
 ```
@@ -263,7 +259,7 @@ Now only the text and icon parameter remain in the constructor. All other
 parameters have been converted into properties. The hard to read example now
 becomes:
 
-```
+```javascript
 var link = new custom.LinkAtom("create").set({
   underline: false
   bold: true,
@@ -272,7 +268,7 @@ var link = new custom.LinkAtom("create").set({
 });
 ```
 
-For someone reading this code it is immediately obvious, what's happening.
+For someone reading this code it is immediately obvious what is happening.
 
 > **note**
 >

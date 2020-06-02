@@ -39,7 +39,7 @@ to the constructor.
 
 ```javascript
 // Singular resource
-var photo = new qx.io.rest.Resource({
+let photo = new qx.io.rest.Resource({
   // Retrieve photo
   get: {
     method: "GET",
@@ -60,7 +60,7 @@ var photo = new qx.io.rest.Resource({
 });
 
 // Plural resource
-var photos = new qx.io.rest.Resource({
+let photos = new qx.io.rest.Resource({
   // Retrieve list of photos
   get: {
     method: "GET",
@@ -78,7 +78,7 @@ var photos = new qx.io.rest.Resource({
 Or programmatically, for each action.
 
 ```javascript
-var photo = new qx.io.rest.Resource();
+let photo = new qx.io.rest.Resource();
 photo.map("get", "GET", "/photo/{id}");
 ```
 
@@ -109,7 +109,7 @@ Parameters are optional unless a check is defined. A default value can be
 provided.
 
 ```javascript
-var photo = new qx.io.rest.Resource();
+let photo = new qx.io.rest.Resource();
 photo.map("get", "GET", "/photo/{id}/{size=medium}", {
   id: qx.io.rest.Resource.REQUIRED
 });
@@ -177,8 +177,8 @@ each request be handled differently, it is possible to remember the id of the
 action's invocation. The `Rest` event includes this id.
 
 ```javascript
-var getPhotoId = photo.get({ id: 1 });
-var getLargePhotoId = photo.get({ id: 1, size: "large" });
+let getPhotoId = photo.get({ id: 1 });
+let getLargePhotoId = photo.get({ id: 1, size: "large" });
 photo.addListener("getSuccess", function (e) {
   if (e.getId() === getLargePhotoId) {
     // Handle large photo

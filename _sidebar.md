@@ -63,7 +63,7 @@
     - [Alphabetic list](/desktop/layout/layout_list.md)
   
   - Qooxdoo Widgets
-    - [Introduction](/desktop/widget/)
+    - [Introduction](/desktop/widget/introduction.md)
     - [Custom widgets](/desktop/gui/customwidgets.md)
     - [Reference](/desktop/widget/reference.md)
     - [Alphabetic list](/desktop/widget/widget_list.md)

@@ -8,7 +8,7 @@ them for the user/developer.
 For all your communication needs you need to create a new instance of Request:
 
 ```javascript
-var req = new qx.io.remote.Request(url, "GET", "text/plain");
+const req = new qx.io.remote.Request(url, "GET", "text/plain");
 ```
 
 Constructor arguments of Request:
@@ -120,7 +120,7 @@ The response object `qx.io.remote.Response` stores all the returning data of a
 
 ```javascript
 // get text from the server
-req = new qx.io.remote.Request(val.getLabel(), "GET", "text/plain");
+const req = new qx.io.remote.Request(val.getLabel(), "GET", "text/plain");
 // request a javascript file from the server
 // req = new qx.io.remote.Request(val.getLabel(), "GET", "text/javascript");
 

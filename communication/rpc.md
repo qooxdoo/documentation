@@ -1,13 +1,12 @@
 # JSON-RPC (JSON Remote Procedure Call)
 
-Qooxdoo includes support for [JSON-RPC v2]\(  
-<https://www.jsonrpc.org> /specification). The implementation allows you to
-write true client/server applications without having to worry about the
-communication details. The client is server-agnostic: it should work with any
-HTTP-based JSONRPC server that complies with the standard JSON-RPC v2
-specification.
+Qooxdoo includes support for [JSON-RPC v2
+specification](https://www.jsonrpc.org). The implementation allows you to write
+true client/server applications without having to worry about the communication
+details. The client is server-agnostic: it should work with any HTTP-based
+JSONRPC server that complies with the standard JSON-RPC v2 specification.
 
-- [`qx.io.remote.Rpc` API](apps://apiviewer/#qx.io.remote.Rpc)
+- See the `qx.io.remote.Rpc` API
 
 Previous versions of Qooxdoo used a custom protocol ("qx1") which is
 incompatible with standard JSON-RPC. For reasons of backwards-compatibility,
@@ -21,7 +20,7 @@ found
 A new transport-agnostic implementation that will implement the complete
 feature-set of JSON-RPC is
 [being developed](https://github.com/qooxdoo/incubator.qx.io.jsonrpc) and will
-be available in an upcoming 6.\* release.
+be available in Qooxdoo version 7.
 
 ## Making remote calls
 
@@ -31,7 +30,7 @@ To make remote calls, you need to create an instance of the
 [Rpc class](apps://apiviewer#qx.io.remote.Rpc) :
 
 ```javascript
-var client = new qx.io.remote.Rpc(
+const client = new qx.io.remote.Rpc(
   "http://localhost:8080/endpoint",
   "Qooxdoo.test"
 );
@@ -48,7 +47,7 @@ When you have the Rpc instance, you can make asynchronous calls (Synchronous
 calls are also possible, but are marked as deprecated).
 
 ```javascript
-var handler = function (result, exc) {
+const handler = function (result, exc) {
   if (exc == null) {
     alert("Result of async call: " + result);
   } else {
@@ -69,7 +68,7 @@ You can abort an asynchronous call while it's still being performed:
 ```javascript
 // Rpc instantiation and handler function left out for brevity
 
-var callref = rpc.callAsync(handler, "echo", "Test");
+const callref = rpc.callAsync(handler, "echo", "Test");
 
 // ...
 
@@ -89,13 +88,9 @@ The following example shows how errors can be handled:
 ```javascript
 // creation of the Rpc instance left out for brevity
 
-var showDetails = function (details) {
+const showDetails = function (details) {
   alert(
-    "origin: " +
-      details.origin +
-      "; code: " +
-      details.code +
-      "; message: " +
+    "origin: " + details.origin + "; code: " + details.code + "; message: " +
       details.message
   );
 };
@@ -135,7 +130,7 @@ destination URL in the Rpc constructor and set the crossDomain property to
 `true`:
 
 ```javascript
-var rpc = new qx.io.remote.Rpc("http://targetdomain.com/appname/.qxrpc");
+const rpc = new qx.io.remote.Rpc("http://targetdomain.com/appname/.qxrpc");
 rpc.setCrossDomain(true);
 ```
 
