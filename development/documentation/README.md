@@ -1,14 +1,15 @@
 # Writing API Documentation
 
-For documenting the Qooxdoo API special comments in the source code
-(so-called "doc comments") are used. The doc comments in Qooxdoo are
-similar to [JSDoc comments](https://jsdoc.app/) or [Javadoc](http://docs.oracle.com/javase/7/docs/technotes/tools/solaris/javadoc.html)
-        comments. To account for some Qooxdoo specific needs there are
-certain differences to the two systems mentioned above.
+For documenting the Qooxdoo API special comments in the source
+code (so-called "doc comments") are used. The doc comments in
+Qooxdoo are similar to [JSDoc comments](https://jsdoc.app/) or
+[Javadoc](http://docs.oracle.com/javase/7/docs/technotes/tools/solaris/javadoc.html)
+comments. To account for some Qooxdoo specific needs there are certain differences
+to the two systems mentioned above.
 
-For a complete treatment of the syntax see the [JSDoc reference](api_jsdoc_ref.md)
-        and see the special [information on the \``@ignore` tag](api_jsdoc_at_ignore.md)
-       .
+For a complete treatment of the syntax see the [JSDoc
+reference](api_jsdoc_ref.md) and see the special
+[information on the \``@ignore` tag](api_jsdoc_at_ignore.md).
 
 ## An introductory example
 
@@ -158,11 +159,10 @@ with the class code seems straight forward, this is not so obvious if
 you want to provide documentation for a collection of classes under a
 common namespace (like _qx.ui.core_, _qx.util_, etc.).
 
-In order to fill this gap you can add a `__init__.js` file to the
-topmost directory of that particular collection. This file should
-contain only a single JSDoc comment that describes the collection as a
-whole. These files are then scanned by the apiviewer application and
-the documentation is inserted at the nodes, together with a list of
-classes of the corresponding collection, in the documentation tree.
-See the API documentation for the [qx.core namespace](apps://apiviewer/#qx.core)
-        as examples.
+In order to fill this gap you can add a `__init__.js` file to the topmost
+directory of that particular collection. This file should contain only a
+single JSDoc comment that describes the collection as a whole. These files
+are then scanned by the apiviewer application and the documentation is
+inserted at the nodes, together with a list of classes of the corresponding
+collection, in the documentation tree. See the API documentation
+for the [qx.core namespace](apps://apiviewer/#qx.core) as examples.

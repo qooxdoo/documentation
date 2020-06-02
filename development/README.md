@@ -20,8 +20,8 @@ Qooxdoo application.
 Our [getting started guide](../README.md) should give you a first
 impression on how to quickly create an application skeleton. We
 suggest you play with this  skeleton application and, with the help of
-the [Demo Browser](apps://demobrowser),  the [Widget Browser](apps://demobrowser/)
-       and the  [API Viewer](apps://apiviewer), add some widgets to
+the [Demo Browser](apps://demobrowser), the [Widget Browser](apps://demobrowser/)
+and the  [API Viewer](apps://apiviewer), add some widgets to
 get  a feel for how Qooxdoo works. Before you start working on a first
 prototype  of your application, we encourage you to review the
 following points.
@@ -29,13 +29,12 @@ following points.
 ## Compiler and CLI
 
 Read this more detailed [introduction to the compiler and the CLI](./compiler)
-       and [in-depth information on the CLI commands](./cli/commands)
- .
+and [in-depth information on the CLI commands](./cli/commands).
 
 ## Development tools
 
 Here's a [list of IDEs, code editors and other development tools](development_tools.md)
-       with support for Qooxdoo's API, features, and semantics.
+with support for Qooxdoo's API, features, and semantics.
 
 ## Application Layout
 
@@ -54,22 +53,22 @@ creating a specific loader that loads all necessary class code.
 
 ## Source versus Build
 
-You will usually develop your application in a so-called source\*
+You will usually develop your application in a so-called "source"
 mode. In this mode individual source code is preserved, except where
 it has to be transpiled for the given target platform. This will make
 it easier to debug the source code, however, it will make the
 application load much slower.
 
-Once you are satisfied with your application, you will create a _build_
-       version of it. This version will be compressed and optimized,
+Once you are satisfied with your application, you will create a "build"
+version of it. This version will be compressed and optimized,
 and will be all geared towards deployment and runtime efficiency. But
 it will be much less amenable to development.
 
 ## Writing API documentation
 
-If you follow [Qooxdoo's API documentation rules](documentation/write_api_documentation.md)
-      , you get Qooxdoo's attractive [API Viewer](apps://apiviewer/)
-for your own code, too. 
+If you follow Qooxdoo's API source code documentation rules, you get Qooxdoo's
+attractive [API Viewer](apps://apiviewer/) for your own code, free of
+charge. See [our guide on how to write API documentation](documentation/).
 
 ## Testing your code
 

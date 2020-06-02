@@ -3,7 +3,7 @@
 The declarative language used in JSDoc-like comments in Qooxdoo has
 grown including specific extensions, maybe in some cases deviating
 from the [official implementation](https://jsdoc.app/), so it makes
-sense to summarize the supported constructs.\`
+sense to summarize the supported constructs.
 
 > Note: Up until version 5, Qooxdoo's API documentation required placing
 > the type of the parameter after the parameter name (`@param name
@@ -46,9 +46,9 @@ An example:
 
 ### Inline Markup
 
-Running text can be formatted using basic [MarkDown syntax](https://www.markdownguide.org/basic-syntax/)
-       . If that does not suffice, there is limited support for HTML
-markup.
+Running text can be formatted using basic 
+[MarkDown syntax](https://www.markdownguide.org/basic-syntax/). 
+If that does not suffice, there is limited support for HTML markup.
 
 ## Attributes / Documentation Tags
 
@@ -98,14 +98,12 @@ The following type indicators are accepted:
 
 -   **Primitive**: `var`, `void`, `undefined`
 
--   **Builtin classes**: `Object`, `Boolean`, `String`, `Number`, `Integer`, `
-           Float`,  
-      `Double`, `Regexp`, `Function`, `Error`, `Map`, `Date`, `Element`
+-   **Builtin classes**: `Object`, `Boolean`, `String`, `Number`, `Integer`,
+    `Float`, `Double`, `Regexp`, `Function`, `Error`, `Map`, `Date`, `Element`
 
--   **Other classes**: Here the full qualified name is specified (e.g. `
-    qx.ui.core.Widget`). If  
-      the referenced class is in the same package as the currently
-    documented class, the plain class name is sufficient (e.g. `Widget`).
+-   **Other classes**: Here the full qualified name is specified (e.g.
+    `qx.ui.core.Widget`). If the referenced class is in the same package as the
+    currently documented class, the plain class name is sufficient (e.g. `Widget`).
 
 -   **Lists**: Homogenous lists are indicated by adding one or more `[]` to
     the type, e.g. `String[]`, `Integer[][]`.
@@ -182,10 +180,10 @@ as "matches".
 -   **Wildcard Match**
 
     Some keys need an explicit, glob-style wildcard at the end to support
-    extension matches. In that case you need to provide a parameter like `
-    foo.*`, in order to match a name of `foo.bar` from the code . Again, a
-    match has to honor object boundaries. In the case of a wildcard like `
-    foo.*`, a simple `foo` will also be matched, so the exact match
+    extension matches. In that case you need to provide a parameter like 
+    `foo.*`, in order to match a name of `foo.bar` from the code . Again, a
+    match has to honor object boundaries. In the case of a wildcard like 
+    `foo.*`, a simple `foo` will also be matched, so the exact match
     (without dot and wildcard) is included.
 
     ```
@@ -201,7 +199,8 @@ key applies.
 ## Section Reference
 
 For a detailed list of tags and their usage, please refer to the  
-[Qooxdoo v5 JSDoc reference list](http://archive.qooxdoo.org/5.0.2/pages/development/api_jsdoc_ref.html#section-reference)
-       . Note that the tags `@lint`, `@group`,` @cldr`, `@attach`, `
+[Qooxdoo v5 JSDoc reference list]
+(http://archive.qooxdoo.org/5.0.2/pages/development/api_jsdoc_ref.html#section-reference).
+Note that the tags `@lint`, `@group`,` @cldr`, `@attach`, `
 @attachStatic`, `@tag`, and  `@signature` described in this list are
 no longer supported and will be ignored.
