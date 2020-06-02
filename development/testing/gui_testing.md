@@ -3,14 +3,16 @@
 To test your application we provide a test infrastructure based on the
 `qx test` command and an extension in compile.js.
 
-To use this you have to generate a compile.js file as described [here](../compiler/configuration/api.md#compile.js)
-      .
+To use this you have to generate a compile.js file as
+described [here](../compiler/configuration/api.md#compile.js).
 
-Here is an example for running a browser test based on [playwright](https://www.npmjs.com/package/playwright)
-      . Note you have to prepare the runtime environment in your build
-scripts yourself (such as installing required libraries and npm
-modules), since they are not included in Qooxdoo (see [this example](https://github.com/Qooxdoo/qxl.apiviewer/blob/master/.github/workflows/build-and-deploy.yml)
-      ).
+Here is an example for running a browser test based on
+[playwright](https://www.npmjs.com/package/playwright) Note
+you have to prepare the runtime environment in your build
+scripts yourself (such as installing required libraries and
+npm modules), since they are not included in Qooxdoo (see 
+[this example](https://github.com/Qooxdoo/qxl.apiviewer/blob/master/.github/workflows/build-and-deploy.yml)
+).
 
 Since the tests are responding to an event, the usual pattern of
 communicating the test results back to the runtime via exceptions does
