@@ -9,29 +9,28 @@ start page of Qooxdoo's built-in server when you execute `npx qx serve -S`.
 
 The applications are:
 
--   **API Viewer**  ([App](apps://apiviewer), [Code](https://github.com/Qooxdoo/qxl.apiviewer)):  
+-   **[API Viewer](apps://apiviewer)** ([Code](https://github.com/Qooxdoo/qxl.apiviewer)):  
     The APIViewer displays the API of the Qooxdoo
     framework, plus of any code written with the Qooxdoo framework
 
--   **Playground**  ([App](apps://playground), [Code](https://github.com/Qooxdoo/qxl.playground)):  
+-   **[Playground](apps://playground)** ([Code](https://github.com/Qooxdoo/qxl.playground)):  
     The Playground allows to run and test Qooxdoo code
     snippets interactively.
 
--   **Demobrowser**  ([App](apps://demobrowser), [Code](https://github.com/Qooxdoo/qxl.demobrowser)):  
+-   **[Demobrowser](apps://demobrowser)** ([Code](https://github.com/Qooxdoo/qxl.demobrowser)):  
     The demobrowser lets you look at common GUI
     application use cases and how they  are solved using Qooxdoo.
 
--   **Widgetbrowser**  ([App](apps://widgetbrowser), [Code](https://github.com/Qooxdoo/qxl.widgetbrowser)): 
+-   **[Widgetbrowser](apps://widgetbrowser)**  ([Code](https://github.com/Qooxdoo/qxl.widgetbrowser)): 
     The widget browser showcases the full portfolio of GUI
     widgets provided by the Qooxdoo framework.
 
--   **Mobileshowcase**  ([App](apps://mobileshowcase), 
-    [Code](https://github.com/Qooxdoo/qxl.mobileshowcase)): 
+-   **[Mobileshowcase](apps://mobileshowcase)** ([Code](https://github.com/Qooxdoo/qxl.mobileshowcase)): 
     The mobileshowcase showcases the full portfolio of GUI
     widgets provided by the Qooxdoo framework for mobile apps. Included is
     a demo how to use OpenStreetMap data together with the openlayers api.
 
--   **Packagebrowser**  ([App](http://www.qooxdoo.org/qxl.packagebrowser), 
-    [Code](https://github.com/Qooxdoo/qxl.packagebrowser)): This
+-   **[Packagebrowser](http://www.qooxdoo.org/qxl.packagebrowser)** 
+    ([Code](https://github.com/Qooxdoo/qxl.packagebrowser)): This
     application lets you browse the extension packages that can be
     installed.
