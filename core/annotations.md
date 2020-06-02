@@ -119,7 +119,7 @@ could get a list of annotations which derive from
 myapp.forms.annotations.ValidationAnnotation, and use that to
 implement it's validation logic, for example:
 
-```
+```javascript
 var propAnnos = qx.Annotation.getProperty(obj.constructor, propName);
 propAnnos.forEach(function(propAnno) {
     if (propAnno instanceof myapp.forms.annotations.ValidationAnnotation) {
@@ -154,7 +154,7 @@ the server, whether they are one way, etc. Once piece of generic code
 can then handle synchronising for Customer or any server object that
 works in this way.
 
-```
+```javascript
 qx.Class.define("myapp.model.Customer", {
     extend: qx.core.Object,
 
@@ -230,7 +230,7 @@ Annotations are declared next to the method being annotated but with a
 leading "@" symbol, or in the case of properties and classes just an
 "@" within the definition. For example:
 
-```
+```javascript
 qx.Class.define("qx.test.Cat", {
   "@": [ "class-annotation" ],
   extend: qx.core.Object,
@@ -248,7 +248,7 @@ namespace.
 Perhaps a better way to annotate would be with an instance of a class
 that has well defined properties; for example:
 
-```
+```javascript
 qx.Class.define("qx.test.Pet", {
   extend: qx.core.Object,
 
@@ -285,7 +285,7 @@ qx.Class.define("qx.test.Cat", {
 Annotations are only useful if you can inspect them, and the `
 qx.Annotation` class provides methods for accessing them; for example:
 
-```
+```javascript
 var pet = this.getPet();
 var annos = qx.Annotation.getProperty(pet.constructor, "color");
 qx.core.Assert.assertEquals(1, annos.length);
@@ -297,7 +297,7 @@ annotations in derived classes; in the example above, the "hasFur"
 property has two annotations in the qx.test.Cat class, but only one
 for qx.test.Pet.
 
-```
+```javascript
 var pet = this.getPet();
 
 // Only Cat's have the second annotation
