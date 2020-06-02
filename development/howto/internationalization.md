@@ -1,13 +1,13 @@
 # Internationalization
 
-We define internationalization (a.k.a. _"I18N"_) as composed of two
+We define internationalization (a.k.a. "I18N") as composed of two
 distinct areas:
 
 **Localization** Adapting software to suit regional customs regarding
-date, time \*and number formatting, names for time units, countries,
+date, time and number formatting, names for time units, countries,
 languages and so forth.
 
-**Translation** Translating user-visible strings in software, like \*
+**Translation** Translating user-visible strings in software, like
 labels on buttons, pop-up messages, headings, help texts, and so
 forth.
 
@@ -30,21 +30,21 @@ category.
 
 A coherent set of these conventions taken together is usually referred
 to as a [locale](http://en.wikipedia.org/wiki/Locale), and they are
-signified by a country code or some derivative thereof. _en_, _en_US_
-and _en_UK_ for example signify three distinct locales that are used
+signified by a country code or some derivative thereof. `en`, `en_US`
+and `en_UK` for example signify three distinct locales that are used
 in English speaking countries. The understanding is that there is a
 sort of inheritance relation between more general and more specific
-locales, so that e.g. _en_US_ only needs to specify the items in which
-it deviates from the more general _en_ locale, and relies on the _en_
+locales, so that e.g. `en_US` only needs to specify the items in which
+it deviates from the more general `en` locale, and relies on the `en`
 settings for all other on which they agree. For historical reasons
-there is a common "ancestor" to all locales which is called _C_. If
-not specified all locale settings fall back to those given in _C_
-(which is mostly a copy of _en_). Qooxdoo supports this fall-back
-chain of locale settings by looking up a specific item e.g first in _
-en_US_ (if that were the current locale), then _en_ and then in _C_.
+there is a common "ancestor" to all locales which is called `C`. If
+not specified all locale settings fall back to those given in `C`
+(which is mostly a copy of `en`). Qooxdoo supports this fall-back
+chain of locale settings by looking up a specific item e.g first in `
+en_US` (if that were the current locale), then `en` and then in `C`.
 
 To support such regional settings, Qooxdoo uses data from the CLDR
-project, the _"Common Locale Data Repository"_, which collects data
+project, the "Common Locale Data Repository", which collects data
 for known locales in a set of XML files. See the project's [home page](http://cldr.unicode.org)
         and [terms of use](http://www.unicode.org/copyright.html).
 
@@ -109,16 +109,17 @@ let button = new qx.ui.form.Button(this.tr("Hello World"));
 ```
 
 `tr` marks the string `"Hello World"` for translation (This string is
-often referred to as the _message id_, as it serves as the lookup key
+often referred to as the `message id`, as it serves as the lookup key
 for any provided translation). This means that the string itself will
 be extracted when the appropriate generator job is run (see further
 internationalization.md#extract_the_messages). During application run
-time, \_tr_ returns the translation of the given string _under the
+time, `tr` returns the translation of the given string _under the
 current locale_. That means, the actual string you get at this point
 in time depends on the locale in effect. If, on the other hand, the
 environment setting qx.dynlocale core/environment.md#environment is
-set to "true", _tr_ returns an instance of `qx.locale.LocalizedString`
-. The `toString()` method of the returned object performs the actual
+set to "true", `tr` returns an instance of 
+[`qx.locale.LocalizedString`](https://qooxdoo.org/api/#qx.locale.LocalizedString). 
+The `toString()` method of the returned object performs the actual
 translation based on the current locale. This has the advantage that
 later changes to the locale (see further
 internationalization.md#run_the_translated_application) are
@@ -131,9 +132,8 @@ current locale, the string itself will be returned.
 
 If the string given to `tr` is the empty string, the header of the .po
 file is returned (which can be a bit confusing if done accidentally,
-but is correct according to the [PO specs]\(  
-<https://www.gnu.org/software/gettext/manual/html_node/PO-Files.html#PO-Files>
-        PO specs).
+but is correct according to the 
+[PO specs](https://www.gnu.org/software/gettext/manual/html_node/PO-Files.html#PO-Files).
 
 There is one exception to the simple rule that all strings can just be
 replaced by wrapping them in an appropriate `this.tr()` function call:
@@ -183,7 +183,7 @@ let n = 2;
 let label = new qx.ui.basic.Label(this.trnc("Helpful comment for translator", "Copied one file.", "Copied %1 files.", n, n));
 ```
 
-Combines _trc_ with _trn_, i.e. same as _trn_ but first argument is
+Combines `trc` with `trn`, i.e. same as `trn` but first argument is
 comment.
 
 #### marktr
@@ -257,10 +257,11 @@ further internationalization.md#update_the_application).
 
 ### Translate the Messages
 
-These `.po` files are the actual files you - or your translator ;-) -
+These `.po` files are the actual files you - or your translator) -
 would have to edit. Since Qooxdoo internally uses well-established
-tools and formats for internationalization ([GNU gettext](http://en.wikipedia.org/wiki/GNU_gettext)
-       , any "po"-aware editor or even a simple text editor can be
+tools and formats for internationalization 
+([GNU gettext](http://en.wikipedia.org/wiki/GNU_gettext), 
+any "po"-aware editor or even a simple text editor can be
 used.
 
 ### Update the Application
@@ -285,9 +286,9 @@ qx compile`
 ### Run the translated Application
 
 By default Qooxdoo tries to use the browser's default language as its
-locale. You can change the language of the application by using `
-qx.locale.Manager`. For example, the following sets the language of
-the application to French:
+locale. You can change the language of the application by using 
+[`qx.locale.Manager`](https://qooxdoo.org/api/#qx.locale.Manager). 
+For example, the following sets the language of the application to French:
 
 ```javascript
 qx.locale.Manager.getInstance().setLocale("fr");
