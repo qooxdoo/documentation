@@ -118,7 +118,7 @@ current locale_. That means, the actual string you get at this point
 in time depends on the locale in effect. If, on the other hand, the
 environment setting qx.dynlocale core/environment.md#environment is
 set to "true", `tr` returns an instance of 
-[`qx.locale.LocalizedString`](https://qooxdoo.org/api/#qx.locale.LocalizedString). 
+[`qx.locale.LocalizedString`](apps://apiviewer/#qx.locale.LocalizedString). 
 The `toString()` method of the returned object performs the actual
 translation based on the current locale. This has the advantage that
 later changes to the locale (see further
@@ -287,7 +287,7 @@ qx compile`
 
 By default Qooxdoo tries to use the browser's default language as its
 locale. You can change the language of the application by using 
-[`qx.locale.Manager`](https://qooxdoo.org/api/#qx.locale.Manager). 
+[`qx.locale.Manager`](apps://apiviewer/#qx.locale.Manager). 
 For example, the following sets the language of the application to French:
 
 ```javascript
