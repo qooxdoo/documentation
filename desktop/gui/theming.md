@@ -238,11 +238,11 @@ This theme is to define which icon set is used and normally consists only of 2
 main keys (title and aliases).
 
 The important one is the `aliases` key which points the generator to the
-location of the icon set. The `icon` alias, which is used to reference icons in
-Qooxdoo applications, is set to the value of this key. As Qooxdoo uses the free
-available [Tango](http://tango.freedesktop.org/Tango_Desktop_Project) and
-[Oxygen](http://www.oxygen-icons.org) icon sets it is not necessary to extend
-these.
+location of the icon set. The `icon` alias, which is used to reference icons
+in Qooxdoo applications, is set to the value of this key. As Qooxdoo uses the
+freely available [Tango](https://commons.wikimedia.org/wiki/Tango_icons) and
+[Oxygen](http://www.iconarchive.com/show/oxygen-icons-by-oxygen-icons.org.html)
+icon sets it is not necessary to extend these.
 
 Complete code for the `tango` icon theme:
 
@@ -314,7 +314,7 @@ provides multiple themes that can be switched at runtime.
   the compile jobs. A good way to achieve this is to override the
   pages/tool/generator/generator_default_jobs#includes job in your config.json:
 
-  ```
+  ```json5
   "includes" : {
     "include" : [
       "qx.theme.Classic",
@@ -334,7 +334,7 @@ provides multiple themes that can be switched at runtime.
   all known theme classes, filter out the "meta" classes, decide which to use,
   and set it as the current theme, exemplified here through two methods:
 
-  ```
+  ```javascript
   _getThemeNames : function() {
     var theme, theme_names = [];
     var themes = qx.Theme.getAll();
@@ -368,7 +368,7 @@ provides multiple themes that can be switched at runtime.
   For 1. add macro definitions to your config.json which can later be used in
   the @asset development/api_jsdoc_ref.md#asset hints of class code. E.g.:
 
-  ```
+  ```json5
   // config.json :
 
   "let" : {
@@ -381,7 +381,7 @@ provides multiple themes that can be switched at runtime.
   literally. This also allows you to later add further icon themes just by
   adapting the configuration, without touching code:
 
-  ```
+  ```javascript
   // Application class:
 
   // Use the asset macro "qx.icontheme" to register icons from both themes.
@@ -392,7 +392,7 @@ provides multiple themes that can be switched at runtime.
 
   For 2. use an alias in application code to reference icons transparently:
 
-  ```
+  ```javascript
   // Use an aliased resource id for the icon
   var b = qx.ui.form.Button("My button", "icon/16/apps/utilities-terminal.png");
   ```
@@ -403,5 +403,5 @@ provides multiple themes that can be switched at runtime.
   use an explicit pages/tool/generator/generator* config_ref#asset-let in your
   config.json, rather than using the default QXICONTHEME
   tool/generator/generator_config_macros.md#qxicontheme macro. A suitable alias
-  like \_icon* -> _myapp/icontheme/Foo_ can be defined in the theme
+  like _icon* -> _myapp/icontheme/Foo_ can be defined in the theme
   ui_theming.md#icon_theme directly.
