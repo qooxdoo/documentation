@@ -270,7 +270,5 @@ var link = new custom.LinkAtom("create").set({
 
 For someone reading this code it is immediately obvious what is happening.
 
-> **note**
->
-> Keep parameter lists small and use properties instead of optional constructor
+> :memo: Keep parameter lists small and use properties instead of optional constructor
 > parameters.

@@ -1,10 +1,10 @@
 # The Qooxdoo package system
 
-**Note**: _The package system was previously called "Qooxdoo-contrib". It will
+> :memo: The package system was previously called "Qooxdoo-contrib". It will
 take a while until the terminology and code will have fully transitioned to the
 new name. In the meantime, you'll probably find references to "contribs"
 everywhere. The new system is fully backwards compatible to "Qooxdoo-contrib",
-but will issue deprecation warnings when the old commands are used._
+but will issue deprecation warnings when the old commands are used.
 
 ## Overview
 

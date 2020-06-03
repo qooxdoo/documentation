@@ -105,9 +105,7 @@ if not properly understood. It centers around the different behavior in the
 assignment of JavaScript's two data types (_primitive types_ vs. _reference
 types_).
 
-> **note**
->
-> Please make sure you understand the following explanation to avoid possible
+> :memo: Please make sure you understand the following explanation to avoid possible
 > future coding errors.
 
 Primitive types include `Boolean`, `Number`, `String`, `null` and the rather

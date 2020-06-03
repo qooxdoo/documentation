@@ -77,9 +77,7 @@ application root is an instance of
 [qx.ui.layout.Basic](apps://apiviewer/#qx.ui.layout.Basic) you can only use
 `left` and `top` coordinates to position your widgets.
 
-> **note**
->
-> Absolute positioning requires no existing DOM node in the target document.
+> :memo: Absolute positioning requires no existing DOM node in the target document.
 
 ```
 qx.Class.define("myPortal.Application",
@@ -112,9 +110,7 @@ To add widgets at certain locations inside the page you can create or reuse DOM
 nodes which act as islands where the Qooxdoo widgets live in regard to the page
 flow.
 
-> **note**
->
-> You need to define specific DOM nodes in your document which act as islands
+> :memo: You need to define specific DOM nodes in your document which act as islands
 > for the Qooxdoo widgets.
 >
 > Additionally if you use the dynamic mode (automatic resizing) it is important

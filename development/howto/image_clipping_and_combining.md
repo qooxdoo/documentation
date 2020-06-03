@@ -6,9 +6,7 @@ appearance or decoration themes (desktop/ui_theming).
 
 ## Configuration
 
-> **note**
->
-> To be able to use image clipping and combining you need a locally installed
+> :memo: To be able to use image clipping and combining you need a locally installed
 > ImageMagick (introduction/third_party_components) package. The latest version
 > known to work is 6.6.1.
 

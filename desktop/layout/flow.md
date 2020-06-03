@@ -1,8 +1,6 @@
 # Flow
 
-> **note**
->
-> This layout manager is available since Qooxdoo 0.8.3.
+> :memo: This layout manager is available since Qooxdoo 0.8.3.
 
 A basic layout, which supports positioning of child widgets in a 'flowing'
 manner, starting at the container's top/left position, placing children left to

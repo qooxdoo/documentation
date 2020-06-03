@@ -68,9 +68,7 @@ A color theme defines all colors used by the framework. Each color is defined by
 an unique name and a value which can be written as hex, rgb or named color. This
 defined name is usable throughout the whole framework and your application.
 
-> **note**
->
-> The best way to organize your color names is to use **semantic ones** like
+> :memo: The best way to organize your color names is to use **semantic ones** like
 > `background`, `text-input` or `text-disabled`. This way it is easier to use
 > one color for multiple widgets.
 
@@ -117,9 +115,7 @@ In a decoration theme you can use several different decorators depending on the
 results you wish to achieve. Please take a look at the decorator article
 (ui_decorators) to get more information.
 
-> **note**
->
-> It is recommended to define the decorations inside the theme instead of
+> :memo: It is recommended to define the decorations inside the theme instead of
 > creating manually decorator instances inside your application code. This way
 > the created decorators can be used by multiple widgets.
 
@@ -187,9 +183,7 @@ declaration? This is needed to for the images used within the theme. A
 description of how to work with resources is available here
 ui_resources.md#declaring_resources_in_the_code.
 
-> **note**
->
-> The `aliases` key is especially important when defining an own decorator
+> :memo: The `aliases` key is especially important when defining an own decorator
 > theme. This entry does add a new alias at the `AliasManager` class and
 > verifies that your images for the decoration theme are found by the
 > `ResourceManager` which is working with the resolve URLs of the `AliasManager`
@@ -202,9 +196,7 @@ application. As the number of types/variants of fonts used with application
 isn't that big the font theme is normally a compact one. Web fonts are also
 defined here. See the article on web fontsui_webfonts.md#webfonts for details.
 
-> **note**
->
-> It is always a good idea to limit the number of types or variants of fonts to
+> :memo: It is always a good idea to limit the number of types or variants of fonts to
 > create a homogenous look.
 
 To demonstrate how compact and powerful a font theme can look like, take a look
@@ -306,9 +298,7 @@ Having e.g. the Qooxdoo modern theme defined in your config.json file, this line
 of code switches the whole UI to the classic theme. Of course, this can also be
 a custom theme desktop/ui_custom_themes.md#custom_themes.
 
-> **note**
->
-> Referencing a second theme in the code also adds a dependency to the theme and
+> :memo: Referencing a second theme in the code also adds a dependency to the theme and
 > all the classes and resources necessary. This is only necessary if the theme
 > switch is actively triggered. Parts
 > parts_overview.md#parts_and_packages_overview offer a convenient way of on

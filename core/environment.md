@@ -277,9 +277,7 @@ additional environment settings.
 If the environment settings are set with this method, the values are set as
 strings. Your code should take care to convert the values from string.
 
-> **note**
->
-> Because the values are set as strings, if there is a need to override any
+> :memo: Because the values are set as strings, if there is a need to override any
 > predefined keys, this method is probably not the best option. The framework
 > uses those keys in various places and many of the keys accept boolean or
 > numeric values. For example the `qx.allowUrlSettings` option, described in the

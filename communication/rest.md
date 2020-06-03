@@ -6,9 +6,7 @@ representing the remote resource is instantiated and **actions** are invoked on
 this resource. A resource with its actions can be configured declaratively or
 programmatically.
 
-> **Note**
->
-> When to use `qx.bom.rest.Resource`? Mostly `qx.io.rest.Resource` delegates to
+> :memo: When to use `qx.bom.rest.Resource`? Mostly `qx.io.rest.Resource` delegates to
 > `qx.bom.rest.Resource` and adds some features on top. For **qx.Desktop** apps
 > you probably want to use `qx.io.rest.Resource` but when developing an
 > app/website with **qx.Website** only `qx.bom.rest.Resource` is available (i.e.

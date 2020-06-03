@@ -253,9 +253,7 @@ You should define at least one of the attributes `init`, `nullable` or
 `inheritable`. Otherwise, the first call to the getter would stop with an
 exception because the computed value is not (yet) defined.
 
-> **note**
->
-> As an alternative to the `init` key you could set the init value of the
+> :memo: As an alternative to the `init` key you could set the init value of the
 > property by calling an initializing function `this.initMyProperty(value)` in
 > the constructor. See below for details.
 
@@ -301,9 +299,7 @@ members :
 
 The applying method is only called when the value has changed.
 
-> **note**
->
-> When using reference data types like `Object` or `Array` the apply method is
+> :memo: When using reference data types like `Object` or `Array` the apply method is
 > **always** called, since these are different objects and indeed different
 > values. This is JavaScript functionality and not Qooxdoo specific.
 
@@ -320,9 +316,7 @@ Qooxdoo fires a `qx.event.type.Data` which supports the methods `getData()` and
 `getOldData()` to allow easy access to the new and old property value,
 respectively.
 
-> **note**
->
-> Events are only useful for public properties. Events for protected and private
+> :memo: Events are only useful for public properties. Events for protected and private
 > properties are usually not a good idea.
 
 #### Example
@@ -377,9 +371,7 @@ internationalizing your application (development/internationalization): Because
 static `qx.locale.Manager.tr()` there instead, or use `this.tr()` in the call of
 the initializing function in the constructor.
 
-> **note**
->
-> You need to add a `deferredInit:true` to the property configuration to allow
+> :memo: You need to add a `deferredInit:true` to the property configuration to allow
 > for a deferred initialization for reference types as mentioned above.
 
 ```
@@ -493,9 +485,7 @@ declaration, it is possible to call the init method with one parameter, which
 represents the init value. This may be useful to apply reference types to each
 instance. Thus they would not be shared between instances.
 
-> **note**
->
-> Please remember that init values are not for incoming user values. Please use
+> :memo: Please remember that init values are not for incoming user values. Please use
 > `init` only for class defined things, not for user values. Otherwise you
 > torpedo the multi-value idea behind the dynamic properties.
 
@@ -562,9 +552,7 @@ properties : {
 }
 ```
 
-> **note**
->
-> Providing a list of possible values only works with primitive types (like
+> :memo: Providing a list of possible values only works with primitive types (like
 > strings and numbers), but not with reference types (like objects, functions,
 > etc.).
 
@@ -820,9 +808,7 @@ properties : {
 }
 ```
 
-> **note**
->
-> `themeable` should only be enabled for truly _theme-relevant_ properties like
+> :memo: `themeable` should only be enabled for truly _theme-relevant_ properties like
 > color and decorator, but not for _functional_ properties like enabled,
 > tabIndex, etc.
 
@@ -881,9 +867,7 @@ support inheritance may be a good orientation:
 - `list-style`
 - `text-align`
 
-> **note**
->
-> This list of CSS properties is only meant for orientation and does not reflect
+> :memo: This list of CSS properties is only meant for orientation and does not reflect
 > any of Qooxdoo widget properties.
 
 ## Internal methods

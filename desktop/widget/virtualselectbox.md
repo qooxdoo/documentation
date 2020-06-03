@@ -155,9 +155,7 @@ The virtual SelectBox uses the same
 interface as the virtuallist to configure the SelectBox's behavior (item and
 group renderer configuration, filtering, sorting, grouping, etc.).
 
-> **note**
-
-> Only widget based rendering for list and group items is supported.
+> :memo: Only widget based rendering for list and group items is supported.
 
 ## Code Example
 

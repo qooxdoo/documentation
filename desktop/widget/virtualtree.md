@@ -20,9 +20,7 @@ With the
 interface it is possible to configure the tree's behavior (item renderer
 configuration, etc.).
 
-> **note**
-
-> Only widget based rendering for tree items is supported.
+> :memo: Only widget based rendering for tree items is supported.
 
 ## Code Example
 

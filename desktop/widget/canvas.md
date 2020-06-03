@@ -4,9 +4,7 @@ This widget embed the
 [HTML canvas element](https://developer.mozilla.org/de/docs/Web/API/HTMLCanvasElement)
 .
 
-> **note**
->
-> It does not work with Internet Explorer
+> :memo: It does not work with Internet Explorer
 
 ## Preview Image
 

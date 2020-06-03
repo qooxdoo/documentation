@@ -21,9 +21,7 @@ With the
 interface, it is possible to configure the list's behavior (item and group
 renderer configuration, filtering, sorting, grouping, etc.).
 
-> **note**
-
-> Only widget based rendering for list and group items is supported.
+> :memo: Only widget based rendering for list and group items is supported.
 
 ## Code Example
 

@@ -96,9 +96,7 @@ different modes:
 - **adaptive:** Easy Web-2.0 selection mode: multiple items can be selected
   without modifier keys. Empty selections are possible.
 
-> **note**
->
-> _Multi_ and _Adaptive_ selections dealing with **selection ranges**, _ Single_
+> :memo: _Multi_ and _Adaptive_ selections dealing with **selection ranges**, _ Single_
 > and _One_ dealing with one **selected item**.
 
 ```javascript

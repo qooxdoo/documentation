@@ -25,9 +25,7 @@ Constructor arguments of Request:
 - text/javascript
 - application/json
 
-> **note**
->
-> `text/javascript` and `application/json` will be directly evaluated. As
+> :memo: `text/javascript` and `application/json` will be directly evaluated. As
 > content you will get the return value.
 
 If you use the iframe transport implementation the functionality of the type is
@@ -45,9 +43,7 @@ convert it. This also depends greatly on the mimetype sent out by the server.
   useful for POST)
 - `getData()`: Returns the data currently set for the request
 
-> **note**
->
-> Parameters are always sent as part of the URL, even if you select POST. If you
+> :memo: Parameters are always sent as part of the URL, even if you select POST. If you
 > select POST, use the setData method to set the data for the request body.
 
 ## Request configuration (properties)
@@ -111,9 +107,7 @@ The response object `qx.io.remote.Response` stores all the returning data of a
 
 - `getStatusCode`: Returns the HTTP status code.
 
-> **note**
->
-> Response headers and status code information are not supported for iframe
+> :memo: Response headers and status code information are not supported for iframe
 > based communication!
 
 ## Simple example

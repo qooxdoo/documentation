@@ -85,9 +85,9 @@ Here's a complete, although minimal, example of an index.html:
 
 ## Splash Screens
 
-**NOTE** It's fair to say that this is still a work in progress - although this
-\_treatment for SplashScreens works just fine, it is only able to update the UI
-\_as each individual script loads, which means that for a `build` target,
+> :memo: It's fair to say that this is still a work in progress - although this
+treatment for SplashScreens works just fine, it is only able to update the UI
+as each individual script loads, which means that for a `build` target,
 nothing \*will appear because there is only one script file.
 
 Splash screens are an optional feature of the application loader in

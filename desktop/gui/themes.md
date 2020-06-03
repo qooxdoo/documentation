@@ -78,9 +78,7 @@ After editing your `config.json` the very last step is to generate your
 application sources and you're done. Now you can adjust and extend your
 appearance theme to suit your needs.
 
-> **note**
->
-> These steps are also applicable for the other themes.
+> :memo: These steps are also applicable for the other themes.
 
 ## Define Custom Themes
 
@@ -326,9 +324,7 @@ style : function(states)
 }
 ```
 
-> **note**
->
-> The `undefined` value means that no value should be applied. When Qooxdoo runs
+> :memo: The `undefined` value means that no value should be applied. When Qooxdoo runs
 > through the returned map it calls the `reset` method for properties with a
 > value of `undefined`. In most cases it would be also perfectly valid to use
 > `null` instead of `undefined`, but keep in mind that `null` is stored using

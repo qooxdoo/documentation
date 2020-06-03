@@ -1,8 +1,6 @@
 # ThemedIframe
 
-> **note**
->
-> This widget is available since Qooxdoo 0.8.3
+> :memo: This widget is available since Qooxdoo 0.8.3
 
 Container widget for internal frames (iframes). An iframe can display any HTML
 page inside the widget.

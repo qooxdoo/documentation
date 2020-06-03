@@ -16,9 +16,7 @@ This is because we use the default
 can only show an image and/or label. To achieve our goal, we have to create a
 custom widget which we can use instead of the ListItem.
 
-> **note**
->
-> The code in this tutorial should also work when you haven't completed the 4.1
+> :memo: The code in this tutorial should also work when you haven't completed the 4.1
 > tutorial because it doesn't depend on the code changes from tutorial 4.1. But
 > if you have any problems to run the tutorial, you can also checkout the code
 > from tutorial 4.1 on

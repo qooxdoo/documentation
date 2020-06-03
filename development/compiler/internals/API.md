@@ -32,7 +32,7 @@ When creating an Application, the Compiler assembles the code according to a
 Target - currently these are SourceTarget and BuildTarget and they correspond to
 the "build" and "source" targets in Qooxdoo v5.
 
-**NOTE** that Hybrid targets do not exist any more - please see the `bundles`
+> :memo: Note that Hybrid targets do not exist any more - please see the `bundles`
 setting in `compile.json`
 
 ## Maker (`qxcompiler.makers.*`)
