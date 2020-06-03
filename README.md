@@ -150,10 +150,9 @@ contain any of the debugging support.
 ## Reading on
 
 With the first mini application up and running you are now ready for bigger
-things. You can either start reading the theory parts of the  
-[documentation](contents.md) where we explore in detail how the Qooxdoo class
-system works or you can try some more hands-on by working through the
-[tutorials](tutorial/).
+things. You can either start reading our [comprehensive manual](contents.md) 
+or you can try some more hands-on by working through the [tutorials](tutorial/)
+first.
 
 If you ever get stuck, feel free to open the chat window by pressing the button
 in the bottom right hand corner of the documentation.
