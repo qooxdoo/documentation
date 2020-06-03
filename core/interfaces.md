@@ -6,7 +6,7 @@ Interface definitions look very similar to normal class definitions.
 
 Example:
 
-```
+```javascript
 qx.Interface.define("qx.test.ISample",
  {
    extend: [SuperInterfaces],
@@ -85,7 +85,7 @@ thrown.
 
 Example:
 
-```
+```javascript
     qx.Class.define("qx.test.Sample",
      {
        implement: [qx.test.ISample],

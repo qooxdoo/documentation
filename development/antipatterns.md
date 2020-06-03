@@ -158,11 +158,11 @@ functions.
 
 So loop trough an array with an normal loop:
 
-````javascript
+```javascript
 var a = [1, 2, 3];
 for (var i=0, l=a.length; i<l; i++) {
   this.debug(a[i]);
 }
 ```
 
-````
+```

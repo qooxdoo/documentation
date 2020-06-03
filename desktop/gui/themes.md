@@ -17,7 +17,7 @@ to create an own meta theme which sets your extended theme.
 For example you like to add some appearances (of your own widgets) to the Modern
 theme you can simply extend the appearance theme of the Modern theme.
 
-```
+```javascript
 qx.Theme.define("myApplication.theme.Appearance",
 {
   extend : qx.theme.modern.Appearance,
@@ -44,7 +44,7 @@ qx.Theme.define("myApplication.theme.Appearance",
 To enable your own appearance theme you also have to extend the Meta theme and
 set your appearance theme.
 
-```
+```javascript
 qx.Theme.define("myApplication.theme.Theme",
 {
   title : "my meta theme",
@@ -119,7 +119,7 @@ A theme normally consists of a set of entries. Each entry has a key which is
 basically some kind of selector which matches to a specific widget. Missing
 selectors are presented as a warning when developing with debug code enabled.
 
-```
+```javascript
 qx.Theme.define("qx.theme.modern.Appearance",
 {
   appearances :
@@ -183,7 +183,7 @@ option is named "alias", it is basically a string, redirecting to another
 selector. In the `Spinner` example from above we may just want to use aliases
 for the buttons. See the example:
 
-```
+```javascript
 qx.Theme.define("qx.theme.modern.Appearance",
 {
   appearances :
@@ -217,7 +217,7 @@ redirected as well. Internally this mapping looks like this:
 This is super convenient for simple cases and additionally it is still possible
 to selectively override definitions for specific child controls.
 
-```
+```javascript
 qx.Theme.define("qx.theme.modern.Appearance",
 {
   appearances :
@@ -247,7 +247,7 @@ Internally the above results into the following remapping:
 The more complex full entry is a map with several sub entries where all are
 optional:
 
-```
+```javascript
 qx.Theme.define("qx.theme.modern.Appearance",
 {
   appearances :
@@ -359,7 +359,7 @@ Child control aliases are compared to the normal aliases mentioned above, just
 define aliases for the child controls. They do not redirect the local selector
 to the selector defined by the alias. An example to make this more clear:
 
-```
+```javascript
 qx.Theme.define("qx.theme.modern.Appearance",
 {
   appearances :
@@ -397,7 +397,7 @@ whole widget. It is also possible to include the original part of the `button`
 into the `spinner/upbutton` as well. This is useful to just override a few
 properties like seen in the following example:
 
-```
+```javascript
 qx.Theme.define("qx.theme.modern.Appearance",
 {
   appearances :
@@ -611,7 +611,7 @@ method.
 
 Here is a sample text shadow decorator mixin:
 
-```
+```javascript
 qx.Mixin.define("my.MTextShadow", {
   properties : {
     textShadowColor : {

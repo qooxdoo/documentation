@@ -49,7 +49,7 @@ npm i -g @Qooxdoo/compiler
 
 Let's create a "skeleton" application and then compile it:
 
-```
+```shell script
 qx create myFirstApp --noninteractive
 cd myFirstApp
 qx compile
@@ -74,7 +74,7 @@ single time_ that you edit a source file; this would be a hassle, so there is
 the fully automatic version that watches for changes; just run this in a spare
 terminal window:
 
-```
+```javascript
 qx compile --watch
 ```
 
@@ -82,7 +82,7 @@ One more really useful tool is that `qx` includes its own webserver, which also
 does automatic compilation. If you're running `qx compile` in a terminal window,
 hit `Ctrl-C` to stop it and then try this instead:
 
-```
+```javascript
 qx serve
 ```
 
@@ -100,7 +100,7 @@ new packages is trivial - even if there is a whole set of dependencies, the
 Here's an example where we add a couple of packages into your project, and then
 serve them up:
 
-```
+```javascript
 qx package install Qooxdoo/qxl.apiviewer
 qx package install Qooxdoo/qxl.widgetbrowser
 qx serve --show-startpage

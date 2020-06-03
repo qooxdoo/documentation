@@ -240,9 +240,9 @@ widget.setPadding([10, 20, 30, 40]);
 The following code creates a property `myProperty` and the corresponding
 functions like `setMyProperty()` and `getMyProperty()`.
 
-```
+```javascript
 qx.Class.define(
-...
+/* ... */
 properties : {
   myProperty : { nullable : true }
 }
@@ -374,7 +374,7 @@ the initializing function in the constructor.
 > :memo: You need to add a `deferredInit:true` to the property configuration to allow
 > for a deferred initialization for reference types as mentioned above.
 
-```
+```javascript
 qx.Class.define("qx.MyClass", {
   construct: function() {
     this.initMyProperty([1, 2, 4, 8]);

@@ -45,7 +45,7 @@ theme as of collection whose parts can easily be changed.
 
 Sample of a meta theme:
 
-```
+```javascript
 qx.Theme.define("qx.theme.Modern",
 {
   meta :
@@ -74,7 +74,7 @@ defined name is usable throughout the whole framework and your application.
 
 Part of a sample color theme:
 
-```
+```javascript
 /**
  * sample color theme
  */
@@ -121,7 +121,7 @@ results you wish to achieve. Please take a look at the decorator article
 
 What a decoration theme can look like:
 
-```
+```javascript
 /**
  * Sample decoration theme.
  *
@@ -202,7 +202,7 @@ defined here. See the article on web fontsui_webfonts.md#webfonts for details.
 To demonstrate how compact and powerful a font theme can look like, take a look
 at the example font theme:
 
-```
+```javascript
 /**
  * The modern font theme.
  */
@@ -246,7 +246,7 @@ these.
 
 Complete code for the `tango` icon theme:
 
-```
+```javascript
 /**
  * Tango icons
  */
@@ -290,7 +290,7 @@ QXTHEME : qx.theme.Modern,
 
 It is also possible to set a theme _at runtime_:
 
-```
+```javascript
 qx.theme.manager.Meta.getInstance().setTheme(qx.theme.Classic);
 ```
 

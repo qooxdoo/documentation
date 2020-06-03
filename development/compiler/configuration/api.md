@@ -45,7 +45,7 @@ module.
 A better example would be to define a Qooxdoo class that derives from the
 standard API classes and return that instead:
 
-```
+```javascript
 qx.Class.define("myapp.compile.CompilerApi", {
   extend: qx.tool.cli.api.CompilerApi,
 
@@ -70,7 +70,7 @@ You still need to have a `compile.json` because all that example above does is
 demonstrate how to override the class which is used to load `compile.json`.
 Let's do something more interesting, and edit the data on the fly:
 
-```
+```javascript
 qx.Class.define("myapp.compile.CompilerApi", {
   extend: qx.tool.cli.api.CompilerApi,
 
@@ -97,7 +97,7 @@ the `environment` block on the fly; assuming that the hostname of your computer
 is set to "MyDevMachine', this will make it look like your `compile.json`
 contained this environment block:
 
-```
+```javascript
   /* ... snip ... */
   "environment": {
       "qx.icontheme": "Tango",
@@ -129,7 +129,7 @@ code that changes how they will be compiled into an application.
 
 For example:
 
-```
+```javascript
 qx.Class.define("abc.somepackage.LibraryApi", {
   extend: qx.tool.cli.api.LibraryApi,
 

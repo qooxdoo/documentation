@@ -91,7 +91,7 @@ The first step is always to update the local cache of available packages
 libraries. For this, simply execute `qx package update`. The command has the
 following options:
 
-```
+```shell script
 qx package update [repository]
 
 Options:
@@ -191,7 +191,7 @@ Qooxdoo framework version used as per the semver range in the
 `require.@Qooxdoo/framework` key in their `Manifest.json` . To install libraries
 that are not listed for this reason anyways, do the following:
 
-```
+```shell script
 qx package list --all # this will list all available packages, regardless of compatibility
 qx package install <URI>@<release_tag>
 ```
@@ -201,13 +201,13 @@ development, if you work with a local git repository. If the library is
 published using the Qooxdoo package registry, but you wish to use a locally
 stored version of it, you can use
 
-```
+```shell script
 qx package install owner/library --from-path ../path/to/the/library
 ```
 
 Otherwise, you can install it "anonymously" with
 
-```
+```shell script
 qx package install --from-path ../path/to/the/library
 ```
 
@@ -236,7 +236,7 @@ qx package upgrade
 
 If you only want to upgrade one of the libraries, use
 
-```
+```shell script
 qx package upgrade <library uri>
 ```
 

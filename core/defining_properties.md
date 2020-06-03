@@ -18,7 +18,7 @@ the available features.
 The following code creates a property `myProperty` and the corresponding
 functions like `setMyProperty()` and `getMyProperty()`.
 
-```
+```javascript
 qx.Class.define(
 ...
 properties : {
@@ -194,7 +194,7 @@ a deferred initialization for reference types as mentioned above.
 
 </div>
 
-```
+```javascript
 qx.Class.define("qx.MyClass", {
   construct: function() {
     this.initMyProperty([1, 2, 4, 8]);

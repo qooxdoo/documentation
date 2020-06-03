@@ -50,7 +50,7 @@ First we have to create a new page class. In order to do so, create a new folder
 "Input.js". This file will contain the `mobiletweets.page.Input` class. Define
 the class like this: :
 
-```
+```javascript
 qx.Class.define("mobiletweets.page.Input",
 {
   extend : qx.ui.mobile.page.NavigationPage,
@@ -142,7 +142,7 @@ the first time.
 Lets try it! Create another page class "Tweets" in the
 "source/class/mobiletweets/page" folder: :
 
-```
+```javascript
 qx.Class.define("mobiletweets.page.Tweets",
 {
   extend : qx.ui.mobile.page.NavigationPage,
@@ -482,7 +482,7 @@ Lets create a simple "TweetDetail" page that only shows a
 like you have done before, in the "source/class/mobiletweets/page" folder. The
 code of the page shouldn't be something new for you: :
 
-```
+```javascript
 qx.Class.define("mobiletweets.page.TweetDetail",
 {
   extend : qx.ui.mobile.page.NavigationPage,

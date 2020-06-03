@@ -47,7 +47,7 @@ Qooxdoo mobile was tested with the following desktop browsers:
 To create a mobile application `mobileapp` in your home directory with your
 shell, change to your home directory (just `cd`).
 
-```
+```shell script
 qx create --type mobile
 ```
 

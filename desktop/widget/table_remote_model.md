@@ -18,7 +18,7 @@ To correctly implement the remote table model you have to define/overwrite two
 methods `_loadRowCount` and `_loadRowData`. Both are automatically called by the
 table widget.
 
-```
+```javascript
 qx.Class.define("myApplication.table.RemoteDataModel",
 {
   extend : qx.ui.table.model.Remote,

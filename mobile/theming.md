@@ -76,7 +76,7 @@ stylesheet files.
 To automatically compile the SCSS files on change/save, you can use the compiler
 watch job:
 
-```
+```shell script
 qx compile —watch
 ```
 
@@ -110,7 +110,7 @@ Into your project's theme file:
 
 After changing this, you have to run the source job in your application's root:
 
-```
+```javascript
 qx compile
 ```
 
@@ -124,7 +124,7 @@ For customization, please follow these steps:
 
 1.  Start the watch job by running
 
-    ```
+    ```shell script
     qx compile —watch
     ```
 

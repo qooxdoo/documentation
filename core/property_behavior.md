@@ -8,7 +8,7 @@ of properties.
 Imagine a class containing a property named `a` with an init value, like the
 following:
 
-```
+```javascript
 qx.Class.define("A", {
         extend : qx.core.Object,
         properties : {

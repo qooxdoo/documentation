@@ -68,7 +68,7 @@ The change is relative to the global font size (e.g. predefined by your
 browser's settings). You set the new relative value, e.g. a factor of 2 for 200%
 scaling) through the method `setFontScale` on `qx.ui.mobile.core.Root`:
 
-```
+```javascript
 qx.core.Init.getApplication().getRoot().setFontScale(2);
 ```
 

@@ -52,7 +52,7 @@ Instead of using `qx.application.Standalone` as a base application class you
 need to extend from `qx.application.Inline` as a starting point. So basically
 your (empty) application looks like this:
 
-```
+```javascript
 qx.Class.define("myPortal.Application",
 {
   extend : qx.application.Inline,
@@ -79,7 +79,7 @@ application root is an instance of
 
 > :memo: Absolute positioning requires no existing DOM node in the target document.
 
-```
+```javascript
 qx.Class.define("myPortal.Application",
 {
   extend : qx.application.Inline,
@@ -118,7 +118,7 @@ flow.
 > _width_ and _height_ attribute. Instead style your DOM node with inline
 > styles, otherwise the dynamic resizing won't work correctly.
 
-```
+```javascript
 qx.Class.define("myPortal.Application",
 {
   extend : qx.application.Inline,

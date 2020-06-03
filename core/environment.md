@@ -59,14 +59,14 @@ asynchronous settings.
 Let's first take a look at the synchronous API and the two possibilities of
 accessing the data:
 
-```
+```javascript
 qx.core.Environment.get("myapp.key");
 ```
 
 The `get` method is likely the most important one. It returns the value for the
 given key, `myapp.key` in this example.
 
-```
+```javascript
 qx.core.Environment.select("myapp.key", {
   "value1" : resvalue1,
   "value2" : resvalue2,
@@ -86,7 +86,7 @@ JavaScript expression.
 
 The asynchronous methods are a direct mapping of their synchronous counterparts.
 
-```
+```javascript
 qx.core.Environment.getAsync("myapp.key", function(result) {
   // callback
 }, context);
@@ -100,7 +100,7 @@ application.
 
 This principle carries over to the corresponding select call:
 
-```
+```javascript
 qx.core.Environment.selectAsync("myapp.key", {
   "value" : function(result) {
     // callback value 1
@@ -126,7 +126,7 @@ edge cases, it might happen that you want to redo the test. For such use cases
 you can invalidate the cache for a given key, to force a re-calculation on the
 next query:
 
-```
+```javascript
 qx.core.Environment.invalidateCacheKey("myapp.key"}
 ```
 
@@ -164,7 +164,7 @@ function foo(a, b) {
 
 In the case of a _select_ call,
 
-```
+```javascript
 qx.core.Environment.select("myapp.key", {
   "value1" : resvalue1,
   "value2" : resvalue2
@@ -219,7 +219,7 @@ possibilities are explained in the following sections.
 You can define a key and its value through the environment key of the map
 defining a Qooxdoo class:
 
-```
+```javascript
 qx.Class.define("myapp.ClassA",
 {
   [...]
@@ -235,7 +235,7 @@ qx.Class.define("myapp.ClassA",
 You can define a key and its value in a class method using the _
 qx.core.Environment.add_ method:
 
-```
+```javascript
 qx.core.Environment.add("key", "value");
 ```
 
@@ -257,7 +257,7 @@ containing your environment settings.
   }
 </script>
 
-````
+```
 
 #### In the Compiler Config
 
@@ -272,7 +272,7 @@ additional environment settings.
 
 ```console
  npx qx compile --set-env myapp.key1=value1 --set-env myapp.key2=value2
-````
+```
 
 If the environment settings are set with this method, the values are set as
 strings. Your code should take care to convert the values from string.
@@ -340,7 +340,7 @@ how they are queried. Synchronous checks are queried with the _.get()_ and _
 
 To add a synchronous check function, the standard _.add()_ call is used:
 
-```
+```javascript
 qx.core.Environment.add("group.feature", function() {
   return !!window.feature;
 });
@@ -356,7 +356,7 @@ check will return `true`.
 
 To add an asynchronous check, use _.addAsync()_:
 
-```
+```javascript
 qx.core.Environment.addAsync("group.feature", function(callback) {
   window.setTimeout(function() {
     callback.call(null, true);

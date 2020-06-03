@@ -7,7 +7,7 @@ phase only, the final app is independent of the SDK.
 
 The first step is to create a mobile skeleton:
 
-```
+```shell script
 qx create helloworld  -type mobile -I
 ```
 
@@ -16,7 +16,7 @@ the mobile skeleton application. Right now the application is pretty useless,
 until we create the `source` version of it. Navigate to the created folder and
 call the Qooxdoo compiler with the following command:
 
-```
+```javascript
 qx compile
 ```
 
