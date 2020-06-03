@@ -1,8 +1,8 @@
-# Overview
+# Building a GUI for your application
 
 ## Widgets
 
-Widgets are the basic building blocks of graphical user interfaces (GUIs) in
+Widgets are the basic building blocks of graphical user interfaces in
 Qooxdoo. Each GUI component, such as a button, label or window, is a widget and
 can be placed within an existing user interface. Each particular type of widget
 is provided by a corresponding subclass of
@@ -24,6 +24,19 @@ hierarchical structure is also used to hide or show specific areas. This means
 for instance, that hiding a parent hides its children as well. Another example
 would be when a widget is being disposed, all the child widgets it contains are
 automatically being disposed as well.
+
+For more information on widgets, see the following pages:
+
+- [Introduction](/desktop/widget/)
+- [Custom widgets](customwidgets.md)
+- [Interaction](interaction.md)
+- [Resources](resources.md)
+- [Selection](selection.md)
+- [Drag'n'Drop](dragdrop.md)
+- [Forms](forms.md)
+- [Menus](menu.md)
+- [Window Managment](window_management.md)
+- [Table Styling](table_styling.md)
 
 ## Composites
 
@@ -110,33 +123,6 @@ custom application:
   applications that do not involve Qooxdoo's GUI toolkit. Typically they make
   only use of the IO ("Ajax") and BOM functionality (e.g. to manipulate the
   existing DOM).
-
-## Communication
-
-Developing a Qooxdoo application does not require a server. Its static
-application contents (initial HTML file, JavaScript files, images, etc.) can
-simply be loaded from the local file system. This means that full applications
-can be developed locally with no server infrastructure - not even an Internet
-connection is required.
-
-Any practical Qooxdoo client application will communicate with a server, for
-instance to retrieve and store certain application data, to do credit card
-validation and so on. To this end, Qooxdoo includes a sophisticated IO layer
-featuring high-level abstractions for XMLHTTP requests and REST resources as
-well as support for cross-domain requests.
-
-## Widgets Introduction
-
-- [Introduction](/desktop/widget/)
-- [Custom widgets](customwidgets.md)
-- [Interaction](interaction.md)
-- [Resources](resources.md)
-- [Selection](selection.md)
-- [Drag'n'Drop](dragdrop.md)
-- [Forms](forms.md)
-- [Menus](menu.md)
-- [Window Managment](window_management.md)
-- [Table Styling](table_styling.md)
 
 ## Themes
 

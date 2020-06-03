@@ -1,4 +1,4 @@
-# Qooxdoo Manual (v\\\\\${Qooxdoo.version})
+# Qooxdoo Manual (v${Qooxdoo.version})
 
 This is an overview of Qooxdoo's comprehensive feature-set and the extensive
 documentation that comes with it. The [sidebar](_sidebar.md) contains a more
@@ -9,10 +9,10 @@ detailed table of contents.
 A dedicated class system with custom class properties, data binding and a
 runtime environment.
 
-## [Qooxdoo Desktop](desktop/gui)
+## [Qooxdoo Desktop](desktop/)
 
-The UI layer of Qooxdoo, providing a rich set of widgets which can be used to
-create professional web-based applications.
+The UI layer of Qooxdoo, providing a rich set of layout and widgets
+which can be used to create professional web-based applications.
 
 ## [Communication](communication/)
 
