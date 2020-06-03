@@ -42,13 +42,13 @@ or you can install it globally.
 The following command line installs the Qooxdoo compiler so that it becomes
 available anywhere via your path settings.
 
-```bash
+```shell script
 $ npm install -g @Qooxdoo/compiler
 ```
 
 To start the Qooxdoo compiler type
 
-```bash
+```shell script
 $ qx
 ```
 
@@ -59,7 +59,7 @@ a large application which you may have to maintain for months and years to come,
 you will probably be better of to install Qooxdoo together with the application
 code.
 
-```bash
+```shell script
 $ mkdir myapp
 $ cd myapp
 $ npm init
@@ -70,7 +70,7 @@ node_modules package-lock.json package.json
 
 To start the Qooxdoo compiler type
 
-```bash
+```shell script
 $ npx qx
 ```
 
@@ -92,7 +92,7 @@ a look at its code. The `create` command in the Qooxdoo compiler lets you
 quickly produce a simple skeleton app. The following command line assumes that
 you have setup a local copy of the Qooxdoo compiler in the myapp subdirectory.
 
-```bash
+```shell script
 $ cd myapp
 $ npx qx create myapp --type desktop --noninteractive --out=.
 $ npx qx serve

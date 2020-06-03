@@ -8,7 +8,7 @@ Workers.
 
 ## Installation via NPM
 
-```bash
+```shell script
 $ npm install @Qooxdoo/framework
 ```
 

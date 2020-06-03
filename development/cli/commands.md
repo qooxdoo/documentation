@@ -91,7 +91,7 @@ To compile a Qooxdoo project into a state that can be opened in a browser, use
 [@Qooxdoo/compiler library](https://github.com/qooxdoo/qooxdoo-compiler/blob/master/README.md)
 . The command has the following options:
 
-```javascript
+```shell script
 qx compile [options]
 
 Options:
@@ -125,7 +125,7 @@ Documentation for the `compile.json` format is
 To check your project with eslint you can use `qx lint`. The command has the
 following options:
 
-```javascript
+```shell script
 qx lint [files...]
 
 Options:
@@ -181,7 +181,7 @@ port 8082
 $ qx serve --listenPort=8082
 ```
 
-```javascript
+```shell script
 qx serve [configFile]
 
 Options:

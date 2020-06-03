@@ -95,7 +95,7 @@ source/class/myapp
 Now you want to factor out the `model` and `view` components into their own
 libraries. In a suitable path you create two new skeletons:
 
-```bash
+```shell script
 $ npx qx create myapp.model
 $ npx qx create myapp.view
 ```

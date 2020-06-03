@@ -91,7 +91,7 @@ The first step is always to update the local cache of available packages
 libraries. For this, simply execute `qx package update`. The command has the
 following options:
 
-```shell script
+```
 qx package update [repository]
 
 Options:
@@ -175,7 +175,7 @@ version (or in fact, any
 that GitHub supports, you can use the `--release` parameter or add the version
 with an '@' sign like so
 
-```bash
+```shell script
 qx install Qooxdoo/qxl.apiviewer --release v1.1.0
 qx install Qooxdoo/qxl.apiviewer@v1.1.0
 qx install Qooxdoo/qxl.apiviewer@eef00cba2dd72ff73dc88f9786aa3d9a0ed4ff6d
@@ -230,7 +230,7 @@ dependencies via `qx package install` (without arguments).
 You can upgrade the packages listed in the lockfile to the latest avalable
 release compatible with your Qooxdoo version with
 
-```bash
+```shell script
 qx package upgrade
 ```
 
@@ -343,7 +343,7 @@ You need to supply a valid GitHub token which has permissions to publish your
 repo - if you're provided one before it will have been stored, and you can find
 out what the token is and set a new one with these commands:
 
-```bash
+```shell script
    $ qx config set github.token 0123456789abcdef0123456789abcdef0123456789abcdef
    $ qx config get github.token
    github.token=0123456789abcdef0123456789abcdef0123456789abcdef
