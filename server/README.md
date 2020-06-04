@@ -3,12 +3,7 @@
 This page is an overview of Qoodoo's server capabilities. It shows which parts
 of Qooxdoo can be used in a server environment or comparable scenario. It also
 serves as an introduction to those interested in using Qooxdoo in a server
-environment.
-
-This listing shows the core features of the _Qooxdoo Server_ package. If you
-build your own package with the skeleton way of using Qooxdoo, the feature set
-might be extended depending on your application code. Qooxdoo server supports 
-all the features of the [Qooxdoo Core](/core/).
+environment. Qooxdoo server supports all the features of the [Qooxdoo Core](/core/).
 
 We currently support two types of runtimes:
 - [node.js](http://nodejs.org/)
