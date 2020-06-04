@@ -1,4 +1,4 @@
-# Building a GUI for your application
+# Introduction
 
 ## Widgets
 

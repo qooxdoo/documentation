@@ -49,7 +49,7 @@ npm i -g @Qooxdoo/compiler
 
 Let's create a "skeleton" application and then compile it:
 
-```shell script
+```bash
 qx create myFirstApp --noninteractive
 cd myFirstApp
 qx compile
@@ -129,7 +129,7 @@ In situations like this, the solution is to install a private version of
 `@Qooxdoo/compiler` inside your project; from then on, all you have to do is to
 use `npx` to execute `qx` commands.
 
-```shell script
+```bash
 mkdir myFirstApp
 cd myFirstApp
 npm init             # answer npm's questions

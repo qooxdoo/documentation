@@ -76,7 +76,7 @@ stylesheet files.
 To automatically compile the SCSS files on change/save, you can use the compiler
 watch job:
 
-```shell script
+```bash
 qx compile —watch
 ```
 
@@ -124,7 +124,7 @@ For customization, please follow these steps:
 
 1.  Start the watch job by running
 
-    ```shell script
+    ```bash
     qx compile —watch
     ```
 

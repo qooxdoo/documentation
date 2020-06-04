@@ -7,7 +7,7 @@ phase only, the final app is independent of the SDK.
 
 The first step is to create a mobile skeleton:
 
-```shell script
+```bash
 qx create helloworld  -type mobile -I
 ```
 

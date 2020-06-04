@@ -129,13 +129,13 @@ of possible section keys and markup possibilities.
 If you haven't already, install the apiviewer package without making it a
 dependency of your application:
 
-```shell script
+```bash
 npx qx pkg install --save=0 Qooxdoo/qxl.apiviewer
 ```
 
 Then start the Qooxdoo application server...
 
-```shell script
+```bash
 npx qx serve -S
 ```
 

@@ -175,7 +175,7 @@ version (or in fact, any
 that GitHub supports, you can use the `--release` parameter or add the version
 with an '@' sign like so
 
-```shell script
+```bash
 qx install Qooxdoo/qxl.apiviewer --release v1.1.0
 qx install Qooxdoo/qxl.apiviewer@v1.1.0
 qx install Qooxdoo/qxl.apiviewer@eef00cba2dd72ff73dc88f9786aa3d9a0ed4ff6d
@@ -191,7 +191,7 @@ Qooxdoo framework version used as per the semver range in the
 `require.@Qooxdoo/framework` key in their `Manifest.json` . To install libraries
 that are not listed for this reason anyways, do the following:
 
-```shell script
+```bash
 qx package list --all # this will list all available packages, regardless of compatibility
 qx package install <URI>@<release_tag>
 ```
@@ -201,13 +201,13 @@ development, if you work with a local git repository. If the library is
 published using the Qooxdoo package registry, but you wish to use a locally
 stored version of it, you can use
 
-```shell script
+```bash
 qx package install owner/library --from-path ../path/to/the/library
 ```
 
 Otherwise, you can install it "anonymously" with
 
-```shell script
+```bash
 qx package install --from-path ../path/to/the/library
 ```
 
@@ -230,13 +230,13 @@ dependencies via `qx package install` (without arguments).
 You can upgrade the packages listed in the lockfile to the latest avalable
 release compatible with your Qooxdoo version with
 
-```shell script
+```bash
 qx package upgrade
 ```
 
 If you only want to upgrade one of the libraries, use
 
-```shell script
+```bash
 qx package upgrade <library uri>
 ```
 
@@ -343,7 +343,7 @@ You need to supply a valid GitHub token which has permissions to publish your
 repo - if you're provided one before it will have been stored, and you can find
 out what the token is and set a new one with these commands:
 
-```shell script
+```bash
    $ qx config set github.token 0123456789abcdef0123456789abcdef0123456789abcdef
    $ qx config get github.token
    github.token=0123456789abcdef0123456789abcdef0123456789abcdef

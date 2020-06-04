@@ -1,4 +1,4 @@
-# Promises
+# Promises and Async Programming
 
 Promises are a well understood and very useful tool for developing asynchronous
 software, although their implementation is deceptively simple; the specification

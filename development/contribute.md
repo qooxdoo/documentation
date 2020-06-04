@@ -66,7 +66,7 @@ regressions.
 After you have added your test classes/methods, navigate to folder containing
 your fork, and execute the following steps:
 
-```shell script
+```bash
 npm install --no-save --no-package-lock @Qooxdoo/compiler
 npx qx lint <path(s) to the file(s) you changed/added, including the test class>
 npx qx test --class=<the class you added your test cases to>

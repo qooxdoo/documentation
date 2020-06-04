@@ -5,7 +5,7 @@ development. Us the compiler create function to setup a new application called
 `tweets`. If you are unsure as to what is happening here, make sure to first
 work through the [introduction](/)
 
-```shell script
+```bash
 $ mkdir tweets
 $ cd tweets
 $ npm init

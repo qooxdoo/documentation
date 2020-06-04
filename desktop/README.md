@@ -11,5 +11,6 @@ well-understood concepts such as widgets, layouts, events, themes etc.
 To learn more, see the following sections:
 
 - [Building a GUI for your application](gui/)
-- [Using layouts](layout)
-- [Widget Reference](widget)
+- [Using layouts](layout/)
+- [Theming](/desktop/gui/theming.md)
+- [Widget Reference](widget/)

@@ -8,7 +8,7 @@ Workers.
 
 ## Installation via NPM
 
-```shell script
+```bash
 $ npm install @Qooxdoo/framework
 ```
 
@@ -18,6 +18,6 @@ include it easily into your applications.
 In both cases, to verify the installation use your runtime's loading primitive
 to include it in a program, e.g. for Node:
 
-```
+```javascript
 var qx = require('@Qooxdoo/framework')
 ```

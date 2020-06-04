@@ -1,38 +1,33 @@
 - [Overview](/contents.md)
   - [Getting Started](/?id=getting-started)
-  - [Qooxdoo Tutorials](/tutorial/)
   - [Qooxdoo Apps](/apps.md)
   - [About](/about.md)
 
 - [Qooxdoo Core](/core/)
-  
   - [Object Orientation](/core/oo_feature_summary.md)
     - [Introduction into OO](/core/oo_introduction.md)
     - [Classes](/core/classes.md)     
     - [Interfaces](/core/interfaces.md) 
     - [Mixins](/core/mixins.md) 
     - [Annotations](/core/annotations.md)
-    - [Arrays](/core/array.md)
-    - [Data binding](/core/data_binding/)
-    - [Promises](/core/promises.md)
     - [Class system quickrefs](/core/class_quickref.md)
         - [Classes](/core/class_quickref.md)
         - [Interfaces](/core/interface_quickref.md)
         - [Mixins](/core/mixin_quickref.md)
-
   - [Properties](/core/understanding_properties.md)
     - [Defining properties](/core/defining_properties.md)
     - [Behavior](/core/property_behavior.md)
     - [Features](/core/property_features.md)
     - [Property Quickref](/core/properties_quickref.md)
-  
   - [Environment](/core/environment.md)
-  
   - [Interaction Events](/core/pointer.md)
     - [Pointer](/core/pointer.md)
     - [Gestures](/core/gestures.md)
+  - [Arrays](/core/array.md)
+  - [Data binding](/core/data_binding/)
+  - [Promises](/core/promises.md)
   
-- [Qooxdoo for Desktop](/desktop/gui/)
+- [Qooxdoo for Desktop](/desktop/)
   - [Qooxdoo UI](/desktop/gui/)
     - [Interaction](/desktop/gui/interaction.md)
     - [Resources](/desktop/gui/resources.md)
@@ -45,24 +40,21 @@
     - [Event layer](/desktop/gui/event_layer_impl.md)
     - [HTML element handling](/desktop/gui/html.md)
     - [Focus handling](/desktop/gui/focus.md)      
-
  - [Theming](/desktop/gui/theming.md)
     - [Appearance](/desktop/gui/appearance.md)
     - [Custom themes](/desktop/gui/themes.md)
     - [Decorators](/desktop/gui/themes.md#Qooxdoo-theme-decorators)
-
   - [Layouts](/desktop/layout/)
     - [Reference](/desktop/layout/reference.md)
     - [Alphabetic list](/desktop/layout/layout_list.md)
-  
   - [Qooxdoo Widgets](/desktop/widget/introduction.md)
     - [Custom widgets](/desktop/gui/customwidgets.md)
     - [Reference](/desktop/widget/reference.md)
     - [Alphabetic list](/desktop/widget/widget_list.md)
 
 - [Qooxdoo on the Server](/server/)
-  - [Getting Started](/server/getting_started.md)
   - [Requirements](/server/requirements.md)  
+  - [Getting Started](/server/getting_started.md)
 
 - [Qooxdoo Mobile](/mobile/)
   - [Overview](/mobile/mobile_overview.md)

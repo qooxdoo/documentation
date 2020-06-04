@@ -32,7 +32,7 @@ ${preBootJs}
 - find out which libraries are used in the old application. For this have a look
   into `config.json` libraries section. Add all libraries found here with
 
-```shell script
+```bash
 qx pkg update
 qx pkg list
 qx pkg install library
