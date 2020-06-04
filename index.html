@@ -39,10 +39,17 @@
       plugins: [function (hook, vm) {
         hook.beforeEach(function (html) {
           // Create automatic links of class names to APIviewer
-          html = html.replace(/`(qx\.[a-zA-Z.]+)`/g, '[`$1`](apps://apiviewer/#$1)');
-          // resolve links with pseudo-protocol "apps:" to relative path to apps
+          html = html
+            .replace(
+              /`(qx\.[a-zA-Z0-9._]+)(#?)([a-zA-Z0-9._]+)?`/g,
+              (m, $1, $2, $3) => '[`' + $1+ '`](apps://apiviewer/#' + $1 + ($2 ? '~':"") + $3 + ')'
+            );
+          // resolve links with pseudo-protocol "apps:" to relative path to apps, if exists,
+          // otherwise to app on the qooxdoo website
           let app_dir = window.location.pathname.split('/').slice(0, -2).concat(['apps', '']).join('/');
-          html = html.replace(/apps:\/\//g, app_dir);
+          let app_url = 'http://qooxdoo.org/apps/';
+          let localApiViewer = location.hostname === "qooxdoo.org"; // needs to also cover "qx serve"
+          html = html.replace(/apps:\/\//g, () => localApiViewer ? app_dir : app_url);
           // insert edit links
           if (/githubusercontent\.com/.test(vm.route.file)) {
             url = vm.route.file
