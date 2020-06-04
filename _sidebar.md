@@ -1,16 +1,13 @@
-- Overview
-  - [Contents](/contents.md)
+- [Overview](/contents.md)
   - [Getting Started](/?id=getting-started)
-  - [Qooxdoo Tutorials](/tutorials.md)
+  - [Qooxdoo Tutorials](/tutorial/)
   - [Qooxdoo Apps](/apps.md)
   - [About](/about.md)
 
-- Qooxdoo Core
-  - [Overview](/core/)
-  - [Introduction into OO](/core/oo_introduction.md)
-  - [Feature summary](/core/oo_feature_summary.md)
+- [Qooxdoo Core](/core/)
   
-  - Object Orientation
+  - [Object Orientation](/core/oo_feature_summary.md)
+    - [Introduction into OO](/core/oo_introduction.md)
     - [Classes](/core/classes.md)     
     - [Interfaces](/core/interfaces.md) 
     - [Mixins](/core/mixins.md) 
@@ -18,30 +15,25 @@
     - [Arrays](/core/array.md)
     - [Data binding](/core/data_binding/)
     - [Promises](/core/promises.md)
-    - Class system quickrefs:
+    - [Class system quickrefs](/core/class_quickref.md)
         - [Classes](/core/class_quickref.md)
         - [Interfaces](/core/interface_quickref.md)
         - [Mixins](/core/mixin_quickref.md)
 
-  - Properties
-    - [Overview](/core/understanding_properties.md)
+  - [Properties](/core/understanding_properties.md)
     - [Defining properties](/core/defining_properties.md)
     - [Behavior](/core/property_behavior.md)
     - [Features](/core/property_features.md)
     - [Property Quickref](/core/properties_quickref.md)
   
-  - Environment
-    - [Overview](/core/environment.md)
+  - [Environment](/core/environment.md)
   
-  - Interaction Events
+  - [Interaction Events](/core/pointer.md)
     - [Pointer](/core/pointer.md)
     - [Gestures](/core/gestures.md)
   
-
-- Qooxdoo for Desktop
-
-  - Qooxdoo UI
-    - [Introduction](/desktop/gui/)
+- [Qooxdoo for Desktop](/desktop/gui/)
+  - [Qooxdoo UI](/desktop/gui/)
     - [Interaction](/desktop/gui/interaction.md)
     - [Resources](/desktop/gui/resources.md)
     - [Selection](/desktop/gui/selection.md)
@@ -50,36 +42,29 @@
     - [Menus](/desktop/gui/menus.md)
     - [Window Management](/desktop/gui/window_management.md)
     - [Table Styling](/desktop/gui/table_styling.md)
+    - [Event layer](/desktop/gui/event_layer_impl.md)
+    - [HTML element handling](/desktop/gui/html.md)
+    - [Focus handling](/desktop/gui/focus.md)      
 
- - Themes
-    - [Theming](/desktop/gui/theming.md)
+ - [Theming](/desktop/gui/theming.md)
     - [Appearance](/desktop/gui/appearance.md)
     - [Custom themes](/desktop/gui/themes.md)
     - [Decorators](/desktop/gui/themes.md#Qooxdoo-theme-decorators)
 
-  - Layouts
-    - [Introduction](/desktop/layout/)
+  - [Layouts](/desktop/layout/)
     - [Reference](/desktop/layout/reference.md)
     - [Alphabetic list](/desktop/layout/layout_list.md)
   
-  - Qooxdoo Widgets
-    - [Introduction](/desktop/widget/introduction.md)
+  - [Qooxdoo Widgets](/desktop/widget/introduction.md)
     - [Custom widgets](/desktop/gui/customwidgets.md)
     - [Reference](/desktop/widget/reference.md)
     - [Alphabetic list](/desktop/widget/widget_list.md)
 
-  - Technical Concepts
-    - [Event layer](/desktop/gui/event_layer_impl.md)
-    - [HTML element handling](/desktop/gui/html.md)
-    - [Focus handling](/desktop/gui/focus.md)  
-
-- Qooxdoo for Node
-  - [Introduction](/server/)
+- [Qooxdoo on the Server](/server/)
   - [Getting Started](/server/getting_started.md)
   - [Requirements](/server/requirements.md)  
 
-- Qooxdoo Mobile
-  - [Introduction](/mobile/)
+- [Qooxdoo Mobile](/mobile/)
   - [Overview](/mobile/mobile_overview.md)
   - [Requirements](/mobile/requirements.md)
   - [Getting Started](/mobile/getting_started.md)
@@ -89,18 +74,15 @@
   - [Resolution and Pixel Density](/mobile/resolution.md)
   - [Theming](/mobile/theming.md)
 
-- Communication
-  - [Overview](/communication/)
+- [Communication](/communication/)
   - [REST](/communication/rest.md)
   - [Remote IO](/communication/remote_io.md)
   - [Request IO](/communication/request_io.md)
   - [JSON RPC](/communication/rpc.md)
 
-- Development
-  - [Introduction](/development/)
-  - [**"qx" CLI commands**](/development/cli/commands.md)
-  - **The Qooxdoo Compiler**
-      - [Overview](/development/compiler/)
+- [Development](/development/)
+  - ["qx" CLI commands](/development/cli/commands.md)
+  - [The Qooxdoo Compiler](/development/compiler/)
       - [Migrating to the `qx` toolchain](/development/compiler/migration.md)
       - [Compiler Configuration](/development/compiler/configuration/)
         - [Manifest.json](/development/compiler/configuration/Manifest.md)
@@ -121,11 +103,8 @@
     - [Using non-Qooxdoo libraries](/development/howto/using_non_qx_libs.md)
   - [Contributing to Qooxdoo](/development/contribute.md)
 
-
-- Tutorials
-
-  - Desktop Twitter App
-    - [Introduction](/tutorial/twitter/)
+- [Tutorials](/tutorial/)
+  - [Desktop Twitter App](/tutorial/twitter/)
     - [1. Getting Started](/tutorial/twitter/tutorial-part-1.md)
     - [2. Finishing the UI](/tutorial/twitter/tutorial-part-2.md)
     - [3. Talking to the Server](/tutorial/twitter/tutorial-part-3.md)
@@ -135,5 +114,5 @@
     - [7. Translations](/tutorial/twitter/tutorial-part-7.md)
     - [8. Unit Testing](/tutorial/twitter/tutorial-part-8.md)
     - [9. Virtual Lists](/tutorial/twitter/tutorial-part-9.md)
-  - [**Qooxdoo Mobile App**](/mobile/tutorial.md)
+  - [Qooxdoo Mobile App](/mobile/tutorial.md)
 
