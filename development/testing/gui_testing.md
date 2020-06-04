@@ -15,7 +15,7 @@ required libraries and npm modules), since they are not included in Qooxdoo (see
 
 Since the tests are responding to an event, the usual pattern of communicating
 the test results back to the runtime via exceptions does not work. Instead,
-instances of {@link qx.tool.cli.api.Test} are used, which need to be registered
+instances of `qx.tool.cli.api.Test` are used, which need to be registered
 and are then configured to reflect the outcome of the test. See the following
 example:
 
