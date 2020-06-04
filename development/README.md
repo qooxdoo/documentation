@@ -16,7 +16,7 @@ application.
 > [our guide to migrate your applications to the new NodeJS-based tooling](compiler/migration.md)
 > .
 
-Our [getting started guide](../README.md) should give you a first impression on
+Our [getting started guide](../README.md#getting-started) should give you a first impression on
 how to quickly create an application skeleton. We suggest you play with this
 skeleton application and, with the help of the
 [Demo Browser](apps://demobrowser), the [Widget Browser](apps://demobrowser/)

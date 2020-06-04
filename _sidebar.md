@@ -90,7 +90,7 @@
   - [Writing API Documentation](/documentation/)
   - [Testing](/development/testing/)
     - [Unit Testing](/development/testing/unit_testing.md)
-    - [GUI Testing](/development/cli/gui_testing.md)
+    - [GUI Testing](/development/testing/gui_testing.md)
   - [Package system](/development/cli/packages.md)
   - [How to ...](/development/howto/)
     - [Logging](/development/howto/logging.md)

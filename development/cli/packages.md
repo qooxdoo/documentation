@@ -483,6 +483,6 @@ b) Under normal circumstances, a package does not need to use NPM or maintain a
 `package.json` file. In particular, neither the `@Qooxdoo/compiler` nor the
 `@Qooxdoo/framework` npm packages should be NPM dependencies of the package.
 Instead, they are installed either at the level of the application or globally
-(see the [docs on installation](../readme.md)). You might want to use NPM for
+(see the [docs on installation](../README.md)). You might want to use NPM for
 development-time task such as transpiling your code, but all NPM-related
 information in the package will be ignored by the compiler.
