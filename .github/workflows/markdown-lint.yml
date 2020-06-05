@@ -12,5 +12,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: file_changes
-        uses: trilom/file-changes-action@v1.2.3
+        uses: trilom/file-changes-action@v1.2.4
       - run: npm ci && npm test
