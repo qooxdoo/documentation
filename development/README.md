@@ -59,7 +59,7 @@ To help you with this requrired intermediate step, Qooxdoo provides
 [continuous compilation in the background](compiler/?id=creating-your-first-application)
 and a [built-in web server](cli/commands?id=mini-web-server).
 
-**__source__, __build__, and __deploy__ compilation targets **
+**'source', 'build', and 'deploy' targets**
 
 You will usually develop your application to a so-called "source" compilation target. 
 In this mode, individual source code is preserved, except where it has to be transpiled
