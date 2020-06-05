@@ -41,26 +41,38 @@ Application code is organized in a particular directory layout which is
 necessary for the tool chain to work properly. See the
 [details on code organization](code_organisation.md).
 
-**Compile before Run**
+**Code compilation and transpilation**
 
 In general you need to invoke Qooxdoo's tool chain, particularly the  
 [Compiler](compiler/), before you can run your application. Qooxdoo has a
 Java-like approach to source code, in that it just "sits around" like a bunch of
 resources. With the help of its configuration the Compiler casts all these
 resources in a runnable application, e.g. by creating a specific loader that
-loads all necessary class code.
+loads all necessary class code. Using [Babel](https://babeljs.io/) and its own
+[AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) parser, it compiles
+your source code into a state that is optimized and [polyfilled](https://en.wikipedia.org/wiki/Polyfill_(programming))
+for the target runtime environment.
 
-**Source versus Build**
+To help you with this requrired intermediate step, Qooxdoo provides
+[continuous compilation in the background](compiler/?id=creating-your-first-application)
+and a [built-in web server](cli/commands?id=mini-web-server).
 
-You will usually develop your application in a so-called "source" mode. In this
-mode individual source code is preserved, except where it has to be transpiled
+**__source__, __build__, and __deploy__ compilation targets **
+
+You will usually develop your application to a so-called "source" compilation target. 
+In this mode, individual source code is preserved, except where it has to be transpiled
 for the given target platform. This will make it easier to debug the source
 code, however, it will make the application load much slower.
 
-Once you are satisfied with your application, you will create a "build" version
-of it. This version will be compressed and optimized, and will be all geared
-towards deployment and runtime efficiency. But it will be much less amenable to
-development.
+Once you are satisfied with your application, you will create a more efficient 
+version of it, using the "build" target. This version will be compressed and 
+optimized, and will be all geared towards deployment and runtime efficiency. 
+But it will be much less amenable to development.
+
+When you have tested this version and are ready to deploy it to a production 
+server, you [create the final version](cli/commands?id=building-for-production-and-deployment)
+using `qx deploy`, which is the "build" version of your code without all the metadata 
+files that are used to speed up compilation. 
 
 **Writing API documentation**
 
