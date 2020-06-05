@@ -54,7 +54,7 @@ with any name you likee, the `qx` command will look for the following special
 keys:
 
 `github.token` - this is the API token used when connecting to GitHub
-`qx.libraryPath` - this is the Qooxdoo library to use when compiling your
+`qx.library` - this is the Qooxdoo library to use when compiling your
 application
 
 ## Create a new project
