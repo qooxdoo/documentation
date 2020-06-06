@@ -54,7 +54,7 @@ with any name you likee, the `qx` command will look for the following special
 keys:
 
 `github.token` - this is the API token used when connecting to GitHub
-`qx.libraryPath` - this is the Qooxdoo library to use when compiling your
+`qx.library` - this is the Qooxdoo library to use when compiling your
 application
 
 ## Create a new project
@@ -118,7 +118,7 @@ Options:
 
 The compiler relies on the information contained in `compile.json`.
 Documentation for the `compile.json` format is
-[here](../configuration/compile.md) .
+[here](../compiler/configuration/compile.md) .
 
 ## Lint
 
@@ -140,7 +140,7 @@ Options:
 ```
 
 Configuration is done in the `compile.json` file, see here
-[here](../configuration/compile.md) .
+[here](../compiler/configuration/compile.md) .
 
 If no special lint configuration is given in `compile.json` the configuration
 `@Qooxdoo/qx/browser` from
@@ -219,7 +219,7 @@ Options:
 Note that the `qx serve` command supports exactly the same options as
 `qx compile`, with the exception of `--watch` because that is always enabled;
 for more details of the options and the compilation process, please see
-[here](../configuration/compile.md)
+[here](../compiler/configuration/compile.md)
 
 ## Building for Production and Deployment
 
