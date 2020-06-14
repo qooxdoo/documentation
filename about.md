@@ -57,7 +57,7 @@ simplifies asynchronous communication.
 
 Qooxdoo is not only a library, but also comes with a set of sophisticated tools.
 Some help with the development workflow, such as the
-[command line interface](cli/commands.md). Others let you quickly get to know
+[command line interface](development/cli/commands.md). Others let you quickly get to know
 the widgets (such as the [widget browser](apps://widgetbrowser)), become fluent
 in the Qooxdoo API (such as the [API Viewer](apps://apiviewer)), or to debug or
 demonstrate code snippets (such as the ["Playground"](apps://playground)).
@@ -66,7 +66,7 @@ demonstrate code snippets (such as the ["Playground"](apps://playground)).
 
 A versatile web framework wouldn't be complete without a package system which
 allows modularizing and reusing code. Qooxdoo's
-[package system](cli/packages.md) is based on GitHub repos. Packages can be
+[package system](development/cli/packages.md) is based on GitHub repos. Packages can be
 installed and published very easily with the Qooxdoo CLI.
 
 ## History
