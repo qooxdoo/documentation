@@ -591,6 +591,7 @@ If you omit the eslintConfig section a default will be used:
 ** The namespaces of all libraries will be added to the globals section
 automatically! **
 
+
 ## Web Server
 
 If you choose to use the optional web server by running `qx serve`, you can
@@ -603,6 +604,7 @@ change the default port by specifying the `listenPort` property:
   }
 }
 ```
+
 
 ## Running applications
 
@@ -627,3 +629,19 @@ For example:
 In this example, the application with the "my-server-app" is run, with a command
 line similar to:
 `node compiled/source/my-server-app/my-server-app.js my command line arguments`
+
+
+## Ignoring global symbols
+
+The compiler tries to detect symbols which have not been declared and will warn you
+if the symbol is not known to it; you can use the `@ignore` JSDoc tag in individual
+javascript files, or you can add a global list with the `"ignores"` key.  For example:
+
+
+```json5
+{
+  ignores: [ "myGlobalVariable", "myOtherGlobal" ]
+}
+```
+
+
