@@ -87,7 +87,7 @@
         - [compile.json](/development/compiler/configuration/compile.md)
         - [API](/development/compiler/configuration/api.md)
       - [Advanced compiler topics](/development/compiler/internals/)
-  - [Writing API Documentation](/documentation/)
+  - [Writing API Documentation](/development/apidoc/)
   - [Testing](/development/testing/)
     - [Unit Testing](/development/testing/unit_testing.md)
     - [GUI Testing](/development/testing/gui_testing.md)
