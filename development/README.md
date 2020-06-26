@@ -80,7 +80,7 @@ files that are used to speed up compilation.
 
 If you follow Qooxdoo's API source code documentation rules, you get Qooxdoo's
 attractive [API Viewer](apps://apiviewer/) for your own code, free of charge.
-See [our guide on how to write API documentation](documentation/).
+See [our guide on how to write API documentation](apidoc/).
 
 **Testing your code**
 
