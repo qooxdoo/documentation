@@ -129,7 +129,7 @@ If you have worked with javascript before you may find that it looks like
 javascript but also different from most javascript you have seen to date. This
 is because Qooxdoo introduces both a rich set of widgets as well as class based
 object orientation into the language. There is quite a lot of documentation on
-these toppics in the next few sections.
+these topics in the next few sections.
 
 And yes, this is the complete program, there is neither HTML nor CSS. The
 Qooxdoo framework creates all that on the fly as the program is started. There
