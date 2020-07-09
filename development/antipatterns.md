@@ -87,7 +87,7 @@ members :
 For the same reason reference types should not be used as `init` values in
 property definitions.
 
-### Abundandly "requiring" other classes
+### Abundantly "requiring" other classes
 
 "requires" in the Qooxdoo context are dependencies of a class to other classes
 which have to be available at _load-time_, i.e. at the time the class code is
