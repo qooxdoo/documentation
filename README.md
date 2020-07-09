@@ -23,7 +23,7 @@ compiled. The compilation step takes care including all the Qooxdoo classes into
 your application that were referenced either directly or indirectly from your
 code.
 
-The Qooxdoo compiler is called `qx` and runs in nodes.js. Qooxdoo requires
+The Qooxdoo compiler is called `qx` and runs in node.js. Qooxdoo requires
 Node.js version 8.x or 10.x. to work.
 
 To check your version, run `node -v` in a terminal/console window.
