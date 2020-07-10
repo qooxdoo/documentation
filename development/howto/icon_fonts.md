@@ -64,7 +64,7 @@ Use the _Manifest.json_ to define the icon font like shown in the example:
 Please note that JSON does not support comments - you'll have to remove them
 first.
 
-Every map entry in the _webfonts_ array needs to have at leasta _name_ and one
+Every map entry in the _webfonts_ array needs to have at least a _name_ and one
 TTF _resources_ entry. Resources can be local files or HTTP URLs. The _name_ is
 used to reference the font in the virtual URLs. So if you name it "Foobar"
 instead of "FontAwesome", you have to use `@Foobar/<glyphname>` instead.
