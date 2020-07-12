@@ -63,7 +63,7 @@ code.
 $ mkdir myapp
 $ cd myapp
 $ npm init
-$ npm install --save-dev @Qooxdoo/compiler
+$ npm install --save-dev @qooxdoo/compiler
 $ ls
 node_modules package-lock.json package.json
 ```
