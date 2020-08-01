@@ -1,4 +1,17 @@
-# Configuration Overview
+# Compiler Configuration Overview
+
+The compiler is called on the commandline with `npx qx
+compile`. You can pass configuration values by using the
+command line options (see `npx qx compile --help` for more). Usually, though, the 
+compiler is fully configured using compiler hints in the source code and, most
+importantly, through its configuration files.
+
+## Compiler hints 
+
+You can use the [`@require` and `@use` compiler
+hints](class_dependencies.md) in the docblock of a class to
+specify which on which other classes this class depends. For other resources such 
+as images, use the [`@asset` compiler hint](../../../desktop/gui/resources.md).
 
 ## Configuration Files
 
