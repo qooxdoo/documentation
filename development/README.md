@@ -43,16 +43,16 @@ necessary for the tool chain to work properly. See the
 
 **Code compilation and transpilation**
 
-In general you need to invoke Qooxdoo's tool chain, particularly the 
-[Compiler](compiler/), before you can run your application. Qooxdoo 
-has a Java-like approach to source code, in that it just "sits around" 
-like a bunch of resources. With the help of its configuration the 
-Compiler casts all these resources in a runnable application, e.g. 
-by creating a specific loader that loads all necessary class code. 
-Using [Babel](https://babeljs.io/) and its own
-[AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) parser, 
-it compiles your source code into a state that is optimized and 
-[polyfilled](https://en.wikipedia.org/wiki/Polyfill_(programming))
+In general you need to invoke Qooxdoo's tool chain, particularly
+the [Compiler](compiler/), before you can run your application.
+Qooxdoo has a Java-like approach to source code, in that it just
+"sits around" like a bunch of resources. With the help of its
+[configuration](compiler/configuration/), the Compiler casts all these
+resources in a runnable application, e.g. by creating a specific loader
+that loads all necessary class code. Using [Babel](https://babeljs.io/)
+and its own [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree)
+parser, it compiles your source code into a state that is optimized
+and [polyfilled](https://en.wikipedia.org/wiki/Polyfill_(programming))
 for the target runtime environment.
 
 To help you with this requrired intermediate step, Qooxdoo provides
