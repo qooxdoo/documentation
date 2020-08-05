@@ -352,7 +352,7 @@ key, for example:
 Unless you list it in the `libraries` key, the compiler will first check the
 `qx.library` setting (see `qx config set qx.library` ), and if not will
 look first in your `node_modules` directory and then it's own `node_modules`
-directory for the `@Qooxdoo/framework` npm module.
+directory for the `@qooxdoo/framework` npm module.
 
 ## Parts
 
@@ -570,7 +570,7 @@ The qx lint command is configured by an eslintConfig section in compile.js:
       "JSZip": false
     },
     "extends": [
-      "@Qooxdoo/qx/browser"
+      "@qooxdoo/qx/browser"
     ]
   }
 ```
@@ -583,7 +583,7 @@ If you omit the eslintConfig section a default will be used:
 ```json5
   "eslintConfig": {
     "extends": [
-      "@Qooxdoo/qx/browser"
+      "@qooxdoo/qx/browser"
     ]
   }
 ```
