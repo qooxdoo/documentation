@@ -9,7 +9,7 @@ Workers.
 ## Installation via NPM
 
 ```bash
-$ npm install @Qooxdoo/framework
+$ npm install @qooxdoo/framework
 ```
 
 This will install the npm package into your current folder from where you can
@@ -19,5 +19,5 @@ In both cases, to verify the installation use your runtime's loading primitive
 to include it in a program, e.g. for Node:
 
 ```javascript
-var qx = require('@Qooxdoo/framework')
+var qx = require('@qooxdoo/framework')
 ```

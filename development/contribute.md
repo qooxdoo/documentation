@@ -67,7 +67,7 @@ After you have added your test classes/methods, navigate to folder containing
 your fork, and execute the following steps:
 
 ```bash
-npm install --no-save --no-package-lock @Qooxdoo/compiler
+npm install --no-save --no-package-lock @qooxdoo/compiler
 npx qx lint <path(s) to the file(s) you changed/added, including the test class>
 npx qx test --class=<the class you added your test cases to>
 ```

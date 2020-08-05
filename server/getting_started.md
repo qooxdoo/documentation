@@ -15,7 +15,7 @@ using your runtime's loading primitives. Here is a simple example for Node.js:
 
 
 ```
-var qx = require('@Qooxdoo/framework')
+var qx = require('@qooxdoo/framework')
 
 // create anmial class
 qx.Class.define("my.Animal", {

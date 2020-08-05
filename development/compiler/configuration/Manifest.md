@@ -58,8 +58,8 @@ This is a sample file:
     "css": ["styles/style.css"]
   },
   "requires": {
-    "@Qooxdoo/framework": "^6.0.0-alpha",
-    "@Qooxdoo/compiler": "^0.2.40",
+    "@qooxdoo/framework": "^6.0.0-alpha",
+    "@qooxdoo/compiler": "^0.2.40",
     "Qooxdoo/contrib": "^0.1.1"
   }
 }
@@ -116,7 +116,7 @@ This is a sample file:
 * **requires**: a list of of needed libraries and [packages](../cli/packages.md)
   . Format is `package_uri`: `needed_version` where `needed_version` is a semver
   compatible version description. Special handling for:
-  - @Qooxdoo/framework: This checks the version of the used Qooxdoo framework
+  - @qooxdoo/framework: This checks the version of the used Qooxdoo framework
     NPM package.
-  - @Qooxdoo/compiler: This checks the version of the used Qooxdoo compiler NPM
+  - @qooxdoo/compiler: This checks the version of the used Qooxdoo compiler NPM
     package.

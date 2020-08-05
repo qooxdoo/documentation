@@ -9,7 +9,7 @@ work through the [introduction](/)
 $ mkdir tweets
 $ cd tweets
 $ npm init
-$ npm install --save-dev @Qooxdoo/compiler
+$ npm install --save-dev @qooxdoo/compiler
 $ npx qx create tweets --type desktop --noninteractive --out=.
 ```
 

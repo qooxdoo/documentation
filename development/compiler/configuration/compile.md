@@ -157,7 +157,7 @@ The `targets` key is an array of objects, one for each possible target that can
 be compiled. Each object can contain:
 
 - `type` - this is either "source", "build", or a class name in
-  `@Qooxdoo/compiler`; using a class name is advanced usage, but ultimately the
+  `@qooxdoo/compiler`; using a class name is advanced usage, but ultimately the
   standard names just shortcuts to class names anyway ("source" is
   `qxcompiler.targets.SourceTarget`, etc)
 

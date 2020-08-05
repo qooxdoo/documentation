@@ -102,7 +102,7 @@ widgets, e.g. their border radius, etc. See the section below on custom theming.
 If you want to use our Flat theme instead of the Indigo theme, you have to copy
 the content of the following file:
 
-`node-modules/@Qooxdoo/framework/source/resource/qx/mobile/scss/theme/flat/_styles.scss`
+`node-modules/@qooxdoo/framework/source/resource/qx/mobile/scss/theme/flat/_styles.scss`
 
 Into your project's theme file:
 
