@@ -6,6 +6,13 @@ definition already "knows" all parts of the class at definition time. This
 allows for many useful checks during development as well as clever optimizations
 during the build process.
 
+The class system has been part of qooxdoo since 2005, when JavaScript had no 
+[`class` keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+(it was introduced with ECMAScript 2015). At the moment, it is not possible 
+to mix Qooxdoo classes and ECMAScript 2015 classes; this is planned for a
+future release. In any case, as shown below, the Qooxdoo class system is still
+much more powerful than the native classes. 
+
 ## Declaration
 
 Here is the most basic definition of a regular, non-static class `qx.test.Cat`.
