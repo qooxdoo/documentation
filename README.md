@@ -165,3 +165,7 @@ one page, please clone
 [the documentation repository](https://github.com/qooxdoo/documentation) and do
 your edits. Before creating a PR with your changes, make sure to `npm install`
 and `npm test`. This will check your markdown and enforce certain style rules.
+
+If you move or rename pages, make sure to add a redirection
+in the [alias.js](/alias.js) file, so that internal links
+and especially external links to them are not broken.

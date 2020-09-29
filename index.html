@@ -12,14 +12,13 @@
 </head>
 <body>
   <div id="app">Loading the qooxdoo documentation ...</div>
+  <script src="alias.js"></script>
   <script>
     window.$docsify = {
       markdown: {
         gfm: true, tables: true
       },
-      alias: {
-        '/.*/_sidebar.md': '/_sidebar.md',
-      },
+      alias: window.docsify_alias,
       name: '@qooxdoo/framework',
       repo: 'https://github.com/qooxdoo/qooxdoo',
       coverpage: true,
