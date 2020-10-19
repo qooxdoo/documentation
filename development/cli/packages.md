@@ -176,10 +176,10 @@ that GitHub supports, you can use the `--release` parameter or add the version
 with an '@' sign like so
 
 ```bash
-qx install Qooxdoo/qxl.apiviewer --release v1.1.0
-qx install Qooxdoo/qxl.apiviewer@v1.1.0
-qx install Qooxdoo/qxl.apiviewer@eef00cba2dd72ff73dc88f9786aa3d9a0ed4ff6d
-qx install Qooxdoo/qxl.apiviewer@master
+qx install qooxdoo/qxl.apiviewer --release v1.1.0
+qx install qooxdoo/qxl.apiviewer@v1.1.0
+qx install qooxdoo/qxl.apiviewer@eef00cba2dd72ff73dc88f9786aa3d9a0ed4ff6d
+qx install qooxdoo/qxl.apiviewer@master
 ```
 
 The prefix "v" is mandatory for releases. You can even use branch names like
