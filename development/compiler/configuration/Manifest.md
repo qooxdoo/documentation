@@ -101,7 +101,7 @@ This is a sample file:
     `source/resource`).
   - **translation**: Path to the library's translation files relative to the
     Manifest.json file (e.g. `source/translation`).
-  - [**webfonts**]&#x3A; [see here](../development/compiler/IconFonts.md)
+  - [**webfonts**]&#x3A; [see here](../development/howto/icon_fonts.md)
   - **type**: One of [`library`, `application`, `add-in`,`contribution`] .
   - **application**: An application description block as described in  
     [compiler.json](./compile.md). This block will copied to `applications`
