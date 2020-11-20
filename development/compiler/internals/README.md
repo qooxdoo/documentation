@@ -4,8 +4,6 @@
 
 [How to configure application start](LoaderUrls.md)
 
-[Handling of icon fonts](IconFonts.md)
-
 [Handling of SASS compilation](Sass.md)
 
 [Metadata infomation written by the compiler](MetaData.md)
