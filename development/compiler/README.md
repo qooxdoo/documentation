@@ -101,8 +101,8 @@ Here's an example where we add a couple of packages into your project, and then
 serve them up:
 
 ```javascript
-qx package install Qooxdoo/qxl.apiviewer
-qx package install Qooxdoo/qxl.widgetbrowser
+qx package install qooxdoo/qxl.apiviewer
+qx package install qooxdoo/qxl.widgetbrowser
 qx serve --show-startpage
 ```
 

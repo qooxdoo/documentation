@@ -86,7 +86,7 @@ application.
 
 ```console
 $ npx qx package update
-$ npx qx package install Qooxdoo/qxl.testtapper
+$ npx qx package install qooxdoo/qxl.testtapper
 ```
 
 Installing the `qxl.testtapper` package adds a new application to your

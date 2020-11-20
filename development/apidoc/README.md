@@ -130,7 +130,7 @@ If you haven't already, install the apiviewer package without making it a
 dependency of your application:
 
 ```bash
-npx qx pkg install --save=0 Qooxdoo/qxl.apiviewer
+npx qx pkg install --save=0 qooxdoo/qxl.apiviewer
 ```
 
 Then start the Qooxdoo application server...
