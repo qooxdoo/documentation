@@ -60,7 +60,7 @@ This is a sample file:
   "requires": {
     "@qooxdoo/framework": "^6.0.0-alpha",
     "@qooxdoo/compiler": "^0.2.40",
-    "Qooxdoo/contrib": "^0.1.1"
+    "qooxdoo/contrib": "^0.1.1"
   }
 }
 ```

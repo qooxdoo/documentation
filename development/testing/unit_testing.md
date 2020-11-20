@@ -58,7 +58,7 @@ you!
 
 To run browser based test you have to
 
-- install testapper with `qx package install Qooxdoo/qxl.testtapper --save=0`
+- install testapper with `qx package install qooxdoo/qxl.testtapper --save=0`
 - prepare testapper application in your `compile.json` by adding your test
   namespace:
 
@@ -101,7 +101,7 @@ mock server responses.
 The unit tests can be run using the
 [TestTapper application](https://github.com/qooxdoo/qxl.testtapper/blob/master/README.md)
 , which you can easily install by executing
-`npx qx package install --save=0 Qooxdoo/qxl.testtapper`. (`--save=0` ensures
+`npx qx package install --save=0 qooxdoo/qxl.testtapper`. (`--save=0` ensures
 that this test runner is not registered as a permanent dependency of your
 application).
 
