@@ -1,6 +1,6 @@
 # About Qooxdoo
 
-**Qooxdoo v.\${Qooxdoo.version}**
+**Qooxdoo v.#{qooxdoo.version}**
 
 Qooxdoo (pronounced ['kuksdu:]) is a universal JavaScript framework for creating
 enterprise-grade single-page web applications. With its class-based object

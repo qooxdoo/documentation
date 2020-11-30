@@ -1,4 +1,4 @@
-# Qooxdoo Manual (v\\\\\${Qooxdoo.version})
+# Qooxdoo Manual (v#{qooxdoo.version})
 
 This is an overview of Qooxdoo's comprehensive feature-set and the extensive
 documentation that comes with it. The [sidebar](_sidebar.md) contains a more
