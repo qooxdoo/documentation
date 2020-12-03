@@ -46,6 +46,7 @@ This is a sample file:
     "resource": "source/resource",
     "translation": "source/translation",
     "type": "application",
+    "environmentChecks": {},
     "application": {
       "class": "qxl.apiviewer.Application",
       "theme": "qxl.apiviewer.Theme",
@@ -106,6 +107,9 @@ This is a sample file:
   - **application**: An application description block as described in  
     [compiler.json](./compile.md). This block will copied to `applications`
     section in `compile.json` during installation of the contrib.
+  - **environmentChecks**: Provides mappings between short environment keys
+    (such as `browser.name`) and the class that implements it; the key name
+    can be specified with a wildcard, eg `browser.*`
 
 - **externalResources**: Static Javascript and CSS files that shall be always
   included without further processing by Qooxdoo. All paths are relative to the
