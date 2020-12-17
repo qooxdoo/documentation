@@ -2,7 +2,7 @@
 
 Aside from normal Qooxdoo libraries and [packages](../cli/packages.md) there may
 be times when you want to include a third-party Javascript library in your
-application that just comes as a (potentially minified) _.js_ file. (This could
+application that just comes as a (potentially minified) `.js` file. (This could
 e.g. be a graphics or charting library.) There are basically two ways to
 integrate such a library into your application:
 
@@ -13,21 +13,48 @@ Here is how each of them works.
 
 ## Using the third-party library like a resource of your application
 
-Let's assume you found charting library, called PonyCharts\_. It is available as
-minified \_ponycharts.js\* download from the project's web site. It exposes an
-API for creating and manipulating charts, and you want ot use such charts as
+Let's assume you found charting library, called PonyCharts. It is available as
+minified `ponycharts.js` download from the project's web site. It exposes an
+API for creating and manipulating charts, and you want to use such charts as
 part of your Qooxdoo application. This means calling into the library's API from
 your Qooxdoo code, which in turn means the library has to be loaded ahead of
 your code in the browser.
 
-1.  As a first step, copy the _.js_ file into your app's resource tree, e.g. as
-    \`source/resource/ponycharts/ponycharts.js\`\`
+As a first step, copy the `.js` file into your app's resource tree, e.g. as
+`source/resource/ponycharts/ponycharts.js`
 
-2.  Then, make sure your new resource is used by your application code. The main
-    consequence of this is that the _.js_ file will be copied over to the build
-    tree of your application, and is being made known to Qooxdoo's
-    ResourceManager. You achieve that by adding an [\*@asset](mailto:*@asset) \*
-    hint to the main class of your application or library.
+### Compiler Hints
+There are two ways that you can arrange for that `.js` file to be loaded - the first,
+and possibly the simplest, is to use the `@external` hint, for example:
+
+```javascript
+/**
+ * This is the main class of your custom application "foo".
+ *
+ * @asset(foo/*)
+ * @external(ponycharts/ponycharts.js)
+ */
+qx.Class.define("foo.Application",
+    //...
+```
+
+In that example, the class is the main Application class and so that class will always
+be loaded - but as Qooxdoo only loads those classes that you actually need, if you have
+an `@external` on a class which is not used, then the .js file will not be loaded.  This
+makes it easy to write (for example) a widget class which only loads the extra .js if
+you're using the widget.
+
+You can do the same with CSS files, just use something like `@external(ponycharts/ponycharts.css)`
+
+### Using Manifest.json
+There is another, older, way to achieve the same thing, and that is to add it into your
+`Manifest.json` for your applciation or library; the disadvantage of this approach is that
+the .js and .css files are *always* loaded, regardless of which classes use them.
+
+If you want to use this approach, you need to make sure your new resource is used by your 
+application code. The main consequence of this is that the `.js` file will be copied over 
+to the build tree of your application, and is being made known to Qooxdoo's ResourceManager. 
+You achieve that by adding an `@asset` hint to the main class of your application or library.
 
 ```javascript
 /**
@@ -40,9 +67,9 @@ qx.Class.define("foo.Application",
     //...
 ```
 
-Sometimes, it makes sense to add the _.js_ file under its own directory, thereby
+Sometimes, it makes sense to add the `.js` file under its own directory, thereby
 creating a namespace for it. This allows you to use wildcards should the
-third-party lib consist of multiple files (e.g. comes with an _.css_ file,
+third-party lib consist of multiple files (e.g. comes with an `.css` file,
 images, etc.). You could then write
 
 ```javascript
@@ -52,13 +79,13 @@ images, etc.). You could then write
  */
 ```
 
-3.  Make sure the PonyCharts _.js_ file is loaded before your application code.
-    A simple way to achieve this is to use the command
-    `npx qx add script path/to/ponycharts.js`. This is the same as adding to the
-    `externalResources.script` array in
-    [Manifest.json](../compiler/configuration/Manifest.md) . This will assure
-    the lib is loaded in source and build versions of your app before your code
-    starts. You can now code happily against PonyChart's API.
+Then, make sure the PonyCharts `.js` file is loaded before your application code.
+A simple way to achieve this is to use the command
+`npx qx add script path/to/ponycharts.js`. This is the same as adding to the
+`externalResources.script` array in
+[Manifest.json](../compiler/configuration/Manifest.md) . This will assure
+the lib is loaded in source and build versions of your app before your code
+starts. You can now code happily against PonyChart's API.
 
 ## Wrapping the third-party code in an own Qooxdoo library
 
