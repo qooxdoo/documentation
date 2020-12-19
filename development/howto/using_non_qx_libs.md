@@ -87,6 +87,16 @@ A simple way to achieve this is to use the command
 the lib is loaded in source and build versions of your app before your code
 starts. You can now code happily against PonyChart's API.
 
+### Inlining the code
+When you build your application with the compiler, the compiler will by default
+just add ordinary `<script>` tags to load the third party code when compiling a
+"source" target, and will insert the code inline into the single, minimised 
+javascript file when compiling a "build" target.
+
+If you want to override this, edit your `compile.json` and in the target definition
+set the `inline-external-scripts` property to `true` or `false`, or use the `--inline-external-scripts`
+command line option.
+
 ## Wrapping the third-party code in an own Qooxdoo library
 
 There is a more elaborate way to use an external Javascript library, by wrapping

@@ -186,6 +186,12 @@ be compiled. Each object can contain:
 - `minify` - (**optional**) determines the minification to be used for
   applications, if the target supports it; can be overridden on a per
   application basis. Can be `off`, `minify`, `mangle`, or `beautify`.
+  
+- `inline-external-scripts` -- (**optional**) controls whether external scripts are added
+  inline into the `index.js` of the target application, or whether they are loaded
+  by adding separate `<script>` tags into the document,  This is by default `false` for source
+  targets and true for `build` targets; see also the `--inline-external-scripts` command
+  line option.
 
 - `addCreatedAt` - (**optional**) if true, this will cause every object to have
   a hidden property called `$$createdAt` which points to an object containing
