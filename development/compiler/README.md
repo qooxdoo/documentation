@@ -133,7 +133,7 @@ use `npx` to execute `qx` commands.
 mkdir myFirstApp
 cd myFirstApp
 npm init             # answer npm's questions
-npm i -g @qooxdoo/compiler
+npm i @qooxdoo/compiler
 npx qx create myFirstApp --noninteractive --out=.
 npx qx compile
 ```
