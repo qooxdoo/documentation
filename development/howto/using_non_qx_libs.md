@@ -2,14 +2,44 @@
 
 Aside from normal Qooxdoo libraries and [packages](../cli/packages.md) there may
 be times when you want to include a third-party Javascript library in your
-application that just comes as a (potentially minified) `.js` file. (This could
-e.g. be a graphics or charting library.) There are basically two ways to
+application. It may come as a Node module, or possibly just comes as a (potentially minified)
+`.js` file. (This could e.g. be a graphics or charting library.) There are basically three ways to
 integrate such a library into your application:
 
+- Using a `browserify` to include a Node module
 - Using the third-party library like a resource of your app.
 - Wrapping the third-party code in an own Qooxdoo library.
 
 Here is how each of them works.
+
+## Using `browserify` to include a Node module
+The [Manifest.json](../compiler/configuration/Manifest.md) file has a key 
+called **externalResources** that may be used to load files, including scripts,
+automatically. One use of **externalResources** is to include a browserified Node
+module with an app. These steps can be used as an example to acomplish it:
+- Go to your project's top-level directory
+- Ensure it is initialized for `npm` by confirming that there is a `node_modules`
+directory there. If not, issue the command, `npm init -f -q`.
+- Install the Node module you want to browerify to use in your app, e.g.,
+`npm install --save trie-search`
+- Create a `script` directory within the `resource` path: `mkdir -p source/resource/script`
+- Install browserify globally: `sudo npm install -g browserify`
+- Browserify the node module, sending the output into that script directory:
+`browserify -r trie-search > source/resource/script/triesearch.js`
+- Now add to the **script** array of **externalResources**:
+```json
+"externalResources": {
+"script": [
+  "script/triesearch.js"
+]
+```
+- Your app can then access the node module as it would if running under Node, with
+`require`. For example:
+```javascript
+const TrieSearch = require("trie-search");
+const trieSearch = new TrieSearch("name");
+```
+
 
 ## Using the third-party library like a resource of your application
 
