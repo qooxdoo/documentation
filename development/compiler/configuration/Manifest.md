@@ -116,6 +116,31 @@ This is a sample file:
   resource folder stated in the "provides" section.
   - **script**: Array of javascript files.
   - **css**: Array of css files.
+  
+  One use of **externalResources** is to include a browserified Node
+  module with an app. These steps can be used as an example to acomplish it:
+  - Go to your project's top-level directory
+  - Ensure it is initialized for `npm` by confirming that there is a `node_modules`
+    directory there. If not, issue the command, `npm init -f -q`.
+  - Install the Node module you want to browerify to use in your app, e.g.,
+    `npm install --save trie-search`
+  - Create a `script` directory within the `resource` path: `mkdir -p source/resource/script`
+  - Install browserify globally: `sudo npm install -g browserify`
+  - Browserify the node module, sending the output into that script directory:
+    `browserify -r trie-search > source/resource/script/triesearch.js`
+  - Now add to the **script** array of **externalResources**:
+  ```json
+    "externalResources": {
+    "script": [
+      "script/triesearch.js"
+    ]
+  ```
+  - Your app can then access the node module as it would if running under Node, with
+    `require`. For example:
+  ```javascript
+  const TrieSearch = require("trie-search");
+  const trieSearch = new TrieSearch("name");
+  ```
 
 * **requires**: a list of of needed libraries and [packages](../cli/packages.md)
   . Format is `package_uri`: `needed_version` where `needed_version` is a semver
