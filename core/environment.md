@@ -137,8 +137,8 @@ This example would clear a previously calculated value for `myapp.key` .
 Usually, function calls like _qx.core.Environment.get()_ are executed at run
 time and return the given value of the environment key. This is useful if such
 value is determined only at run time, or can change between runs. But if you
-want to pre-determine the value, you can set it in the generator config. The
-generator can then anticipate the outcome of a query and remove code that
+want to pre-determine the value, you can set it in the compiler config. The
+compiler can then anticipate the outcome of a query and remove code that
 wouldn't be used at run time.
 
 For example,
@@ -189,6 +189,29 @@ For a complete list of predefined environment keys, take a look at the
 [API documentation of the qx.core.Environment class](apps://apiviewer#qx.core.Environment)
 .
 
+## Code Optimization
+
+When the compiler can absolutely determine, in advance, the values for an
+environment variable, it will evaluate the expression in advance and eliminate
+code which can never be called; for example, the most common example of this is
+`qx.debug` which is true for the Source Target and false for Build Targets.
+
+This also happens with the generator, but only when using the `build` target.
+
+The optimization takes
+advantage of the values of environment settings given in the configuration, to
+remove code like calls to `qx.core.Environment.get()` for such a setting and
+replace it with the corresponding value. That means that changing the value of
+such a key via URL parameter later has no effect, as the call to retrieve its
+value is no longer in the code. You can then only set environment values via URL
+parameter for those keys which have **not** been given a value in the
+configuration.
+
+This isn't always practical - for example, you may wish to use the configuration
+to set the default value for an environment setting - to prevent the compiler 
+eliminating the code, use the "preserveEnvironment" setting (or in the generator,
+disable the `variants` optimisation and set `qx.allowUrlSettings` to true).
+
 ## Defining New Environment Settings
 
 Now to actually setting new or overriding existing environment settings. The
@@ -196,25 +219,32 @@ value of an environment key can take one of two forms, as a concrete literal
 value, or as a function that returns a value at run time. The former can be
 achieve in various ways (see further), the latter only through application code.
 (An environment key with its current value is also referred to as an
-_environment setting_). We go through both ways now.
+_environment setting_). 
+
+### Naming new settings
+When you add a new environment setting, if the literal value or function is
+defined in code, the compiler needs to know where to find that value or function;
+the easiest way to tell the compiler is to include the class name in the setting
+name, for example `myapp.MyClass.mySetting` makes it easy for the compiler to understand
+that the `myapp.MyClass` class is needed - and it also helps you make your code self
+documenting.
 
 ### As Literal Values
 
 As already mentioned, there are various possibilities to assign a literal value,
 like `"foo"`, `3` or `true`, to an environment key. You can define the setting
 
-- in the class map
-- in method code
-- through inline `<script>` code in the index.html
-- in the generator configuration
-- during compilation using the `--set-env` option
+- in the class definition
+- in application code
+- through inline `<script>` code in the index.html, prior to the app loading
+- in the compiler configuration
 - via URL parameter
 
 The list is sorted in ascending precedence, i.e. if a key is defined multiple
 times, mechanisms further down the list take higher precedence. Those
 possibilities are explained in the following sections.
 
-#### In the Class Map
+#### In the Class Definition
 
 You can define a key and its value through the environment key of the map
 defining a Qooxdoo class:
@@ -225,7 +255,7 @@ qx.Class.define("myapp.ClassA",
   [...]
 
   environment : {
-    "myapp.key" : value
+    "myapp.ClassA.key" : value
   }
 });
 ```
@@ -264,27 +294,6 @@ containing your environment settings.
 see [here](../development/compiler/configuration/compile.md#environment-settings)
 .
 
-#### During compilation
-
-You can define your environment settings during compilation using the
-compiler `--set-env` option. Setting the option multiple times sets
-additional environment settings.
-
-```console
- npx qx compile --set-env myapp.key1=value1 --set-env myapp.key2=value2
-```
-
-If the environment settings are set with this method, the values are set as
-strings. Your code should take care to convert the values from string.
-
-> :memo: Because the values are set as strings, if there is a need to override any
-> predefined keys, this method is probably not the best option. The framework
-> uses those keys in various places and many of the keys accept boolean or
-> numeric values. For example the `qx.allowUrlSettings` option, described in the
-> next section, accepts a boolean value. The
-> `--set-env qx.allowUrlSettings=true` option will set it to the string `"true"`
-> which is not what the framework expects.
-
 #### Via URL parameter
 
 Before using URL parameter to define environment settings, you have to specify
@@ -300,29 +309,8 @@ The pattern in the URL parameter is easy. It has three parts separated by
 colons. The first part is the constant `qxenv`, the second part is the key of
 the environment setting and the last part is the value of the setting.
 
-### qx.allowUrlSettings and "variants" Optimization
-
-Setting `qx.allowUrlSettings` to true in the configuration somewhat contradicts
-using the variants optimization in builds. The variants optimization takes
-advantage of the values of environment settings given in the configuration, to
-remove code like calls to `qx.core.Environment.get()` for such a setting and
-replace it with the corresponding value. That means that changing the value of
-such a key via URL parameter later has no effect, as the call to retrieve its
-value is no longer in the code. You can then only set environment values via URL
-parameter for those keys which have **not** been given a value in the
-configuration.
-
-Alternatively, you could disable `variants` optimization in the build, or remove
-the setting you want to change via URL parameter from the config. In the latter
-case, you have other possibilities to set a default for this setting, by either
-providing an `environment` key in the class map, or a
-`qx.core.Environment.add()` call in the class' `defer` function.
-
-If you set `qx.allowUrlSettings` to true and have the `variants` optimization
-enabled for a particular build, the generator will issue a warning.
-
-So much for setting simple key:value pairs. Now for providing a check function
-as the value of an environment key.
+Note that you also need to prevent the compiler or generator from eliminating code
+(see (Code Optimization)[#Code Optimization])
 
 ### As a Check Function
 

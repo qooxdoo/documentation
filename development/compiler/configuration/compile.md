@@ -465,9 +465,14 @@ code which can never be called; for example, the most common example of this is
 `qx.debug` which is true for the Source Target and false for Build Targets.
 
 However, the environment variable is compiled into every file, which means that
-if you set an environmenmt variable in the application block, it will not be
-compiled in and code elimination cannot take place. Code elimination is only
-activated if the setting is set in the global or target `environment` blocks.
+if you set an environment variable which differs between applications (within the 
+same target), then the compiler cannot eliminate code and the check will take place 
+at runtime, instead of at compile time.  The compiler automatically determines which 
+settings can be compiled into the code.
+
+The only exception to this is if you use the `preserveEnvironment` setting when
+defining a target - this is an array of setting names which the compiler will
+keep for runtime decisions and not perform code elimination for.
 
 ## Locales
 
