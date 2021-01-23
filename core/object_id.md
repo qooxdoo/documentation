@@ -28,30 +28,6 @@ members: {
 
 Now you can call `this.getQxObject("someArray")` to get the array (you can call `getQxObject` as many times as you like with the same ID, and `_createQxObjectImpl` will only be called once).
 
-This ID mechanism is very useful for improving code structure, because when writing an object which has a lot of controls or other objects (eg you're writing a form of some kind such as an editor widget or a dialog box), your constructor might look like this:
-
-```
-construct: function() {
-  this.base(arguments);
-  var comp = new qx.ui.container.Composite();
-  var edt = new qx.form.TextField();
-  this._addToGroup(comp, edt, "Line 1", "line1"); 
-
-  edt = new qx.form.TextField();
-  this._addToGroup(comp, edt, "Line 2", "line2"); 
-  /* ... snip ... */
-
-  edt = new qx.form.TextField();
-  this._addToGroup(comp, edt, "Postcode", "postcode"); 
-  // ... etc ...
-},
-members: {
-  _addToGroup: function(parentWidget, widget, label, bindPath) {
-    /* ... snip ... */
-  }
-}
-```
-
 As forms get more complex, so does the constructor; adding event listeners and other behaviour increase the size of the constructor and make it harder to read what exactly is going on.  And as layout is redesigned, the order of the code in constructor becomes important because obviously you cannot register event listeners on objects that have not been created yet.
 
 When those widgets need to be referenced by event handlers or other methods, you need to make sure that each one has a unique name, and/or is assigned to a unique member variable too.  With this being the case, you are already assigning a unique ID to most of the objects that you create, the difference is that they are local and/or member variables rather than strings.
