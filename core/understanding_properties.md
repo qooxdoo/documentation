@@ -519,8 +519,7 @@ You can check incoming values by adding a `check` key to the corresponding
 property definition. But keep in mind that these checks only apply in the
 development (source) version of the application. Due to performance
 optimization, we strip these checks for the build version. If you want a
-property validation, take a look at the validation section
-defining_properties.md#validation_incoming_values.
+property validation, take a look at the [validation section](?id=validation-of-incoming-values).
 
 ### Predefined types
 
@@ -940,8 +939,6 @@ obj.setPadding( 10, 20 );
 // obj.setPaddingBottom(10);
 // obj.setPaddingLeft(20);
 }
-
-.. _pages/defining_properties#when_to_use_properties:
 ```
 
 ## When to use properties?
