@@ -59,8 +59,6 @@
     - [Alphabetic list](/desktop/widget/widget_list.md)
 
 - [Qooxdoo on the Server](/server/)
-  - [Requirements](/server/requirements.md)  
-  - [Getting Started](/server/getting_started.md)
 
 - [Qooxdoo Mobile](/mobile/)
   - [Overview](/mobile/mobile_overview.md)
