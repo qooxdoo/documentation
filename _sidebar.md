@@ -1,6 +1,7 @@
 - [Overview](/contents.md)
   - [Getting Started](/?id=getting-started)
   - [Qooxdoo Apps](/apps.md)
+  - [Release Notes](/release-notes.md)
   - [About](/about.md)
 
 - [Qooxdoo Core](/core/)
