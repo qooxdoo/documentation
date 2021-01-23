@@ -2,20 +2,25 @@
 
 Qooxdoo includes four themes:
 
+- `Simple` - a lightweight theme, which looks more like a website.
+- `TangibleLight` and `TangibleDark` - lightweight themes based on Google Materials design philosophy and using Material Font Icons
 - `Modern` - a graphically rich theme, showcasing many UI capabilities of
   Qooxdoo %{version}
 - `Classic` - MS Windows oriented theme
-- `Simple` - a lightweight theme, which looks more like a website.
 - `Indigo` - a theme, based on simple but offers the style of the qooxdoo.org
   website.
 
 Here some screenshots:
 
+![Simple theme](theming/window_simple_theme.png)
+
+![Tangible Light theme](theming/window_tangible_light_theme.png)
+
+![Tangible Dark theme](theming/window_tangible_dark_theme.png)
+
 ![Modern theme](theming/window_modern_theme.png)
 
 ![Classic theme](theming/window_classic_theme.png)
-
-![Simple theme](theming/window_simple_theme.png)
 
 ![Indigo theme](theming/window_indigo_theme.png)
 
