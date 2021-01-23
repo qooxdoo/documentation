@@ -23,13 +23,6 @@ welcome your thoughts on what could be improved in this documentation. Better
 still, you can improve them right away by clicking on the "Edit document on
 GithHub" button which is at the bottom of every page.
 
-If you plan on editing several pages or add new ones, it makes sense to check
-out a clone of the
-[current master branch of the Qooxdoo repository](https://github.com/qooxdoo/qooxdoo)
-, make the edits in a new branch of your clone, and create a Pull Request.
-Please run `./.travis/markdown-lint` first, this will catch MarkDown-related
-errors and save you a lot of time.
-
 ## Feature requests amd incubators
 
 If you think Qooxdoo needs improvement in a particular area, you can  
