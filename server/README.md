@@ -1,14 +1,32 @@
 # Qooxdoo on the Server
 
-This page is an overview of Qoodoo's server capabilities. It shows which parts
-of Qooxdoo can be used in a server environment or comparable scenario. It also
-serves as an introduction to those interested in using Qooxdoo in a server
-environment. Qooxdoo server supports all the features of the [Qooxdoo Core](/core/).
+Qooxdoo applications are not just limited to use in a web browser or mobile, they 
+can also be used in Node.JS and Rhino.
 
-We currently support two types of runtimes:
-- [node.js](http://nodejs.org/)
-- [Rhino](http://www.mozilla.org/rhino/)
+The only thing you need to do is edit your `compile.json` and add a new entry in the
+`applications` array for your server app, and set the `type` to `"node"`.
 
-For more information, see the sections on
-- [Requirements](requirements.md)
-- [Getting started with Qooxdoo Mobile](getting_started.md)
+In the example below, there are two applications - one for browser application, and 
+one for running in node:
+
+```json5
+{
+    /** Applications */
+    "applications": [
+        {
+            "class": "demoapp.Application",
+            "theme": "demoapp.theme.Theme",
+            "name": "demoapp"
+        },
+        {
+            "class": "demoapp.ServerApplication",
+            "name": "serverapp",
+            "type": "node"
+        }
+    ],
+```
+
+After successfully running `qx compile` you will be able to run `node ./compiled/source/serverapp/index.js`
+
+That's all there is to it - you can use `require` and all the normal features of Node.JS, just with
+the Qooxdoo framework automatically integrated.
