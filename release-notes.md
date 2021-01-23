@@ -15,7 +15,7 @@ The compiler (the `qx compile` command) is fast, and continuously compiles code 
 the latest ES6 language specs into ES5, giving you ultimate compatibility without compromising
 ease of coding.
 
-Documentation is at [https://qooxdoo.org/documentation/#/development/cli/commands](https://qooxdoo.org/documentation/#/development/cli/commands)
+[Documentation](https://qooxdoo.org/documentation/#/development/cli/commands)
 
 
 ## Packages
@@ -27,10 +27,10 @@ database to pull from.
 See the `qx package` command for more information on how to incorporate packages into your
 application.
 
-Documentation is at [https://qooxdoo.org/documentation/#/development/cli/packages](https://qooxdoo.org/documentation/#/development/cli/packages).
 All published packages are cataloged and showcased in our online [Package Browser](https://qooxdoo.org/qxl.packagebrowser/qxl.packagebrowser/#), 
 which is itself a packaged application that can be locally installed.
 
+[Documentation](https://qooxdoo.org/documentation/#/development/cli/packages).
 
 ## Automatic Memory Management
 A big improvement is that it is no longer necessary to manually `.dispose()` most objects when you
@@ -46,14 +46,14 @@ Although it is *mostly* widgets that are in the `ObjectRegistry`, it's actually 
 the `qx.core.IDisposable` interface; if you add that interface to your own classes, they will automatically
 added to the `ObjectRegistry` and you must manually call `.dispose()`.
 
-Documentation is at [https://qooxdoo.org/documentation/#/development/howto/memory_management](https://qooxdoo.org/documentation/#/development/howto/memory_management)
+[Documentation](https://qooxdoo.org/documentation/#/development/howto/memory_management)
 
 
 ## Object ID
 All objects now support an ID mechanism which is heirarchial and can be navigated by code; this simplifies
 development and enables external automated testing tools to find your widgets and other objects.
 
-Documentation is at [https://qooxdoo.org/documentation/#/core/object_id](https://qooxdoo.org/documentation/#/core/object_id)
+[Documentation](https://qooxdoo.org/documentation/#/core/object_id)
 
 
 ## Promises
@@ -61,13 +61,13 @@ Promises are now integrated into the framework, represented by the `qx.Promise` 
 apply methods can return promises and will when for previous promises to complete before going onto
 the next step.
 
-Documentation is at [https://qooxdoo.org/documentation/#/core/promises](https://qooxdoo.org/documentation/#/core/promises)
+[Documentation ](https://qooxdoo.org/documentation/#/core/promises)
 
 
 ## Webfonts
 Qooxdoo now supports webfonts / iconfonts everywhere an image can be placed.
 
-Documentation is [https://qooxdoo.org/documentation/#/development/howto/icon_fonts](https://qooxdoo.org/documentation/#/development/howto/icon_fonts)
+[Documentation](https://qooxdoo.org/documentation/#/development/howto/icon_fonts)
 
 
 ## New Theme
@@ -95,7 +95,7 @@ submit Pull Requests to contribute to the project.
 We chat in public on [Gitter](https://gitter.im/qooxdoo/qooxdoo) and answer questions
 on [StackOverflow](https://stackoverflow.com/questions/tagged/qooxdoo)
 
-Documentation is at [https://qooxdoo.org/documentation/#/development/contribute](https://qooxdoo.org/documentation/#/development/contribute)
+[Documentation](https://qooxdoo.org/documentation/#/development/contribute)
 
 
 
