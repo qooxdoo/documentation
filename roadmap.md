@@ -9,6 +9,8 @@ Below is a summary of our plans for v7 and a rough outline of what we're thinkin
 
 * **Remove deprecated python tool chain** (the "generator"); this requires reworking the test runner framework, which although it is written in Javascript as a Qooxdoo application, the collection and compilation of unit tests depends on the generator.
 
+* **Allow new JavaScript syntax** With the generator gone, which only understood ECMAScript 5, framework code can use any new JavaScript syntax that is supported by the compiler (internally powered by the Babel transpiler). 
+
 * **Remove other deprecated code**
 
 * **Qooxdoo CMS** - currently a pre-alpha work in progress, the CMS sub project will bring a complete server and client development system with pluggable CMS.  Repo is [qooxdoo/qxl.cms](https://github.com/qooxdoo/qxl.cms)
@@ -21,7 +23,6 @@ Below is a summary of our plans for v7 and a rough outline of what we're thinkin
 
 * **Qooxdoo RPC** - provides a framework for transport-agnostic higher-level i/o protocols to the qx.io namespace; although this is already stable and ready for production use, it's due to be integrated into the core framework.  Repo is [qooxdoo/incubator.qx.io.jsonrpc](https://github.com/qooxdoo/incubator.qx.io.jsonrpc)
 
-
 ## v8.0.0
 
 Please remember that this list is a rough plan and subject to change.
@@ -32,4 +33,8 @@ Please remember that this list is a rough plan and subject to change.
 
 * **Native Decorators** - Qooxdoo annotations are similar to Javascript Decorators, and we would like to integrate the Qooxdoo annotations with the native syntax for decorators
 
+
+## Other features
+
+Our issue tracker contains [more features planned for the next release](https://github.com/qooxdoo/qooxdoo/milestone/66)...
 
