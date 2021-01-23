@@ -345,7 +345,7 @@ qx.Class.define("my.cool.Class", {
 ## Browser specific methods
 
 To maintain the closed form, browser switches at the method level is done using
-[environment settings](../core/environment.md). Since the generator knows about
+[environment settings](../core/environment.md). Since the compiler knows about
 environment settings it is (optionally) possible to only keep the code for each
 specific browser and remove the implementation for all other browsers from the
 code and thus generate highly-optimized browser-specific builds. It is possible

@@ -60,25 +60,15 @@ qx.Theme.define("myApplication.theme.Theme",
 });
 ```
 
-At last you have to tell the generator to actually use your meta theme.
-Therefore you have to edit your `config.json` file and add/edit the key
-`QXTHEME` in the `let` block.
+Finally you have to tell the generator to actually use your new theme - edit `compile.json` and in the `applications` array, find the block for your application and set the `theme` property, EG:
 
 ```
-"let" :
-  {
-    "APPLICATION"  : "myApplication",
-    ...
-    "QXTHEME"      : "myApplication.theme.Theme"
-    ...
-  },
+"applications": [
+  { 
+    "class": "myApplication.Application",
+    "theme": "myApplication.theme.Theme",
+    /* ...snip ... */
 ```
-
-After editing your `config.json` the very last step is to generate your
-application sources and you're done. Now you can adjust and extend your
-appearance theme to suit your needs.
-
-> :memo: These steps are also applicable for the other themes.
 
 ## Define Custom Themes
 

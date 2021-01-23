@@ -242,7 +242,7 @@ on [qx.bom.Font](apps://apiviewer/#qx.bom.Font) or
 This theme is to define which icon set is used and normally consists only of 2
 main keys (title and aliases).
 
-The important one is the `aliases` key which points the generator to the
+The important one is the `aliases` key which points the compiler to the
 location of the icon set. The `icon` alias, which is used to reference icons
 in Qooxdoo applications, is set to the value of this key. As Qooxdoo uses the
 freely available [Tango](https://commons.wikimedia.org/wiki/Tango_icons) and
@@ -315,24 +315,25 @@ Building up on the previous section, here is how to create an application that
 provides multiple themes that can be switched at runtime.
 
 - **Configure themes**: Add all meta theme classes of the themes you want to use
-  to the pages/tool/generator/generator_config_ref#include configuration key of
-  the compile jobs. A good way to achieve this is to override the
-  pages/tool/generator/generator_default_jobs#includes job in your config.json:
-
-  ```json5
-  "includes" : {
-    "include" : [
-      "qx.theme.Classic",
-      "qx.theme.Indigo",
-      "..."
-    ]
-  }
-  ```
+  to the `include` key for the application; for example:
+  
+```
+   "applications": [
+      {
+         "class": "qxl.widgetbrowser.Application",
+         "theme": "qx.theme.Indigo",
+         "name": "widgetbrowser",
+         "title": "WidgetBrowser",
+         "include": [
+            "qx.theme.Modern",
+            "qx.theme.Simple",
+            "qx.theme.Classic",
+            "qx.theme.TangibleLight",
+            "qx.theme.TangibleDark",
+```
 
   If you use third-party themes (like the Aristo or RetroTheme contributions)
-  make sure you also add their libraries to the
-  pages/tool/generator/generator_default_jobs#libraries job, so their classes
-  are actually available.
+  make sure you also add their libraries via `qx package` or the `libraries` property in the `compile.json`, so their classes are actually available.
 
 - **Implement theme switch**: Switch the theme in your application code. E.g.
   you can use [qx.Theme.getAll()](apps://apiviewer/#qx.Theme~getAll) to retrieve
@@ -402,6 +403,7 @@ provides multiple themes that can be switched at runtime.
   var b = qx.ui.form.Button("My button", "icon/16/apps/utilities-terminal.png");
   ```
 
+** NOTE ** This is not currently supported
   This is basically the same when you define your own icon themes (like with
   `qx.Theme.define("myapp.theme.icon.Foo)`) and define your own asset macros
   (like `"myapp.iconthemes" : ["Foo", "Bar"]`). For the latter you would just
