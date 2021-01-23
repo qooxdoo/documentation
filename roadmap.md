@@ -2,7 +2,10 @@
 
 With the release of Qooxdoo v6.0.0, the project is looking forward to removing a number of deprecated features and adding new components and modules that will broaden our feature set and build on the solid foundation that Qooxdoo currently is.
 
-Here's a brief summary of what we're planning:
+Below is a summary of our plans for v7 and a rough outline of what we're thinking about for v8; if there is anything you feel strongly about on either list (or you think that there is something missing) please feel free to talk to us about it - after all, if you don't us what you think, we'll never know!
+
+
+## v7.0.0:
 
 * **Remove deprecated python tool chain** (the "generator"); this requires reworking the test runner framework, which although it is written in Javascript as a Qooxdoo application, the collection and compilation of unit tests depends on the generator.
 
@@ -17,4 +20,16 @@ Here's a brief summary of what we're planning:
 * **Qooxdoo Remote Objects and Persistence** - another two incubators which are required for the Qooxdoo CMS, these add seamless remote control of Qooxdoo objects (think "RPC" but for entire objects, where property changes on the client can be reflected on the server) and persistently storing objects to disk.  Repos are [qooxdoo/incubator.qx.io.remote](https://github.com/qooxdoo/incubator.qx.io.remote) and [qooxdoo/incubator.qx.io.persistence](https://github.com/qooxdoo/incubator.qx.io.persistence)
 
 * **Qooxdoo RPC** - provides a framework for transport-agnostic higher-level i/o protocols to the qx.io namespace; although this is already stable and ready for production use, it's due to be integrated into the core framework.  Repo is [qooxdoo/incubator.qx.io.jsonrpc](https://github.com/qooxdoo/incubator.qx.io.jsonrpc)
+
+
+## v8.0.0
+
+Please remember that this list is a rough plan and subject to change.
+
+* **Native properties** - currently, Qooxdoo properties have to be accessed via `.getPropertyValue()`, we would like to change this to be more javascript and have the same functionality also available via `.propertyValue`.  This also means mapping `qx.data.Array` accessors, so that `myArr.getItem(0)` can be rewritten as just `myArr[0]`
+
+* **Native Classes** - the Qooxdoo class mechanism offers more features than standard ES6 classes, but it should be possible to integrate the two - for example, allow an ES6 `class` to extend from a Qooxdoo class and vice versa.
+
+* **Native Decorators** - Qooxdoo annotations are similar to Javascript Decorators, and we would like to integrate the Qooxdoo annotations with the native syntax for decorators
+
 
