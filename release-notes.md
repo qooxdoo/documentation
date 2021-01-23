@@ -5,11 +5,13 @@ which mean great things for the project, a better development environment for co
 still maintaining that rock solid reliability, scalability and no compromise on backwards
 compatibility and coding standards.
 
+And although 6.0.0 is a very new release, it's stable because the core developers as well as a number of other developers have been using the `master` branch of the framework constantly for many years; stability is essential to us, and while there are bound to be bugs, the project has gone through a lot of real world testing to get here.
+
 
 ## Compiler
 There is a whole new compiler and command line tool (the `qx` command), written entirely in 
 Javascript and replacing the Python toolchain (which is still supported but is officially 
-deprecated).
+deprecated **and will be removed in v7**).
 
 The compiler (the `qx compile` command) is fast, and continuously compiles code written to 
 the latest ES6 language specs into ES5, giving you ultimate compatibility without compromising

@@ -2,6 +2,7 @@
   - [Getting Started](/?id=getting-started)
   - [Qooxdoo Apps](/apps.md)
   - [Release Notes](/release-notes.md)
+  - [Roadmap](/roadmap.md)
   - [About](/about.md)
 
 - [Qooxdoo Core](/core/)
