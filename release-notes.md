@@ -27,7 +27,9 @@ database to pull from.
 See the `qx package` command for more information on how to incorporate packages into your
 application.
 
-Documentation is at [https://qooxdoo.org/documentation/#/development/cli/packages](https://qooxdoo.org/documentation/#/development/cli/packages)
+Documentation is at [https://qooxdoo.org/documentation/#/development/cli/packages](https://qooxdoo.org/documentation/#/development/cli/packages).
+All published packages are cataloged and showcased in our online [Package Browser](https://qooxdoo.org/qxl.packagebrowser/qxl.packagebrowser/#), 
+which is itself a packaged application that can be locally installed.
 
 
 ## Automatic Memory Management
