@@ -134,7 +134,7 @@ qx.Class.define("myapp.AddressEditor", {
 });
 ```
 
-Every widget becomes a member of the class, and although in this example they are all "public" there is nothing to prevent you using "_" or "__" prefixes to denote protected/private members.  It's easy and natural to pass around ID strings instead of object instances, and it means that if you derive a class from this, the derived class can change the widget implementation completely just by overriding `_createObjectImpl`.  
+Every widget becomes a member of the class, and although in this example they are all "public" there is nothing to prevent you using "\_" or "\_\_" prefixes to denote protected/private members.  It's easy and natural to pass around ID strings instead of object instances, and it means that if you derive a class from this, the derived class can change the widget implementation completely just by overriding `_createObjectImpl`.  
 
 The visual impact when reading code is great because you can see at a glance where widgets are and the constructor is much less cluttered.  Syntax highlighting in many IDEs mean that the strings in `case "edtLine1":` lines are highlighted and draw your eye to the different controls at least as good as comments (without requiring an additional comment).
 
