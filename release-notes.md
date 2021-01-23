@@ -5,6 +5,7 @@ which mean great things for the project, a better development environment for co
 still maintaining that rock solid reliability, scalability and no compromise on backwards
 compatibility and coding standards.
 
+
 ## Compiler
 There is a whole new compiler and command line tool (the `qx` command), written entirely in 
 Javascript and replacing the Python toolchain (which is still supported but is officially 
@@ -15,6 +16,7 @@ the latest ES6 language specs into ES5, giving you ultimate compatibility withou
 ease of coding.
 
 Documentation is at [https://qooxdoo.org/documentation/#/development/cli/commands](https://qooxdoo.org/documentation/#/development/cli/commands)
+
 
 ## Packages
 The new compiler supports "packages" (which are analogous to the old "contrib" system), where
@@ -84,14 +86,14 @@ before, and we've made sure that all contributions have formally switched to MIT
 As a team, we are a small group of experienced developers based around the world who use
 Qooxdoo every day and have a vested interest in maintaining the project and keeping it strong.
 
-All code is available at GitHub (https://github.com/qooxdoo)[https://github.com/qooxdoo],
+All code is available at GitHub [https://github.com/qooxdoo](https://github.com/qooxdoo),
 where we have published policies and rules on contributing; we actively encourage anyone to
 submit Pull Requests to contribute to the project.
 
-We chat in public on (Gitter)[https://gitter.im/qooxdoo/qooxdoo] and answer questions
-on (StackOverflow)[https://stackoverflow.com/questions/tagged/qooxdoo]
+We chat in public on [Gitter](https://gitter.im/qooxdoo/qooxdoo) and answer questions
+on [StackOverflow](https://stackoverflow.com/questions/tagged/qooxdoo)
 
-Documentation is at (https://qooxdoo.org/documentation/#/development/contribute)[https://qooxdoo.org/documentation/#/development/contribute]
+Documentation is at [https://qooxdoo.org/documentation/#/development/contribute](https://qooxdoo.org/documentation/#/development/contribute)
 
 
 
