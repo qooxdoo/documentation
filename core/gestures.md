@@ -1,8 +1,7 @@
 # Gesture Events
 
 Based on the `low-level pointer events pointer.md#pointer_events`, the following
-gesture events are available in all three of Qooxdoo's GUI toolkits (qx.Desktop,
-qx.Mobile and qx.Website):
+gesture events are available:
 
 - [tap](apps://apiviewer/#qx.event.type.Tap): A brief finger/stylus tap or mouse
   click

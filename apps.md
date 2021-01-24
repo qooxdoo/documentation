@@ -31,6 +31,10 @@ with the framework. The applications are:
 - **[Packagebrowser](http://www.qooxdoo.org/qxl.packagebrowser)**
   ([Code](https://github.com/qooxdoo/qxl.packagebrowser)): This application lets
   you browse the extension packages that can be installed.
+  
+- **[Testrunner](https://qooxdoo.org/qxl.testrunner/)**
+  ([Code](https://github.com/qooxdoo/qxl.testrunner)): A special testrunner for
+  the framework unit tests.
 
 The applications are developed as and shipped in separate packages. They can
 also be locally built by executing

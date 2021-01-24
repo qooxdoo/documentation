@@ -1,11 +1,5 @@
 # The Qooxdoo package system
 
-> :memo: The package system was previously called "Qooxdoo-contrib". It will
-take a while until the terminology and code will have fully transitioned to the
-new name. In the meantime, you'll probably find references to "contribs"
-everywhere. The new system is fully backwards compatible to "Qooxdoo-contrib",
-but will issue deprecation warnings when the old commands are used.
-
 ## Overview
 
 Qooxdoo's "plugin architecture" is called Qooxdoo package system. It does not
@@ -15,8 +9,10 @@ hosts components that have previously shipped with the framework, such as the
 API viewer or the playground. You can distribute whole Qooxdoo applications this
 way.
 
-You can browse the available packages with a GUI application, using the
-[Qooxdoo package viewer](http://www.qooxdoo.org/qxl.packagebrowser) .
+You can view a list of currently available packages in the
+[online catalog](https://qooxdoo.org/package-cache/) or browse
+the available packages with a GUI application, using the [Qooxdoo
+package viewer](http://www.qooxdoo.org/qxl.packagebrowser).
 
 The CLI supports the use, creation and mainenance of packages with the
 `qx package` subcommands.

@@ -76,8 +76,8 @@ Internet (now part of United Internet AG). In late 2015, the Qooxdoo framework
 with all its assets, was turned over to the Qooxdoo association, located in
 Switzerland. Qooxdoo development has, since then, been lead by a group of
 dedicated developers congregating on [gitter](https://gitter.im/qooxdoo/qooxdoo)
-and [github](https://github.com/qooxdoo/qooxdoo) . Contributions are always
-welcome.
+and [github](https://github.com/qooxdoo/qooxdoo) .
+[Contributions](contribute.md) are always welcome.
 
 ## Contact
 

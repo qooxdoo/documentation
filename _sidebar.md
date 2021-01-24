@@ -4,6 +4,8 @@
   - [Release Notes](/release-notes.md)
   - [Roadmap](/roadmap.md)
   - [About](/about.md)
+  - [History](/history.md)
+  - [Contribute](/contribute.md)
 
 - [Qooxdoo Core](/core/)
   - [Object Orientation](/core/oo_feature_summary.md)
@@ -114,3 +116,7 @@
     - [9. Virtual Lists](/tutorial/twitter/tutorial-part-9.md)
   - [Qooxdoo Mobile App](/mobile/tutorial.md)
 
+Status:  [Builds][build-status] | [Packages][package-catalog]
+
+[build-status]: https://qooxdoo.org/status/
+[package-catalog]: https://qooxdoo.org/package-cache/
