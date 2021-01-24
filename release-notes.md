@@ -73,7 +73,6 @@ Qooxdoo now supports webfonts / iconfonts everywhere an image can be placed.
 
 [Documentation](https://qooxdoo.org/documentation/#/development/howto/icon_fonts)
 
-
 ## New Theme
 There's a new theme based on Google Materials design philosophy and available in Light and Dark modes - the
 theme is called Tangible and is `qx.theme.TangibleLight` and `qx.theme.TangibleDark`.
@@ -105,6 +104,8 @@ submit Pull Requests to contribute to the project.
 
 We chat in public on [Gitter](https://gitter.im/qooxdoo/qooxdoo) and answer questions
 on [StackOverflow](https://stackoverflow.com/questions/tagged/qooxdoo)
+
+And we have [exciting plans for the future](http://qooxdoo.org/documentation/#/roadmap)!
 
 [Documentation](https://qooxdoo.org/documentation/#/development/contribute)
 
