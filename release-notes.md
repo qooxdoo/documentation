@@ -29,7 +29,9 @@ database to pull from.
 See the `qx package` command for more information on how to incorporate packages into your
 application.
 
-All published packages are cataloged and showcased in our online [Package Browser](https://qooxdoo.org/qxl.packagebrowser/qxl.packagebrowser/#), 
+All published packages are listed in an online
+[Catalog](http://qooxdoo.org/package-cache/) and showcased in our [Package
+Browser](https://qooxdoo.org/qxl.packagebrowser/qxl.packagebrowser/#),
 which is itself a packaged application that can be locally installed.
 
 [Documentation](https://qooxdoo.org/documentation/#/development/cli/packages).
@@ -76,6 +78,13 @@ Qooxdoo now supports webfonts / iconfonts everywhere an image can be placed.
 There's a new theme based on Google Materials design philosophy and available in Light and Dark modes - the
 theme is called Tangible and is `qx.theme.TangibleLight` and `qx.theme.TangibleDark`.
 
+## New testing infrastructure
+
+The v6 release contains a testing infrastructure for unit and UI
+testing that will ultimately allow to test browser and server apps by
+simply executing `qx test`, using pluggable test runners. 
+
+[Documentation](https://qooxdoo.org/documentation/#/development/testing/)
 
 ## Licensing and Open Source Ownership
 The first big change, chronologically speaking, was that 1&1, the company which originally 
