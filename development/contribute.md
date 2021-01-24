@@ -7,8 +7,7 @@ following, we list a few ways in which you can contribute.
 ## Report and (even better:) fix bugs that you observe
 
 If you notice a malfunction of Qooxdoo, and it hasn't been reported yet, we
-suggest you create a bug report. See
-[this guide on creating helpful bug reports](reporting_bugs.md).
+suggest you create a [bug report](https://github.com/qooxdoo/qooxdoo/issues/new?assignees=&labels=&template=Bug_report.md).
 
 Since the time of the core developers is limited, we would be very much obliged
 if you could take the time to try to fix it yourself and provide a Pull Request
@@ -21,7 +20,9 @@ you need help with this, do not hesitate to ask on
 Good documentation is vital for a great development experience. Therefore we
 welcome your thoughts on what could be improved in this documentation. Better
 still, you can improve them right away by clicking on the "Edit document on
-GithHub" button which is at the bottom of every page.
+GithHub" button which is at the bottom of every page. If you want to change more
+than one page or add new pages, please fork the [documentation repository](https://qooxdoo.org/documentation)
+and create a pull request with your changes.
 
 ## Feature requests amd incubators
 
@@ -47,6 +48,16 @@ system.
 Features or functionalities which are candidates to become part of the core
 library are called "incubators" and live in repositories which are prefixed by
 `incubator`. They are usually maintained by the core developers.
+
+## Checking out the framework repository for development
+
+If you want to work on the framework itself, create and checkout a fork of the 
+[repository](https://github.com/qooxdoo/qooxdoo). In order for the compiler to
+pick up the forked framework code instead of the npm version, execute 
+
+```bash
+npx qx config set qx.library <path to the forked repo>/framework
+```
 
 ## Running framework tests
 
