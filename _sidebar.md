@@ -116,7 +116,7 @@
     - [9. Virtual Lists](/tutorial/twitter/tutorial-part-9.md)
   - [Qooxdoo Mobile App](/mobile/tutorial.md)
 
-Status:  [Builds][build-status] | [Packages][package-catalog]
+- Status:  [Builds][build-status] | [Packages][package-catalog]
 
 [build-status]: https://qooxdoo.org/status/
 [package-catalog]: https://qooxdoo.org/package-cache/

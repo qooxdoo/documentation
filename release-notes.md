@@ -73,9 +73,14 @@ Qooxdoo now supports webfonts / iconfonts everywhere an image can be placed.
 
 [Documentation](https://qooxdoo.org/documentation/#/development/howto/icon_fonts)
 
-## New Theme
-There's a new theme based on Google Materials design philosophy and available in Light and Dark modes - the
-theme is called Tangible and is `qx.theme.TangibleLight` and `qx.theme.TangibleDark`.
+## New Themes
+
+There's a new theme based on Google Materials design
+philosophy and available in Light and Dark modes - the theme
+is called Tangible and is `qx.theme.TangibleLight` and
+`qx.theme.TangibleDark`. An additional theme is available as a [Qooxdoo
+package](https://qooxdoo.org/qxl.packagebrowser/#sqville~ville.Clean~Demos~WidgetBrowser), 
+and we expect more themes to be contributed via packages.
 
 ## New testing infrastructure
 
