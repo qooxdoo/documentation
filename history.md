@@ -19,14 +19,14 @@ volunteer developers and managed by a foundation under Swiss law.
   | [API Viewer](https://qooxdoo.org/qxl.apiviewer)
   
 - v5.0 (May 2015) [Readme](https://github.com/qooxdoo/qooxdoo/blob/branch_5_0_x/readme.rst) 
-  | [Documentation](https://archive.qooxdoo.org/5.0)
+  | [Documentation](https://archive.qooxdoo.org/5.0.2)
   | [API Viewer](https://archive.qooxdoo.org/5.0.2/api/#qx)
 
 - v4.0 (May 2014) [Readme](https://github.com/qooxdoo/qooxdoo/blob/branch_4_0_x/readme.rst) 
-  | [Documentation](https://archive.qooxdoo.org/4.0)
+  | [Documentation](https://archive.qooxdoo.org/4.0.2)
 
 - v3.0 (May 2013) [Readme](https://github.com/qooxdoo/qooxdoo/blob/branch_3_0_x/readme.rst) 
-  | [Documentation](https://archive.qooxdoo.org/3.0)
+  | [Documentation](https://archive.qooxdoo.org/3.0.2)
 
 - v2.0 (Dec 2011)
 
