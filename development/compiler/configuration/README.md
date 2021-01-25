@@ -66,4 +66,5 @@ While the configuration is typically read from `compile.json`, an API is exposed
 by the CLI which allows the configuration to be manipulated before it is
 processed and to interact with the compiler as it works.
 
-See [api.md](api.md) for more details.
+See [the configuration API](api.md) and the [compiler API](../internals/API.md) 
+for more details.
