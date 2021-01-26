@@ -1,6 +1,6 @@
-# API
+# Compiler API
 
-The API has these core concepts:
+The compiler API has these core concepts:
 
 - Library
 - Application

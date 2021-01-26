@@ -29,7 +29,9 @@ database to pull from.
 See the `qx package` command for more information on how to incorporate packages into your
 application.
 
-All published packages are cataloged and showcased in our online [Package Browser](https://qooxdoo.org/qxl.packagebrowser/qxl.packagebrowser/#), 
+All published packages are listed in an online
+[Catalog](http://qooxdoo.org/package-cache/) and showcased in our [Package
+Browser](https://qooxdoo.org/qxl.packagebrowser/qxl.packagebrowser/#),
 which is itself a packaged application that can be locally installed.
 
 [Documentation](https://qooxdoo.org/documentation/#/development/cli/packages).
@@ -71,11 +73,22 @@ Qooxdoo now supports webfonts / iconfonts everywhere an image can be placed.
 
 [Documentation](https://qooxdoo.org/documentation/#/development/howto/icon_fonts)
 
+## New Themes
 
-## New Theme
-There's a new theme based on Google Materials design philosophy and available in Light and Dark modes - the
-theme is called Tangible and is `qx.theme.TangibleLight` and `qx.theme.TangibleDark`.
+There's a new theme based on Google Materials design
+philosophy and available in Light and Dark modes - the theme
+is called Tangible and is `qx.theme.TangibleLight` and
+`qx.theme.TangibleDark`. An additional theme is available as a [Qooxdoo
+package](https://qooxdoo.org/qxl.packagebrowser/#sqville~ville.Clean~Demos~WidgetBrowser), 
+and we expect more themes to be contributed via packages.
 
+## New testing infrastructure
+
+The v6 release contains a testing infrastructure for unit and UI
+testing that will ultimately allow to test browser and server apps by
+simply executing `qx test`, using pluggable test runners. 
+
+[Documentation](https://qooxdoo.org/documentation/#/development/testing/)
 
 ## Licensing and Open Source Ownership
 The first big change, chronologically speaking, was that 1&1, the company which originally 
@@ -96,6 +109,8 @@ submit Pull Requests to contribute to the project.
 
 We chat in public on [Gitter](https://gitter.im/qooxdoo/qooxdoo) and answer questions
 on [StackOverflow](https://stackoverflow.com/questions/tagged/qooxdoo)
+
+And we have [exciting plans for the future](http://qooxdoo.org/documentation/#/roadmap)!
 
 [Documentation](https://qooxdoo.org/documentation/#/development/contribute)
 

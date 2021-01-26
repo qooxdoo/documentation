@@ -168,10 +168,23 @@ In the second example, the `_appCompiling` method is called each time the
 `checkEnvironment` event is fired - this shows the LibraryApi interacting with
 the compilation process of a single application.
 
-There are a number of events which are available on the command
-[see Compile.js for full details](https://github.com/qooxdoo/qooxdoo-compiler/blob/master/source/class/qx/tool/cli/commands/Compile.js)
-or you can attach event handlers directly to the
-[Compiler API](../compiler/API.md)
+## Events and hook methods
+
+To hook into the compilation lifecycle, there are a number of [events
+which are available on the command](../internals/Events.md#cli-commands).
+Alternatively you can attach [event handlers](../internals/Events.md)
+directly to the [Compiler API](../compiler/API.md). In addition, both APIs provide
+hook methods which are triggered by these events:
+
+`qx.tool.cli.api.CompilerApi` [Details](https://qooxdoo.org/qooxdoo-compiler/#qx.tool.cli.api.CompilerApi)
+- `afterDeploy()`: called after deployment happens
+- `afterLibrariesLoaded()`: Called after all libraries have been loaded and added to the compilation data
+- `load()`: Called to update the compilerConfig 
+- `beforeTests()`: Register compiler tests
+
+`qx.tool.cli.api.LibraryApi` [Details](https://qooxdoo.org/qooxdoo-compiler/#qx.tool.cli.api.LibraryApi)
+- `afterLibrariesLoaded()`: Called after all libraries have been loaded and added to the compilation data
+- `load()`: Called to load any library-specific configuration and update the compilerConfig
 
 ## `CompilerApi` vs `LibraryApi`
 

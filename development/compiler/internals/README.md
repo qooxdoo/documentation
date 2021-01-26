@@ -1,13 +1,15 @@
 # Advanced compiler topics
 
-[How to configure application start](CustomAppStartup.md)
+- [Internal compiler API](API.md) and [Events](Events.md)
 
-[How to configure application start](LoaderUrls.md)
+- [How to configure application start](CustomAppStartup.md)
 
-[Handling of SASS compilation](Sass.md)
+- [How to configure application loading](LoaderUrls.md)
 
-[Metadata infomation written by the compiler](MetaData.md)
+- [Handling of SASS compilation](Sass.md)
 
-[How the compiler check class dependencies](Dependencies.md)
+- [Metadata infomation written by the compiler](MetaData.md)
 
-[Internal compiler API](API.md)
+- [How the compiler check class dependencies](Dependencies.md)
+
+
