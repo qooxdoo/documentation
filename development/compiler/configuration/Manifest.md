@@ -116,6 +116,10 @@ This is a sample file:
   resource folder stated in the "provides" section.
   - **script**: Array of javascript files.
   - **css**: Array of css files.
+  
+  See [Using non-Qooxdoo, third-party libraries](../../howto/using_non_qx_libs.md)
+  for how to use **externalResources** to include a browserified Node module in
+  an app.
 
 * **requires**: a list of of needed libraries and [packages](../cli/packages.md)
   . Format is `package_uri`: `needed_version` where `needed_version` is a semver
