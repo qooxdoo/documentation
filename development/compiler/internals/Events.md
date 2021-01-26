@@ -46,8 +46,29 @@ events:
 
 Here is an example how to add some stuff to the express server when you run qx start:
 ```javascript
-qx.Class.define("myapp.Application", {
+qx.Class.define("myApp.CompilerApi", {
+  extend: qx.tool.cli.api.CompilerApi,
+  members: {
+    load: async function () {
+      this.addListener("changeCommand", function () {
+        let command = this.getCommand();
+        if (command instanceof qx.tool.cli.commands.Serve) {
+          command.addListener("beforeStart", this.__onBeforeStart, this);
+        }
+      }, this);
+      return this.base(arguments);
+    },
+
+    __onBeforeStart: function (event) {
+      let expressApp = event.getData().application;
+      expressApp.use("/", express.static(my_cool_static_dir));
+    }
+  }
 });
+
+module.exports = {
+  CompilerApi: myApp.CompilerApi
+};
 ```
 
 Instances of `qx.tool.cli.commands.Test` and its subclasses fire the following events:
@@ -76,4 +97,8 @@ qx.Class.define("myApp.CompilerApi", {
         }
     }
 });
+module.exports = {
+  CompilerApi: myApp.CompilerApi
+};
+```
 
