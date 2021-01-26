@@ -38,3 +38,42 @@ Instances of `qx.tool.cli.commands.Compile` and its subclasses fire the followin
 - `writingApplications`: Fired when application writing starts.
 - `writtenApplication`: Fired when writing of single application is complete.
 - `writtenApplications`: Fired after writing of all applications.
+
+Instances of `qx.tool.cli.commands.Serve` and its subclasses fire the following events:
+events:
+- `beforeStart`: Fired before server start
+- `afterStart`: Fired when server is started
+
+Here is an example how to add some stuff to the express server when you run qx start:
+```javascript
+qx.Class.define("myapp.Application", {
+});
+```
+
+Instances of `qx.tool.cli.commands.Test` and its subclasses fire the following events:
+events:
+- `runTests`: Fired to start tests. Alternative to overload the function `beforeTests`.
+
+Here is an example how to write your own test using the events in your `compile.js` file:
+```javascript
+qx.Class.define("myApp.CompilerApi", {
+  extend: qx.tool.cli.api.CompilerApi,
+  members: {
+    async load() {
+      this.addListener("changeCommand", function () {
+        let command = this.getCommand();
+        if (command instanceof qx.tool.cli.commands.Test) {
+          command.addListener("runTests", this.__appTesting, this);
+        }
+      }, this);
+      return this.base(arguments);
+    },
+
+    __appTesting: async function (data) {
+        let result = data.getData();
+        return new qx.Promise(async function (resolve) {
+           result.setExitCode(testResult);
+        }
+    }
+});
+
