@@ -8,6 +8,12 @@ compatibility and coding standards.
 And although 6.0.0 is a very new release, it's stable because the core developers as well as a number of other developers have been using the `master` branch of the framework constantly for many years; stability is essential to us, and while there are bound to be bugs, the project has gone through a lot of real world testing to get here.
 
 
+## Deployment via npmjs.com
+Instead of downloading a tarball or zip file, releases are now distributed via npm - this streamlines version management, and makes it particularly easy for new users.
+
+We've also modularised the repo - using features like (the new packages system)[#packages], things like the API viewer, test runner, etc can be added on demand to your application; internally, as they are separate repositories at GitHub this allows us to vary the release cycle for those added features so that we can get updates out faster (and it's easier for anyone who wants to contribute changes!)
+
+
 ## Compiler
 There is a whole new compiler and command line tool (the `qx` command), written entirely in 
 Javascript and replacing the Python toolchain (which is still supported but is officially 
@@ -35,6 +41,7 @@ Browser](https://qooxdoo.org/qxl.packagebrowser/qxl.packagebrowser/#),
 which is itself a packaged application that can be locally installed.
 
 [Documentation](https://qooxdoo.org/documentation/#/development/cli/packages).
+
 
 ## Automatic Memory Management
 A big improvement is that it is no longer necessary to manually `.dispose()` most objects when you

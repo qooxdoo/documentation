@@ -237,6 +237,86 @@ It is important to note that you can only specify values available as property
 on [qx.bom.Font](apps://apiviewer/#qx.bom.Font) or  
 [qx.bom.webfonts.WebFont](apps://apiviewer/#qx.bom.webfonts.WebFont).
 
+### Web Fonts
+These days there are a lot of fonts available, and it's not unusual to want to download and use a font specifically chosen for your theme.  These webfonts are available from a variety of sources (whether open source licensed or proprietary / paid for); you can use an online service such as (FontSquirrel's Webfont Generator)[https://www.fontsquirrel.com/tools/webfont-generator] or other tools to convert your fonts into webfonts (provided of course that your license for the font permits it) and add them to your resources directory, and then add them to your theme font by using the `sources` option.  
+
+This example uses the (Monserrat font)[https://fonts.google.com/specimen/Montserrat]
+
+```
+    "default": {
+      size: 14,
+      family: ["Montserrat", "sans-serif"],
+      color: "text-primary-on-surface",
+      weight: "300",
+      sources: [
+        {
+          family: "Montserrat",
+          fontWeight: "300",
+          source: [
+            "grasshopper/font/Montserrat/Montserrat-Light.woff2",
+            "grasshopper/font/Montserrat/Montserrat-Light.woff",
+            "grasshopper/font/Montserrat/Montserrat-Light.ttf"
+          ]
+        }
+      ]
+    },
+    
+    "bold":
+    {
+      size: 14,
+      family: ["Montserrat", "sans-serif"],
+      bold: true,
+      color: "text-primary-on-surface",
+      weight: "500",
+      sources: [
+        {
+          family: "Montserrat",
+          fontWeight: "500",
+          source: [
+            "grasshopper/font/Montserrat/Montserrat-Medium.eot",
+            "grasshopper/font/Montserrat/Montserrat-Medium.woff2",
+            "grasshopper/font/Montserrat/Montserrat-Medium.woff",
+            "grasshopper/font/Montserrat/Montserrat-Medium.ttf"
+          ]
+        }
+      ]
+    },
+    
+    "italic": {
+      size: 14,
+      family: ["Montserrat", "sans-serif"],
+      color: "text-primary-on-surface",
+      italic: true,
+      weight: "300",
+      sources: [
+        {
+          family: "Montserrat",
+          fontWeight: "300",
+          fontStyle: "italic",
+          source: [
+            "grasshopper/font/Montserrat/Montserrat-LightItalic.eot",
+            "grasshopper/font/Montserrat/Montserrat-LightItalic.woff2",
+            "grasshopper/font/Montserrat/Montserrat-LightItalic.woff",
+            "grasshopper/font/Montserrat/Montserrat-LightItalic.ttf"
+          ]
+        }
+      ]
+    },
+```
+
+Note that things like "family" are specified more than once and in different ways - the *top* level of properties (eg `size`, `family`, `bold`, etc relate to properties in the [qx.bom.webfonts.WebFont](apps://apiviewer/#qx.bom.webfonts.WebFont) class, whereas the properties of the `sources` key are slightly different.
+
+The top level properties are typically for defining what properties you would allow the browser to apply, and are analogous to the CSS properties.  For example, you can see that `family` is an array, because just like CSS the browser is to try and the first listed font family and then fallback to the second etc.
+
+The `sources` property, tells Qooxdoo where to load the fonts from and what font variants are in the font files; the `family` property in this section is not an array - it is the actual family of the font contained in the file.  
+
+When looking at all the fonts in your theme, Qooxdoo will only load a font file once - however, due to restrictions on how a browser allows us to detect when a font is loaded, the way it does this is to create a unique key based on `sources.family`, `sources.fontWeight`, and `sources.fontStyle`.  The net effect is that if you use more than one font from the same family, then you *must* make sure that the `sources` key describes `fontWeight` and `fontStyle` and that the addition of `fontWeight` and `fontStyle` make a unique key.
+
+Note also the top level `weight`, `bold`, and `italic` properties - these do not need to match whatever is provided by the font file - for example, you could use a regular, non-italic font for the "italic" font; Qooxdoo and the browser won't care that the font does not appear italic on the screen.
+
+One other thing to note is the top level `weight` property - the default browser font weight is 400, and if your font is not 400 in weight then you must specify the actual weight at the top level.
+
+
 ## Icon Theme
 
 This theme is to define which icon set is used and normally consists only of 2
