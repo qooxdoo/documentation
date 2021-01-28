@@ -8,10 +8,10 @@ and build on the solid foundation that Qooxdoo currently is.
 Below is a summary of our plans for v7 and a rough outline of
 what we're thinking about for the future; if there is anything
 you feel strongly about on either list (or you think that there
-is something missing) please feel free to talk to us about it
-- after all, if you don't us what you think, we'll never know!
+is something missing) please feel free to talk to us about it- 
+after all, if you don't us what you think, we'll never know!
 
-## v7.0.0:
+## v7.0.0
 
 - **Remove deprecated python tool chain** (the "generator"); this
 will require to [migrate all legacy qooxdoo applications to use
@@ -32,9 +32,9 @@ which we already use for our package/library dependency management.
 project will bring a complete server and client development system with
 pluggable CMS.  Repo is [qooxdoo/qxl.cms](https://github.com/qooxdoo/qxl.cms)
 
-- **JSX**: Adding support for JSX will enable super-lightweight user
-interfaces and DOM manipulation, from the server and the client. 
-Available in [PR#9967]https://github.com/qooxdoo/qooxdoo/pull/9967
+- **JSX**: [Adding support for
+JSX](https://github.com/qooxdoo/qooxdoo/pull/9967) will enable super-lightweight
+user interfaces and DOM manipulation, from the server and the client.
 
 - **Qooxdoo Thin Client**: When building a normal website (for example,
 the kind of website which might be backed by a CMS) there are lots of times
@@ -59,7 +59,7 @@ for production use, it's due to be integrated into the core framework.  Repo is
 
 - **Remove other deprecated code**
 
-## future releases
+## Plans for the future 
 
 Please remember that this list is a rough plan and subject to change.
 
