@@ -39,6 +39,10 @@ Instances of `qx.tool.cli.commands.Compile` and its subclasses fire the followin
 - `writtenApplication`: Fired when writing of single application is complete.
 - `writtenApplications`: Fired after writing of all applications.
 
+Instances of `qx.tool.cli.commands.Deploy` and its subclasses fire the following events:
+events:
+- `afterDeploy`: Fired after the deploy process has finished.
+
 Instances of `qx.tool.cli.commands.Serve` and its subclasses fire the following events:
 events:
 - `beforeStart`: Fired before server start
