@@ -28,23 +28,7 @@ offers a fully automated release system that is based on formalized commit
 messages. It is based on [semantic versioning](https://semver.org/),
 which we already use for our package/library dependency management.
 
-- **Qooxdoo CMS**: Currently a pre-alpha work in progress, the CMS sub
-project will bring a complete server and client development system with
-pluggable CMS.  Repo is [qooxdoo/qxl.cms](https://github.com/qooxdoo/qxl.cms)
-
-- **JSX**: [Adding support for
-JSX](https://github.com/qooxdoo/qooxdoo/pull/9967) will enable super-lightweight
-user interfaces and DOM manipulation, from the server and the client.
-
-- **Qooxdoo Thin Client**: When building a normal website (for example,
-the kind of website which might be backed by a CMS) there are lots of times
-when a full blown Qooxdoo app would not be appropriate, eg a login form
-or a simple data capture form.  The Qooxdoo Thin Client builds on the JSX
-feature to give easy access to DOM to build simple user interface components
-from the server as well as the client, based on Google Materials design.
-
-- **Qooxdoo Remote Objects and Persistence**: Another two incubators
-which are required for the Qooxdoo CMS, these add seamless remote
+- **Qooxdoo Remote Objects and Persistence**: Another two incubators, these add seamless remote
 control of Qooxdoo objects (think "RPC" but for entire objects,
 where property changes on the client can be reflected on the
 server) and persistently storing objects to disk.  Repos are
