@@ -12,6 +12,7 @@ tutorials:
 - [**Qooxdoo tutorial app**](http://www.qooxdoo.org/qxl.tutorial)
   ([Code](https://github.com/qooxdoo/qxl.tutorial)): An interactive web app that teaches you how 
   to code with the Qooxdoo framework
-- **Tweets app tutorials**:
-  - [Desktop](https://qooxdoo.org/documentation/#/tutorial/twitter/)
-  - [Mobile](https://qooxdoo.org/documentation/#/mobile/tutorial) 
+- **Tweets app tutorials**: We provide two detailed tutorials on how to code a Twitter-like app with 
+  Qooxdoo:
+  - [Desktop app](https://qooxdoo.org/documentation/#/tutorial/twitter/)
+  - [Mobile app](https://qooxdoo.org/documentation/#/mobile/tutorial) 
