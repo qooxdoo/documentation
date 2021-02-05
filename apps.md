@@ -4,25 +4,25 @@ Qooxdoo comes with a rich set of sophisticated web applications that provide
 valuable resources for learning Qooxdoo and developing your own applications
 with the framework. The applications are:
 
-- **[API Viewer](apps://apiviewer)**
+- **[API Viewer](https://qooxdoo.org/qxl.apiviewer)**
   ([Code](https://github.com/qooxdoo/qxl.apiviewer)):  
   The APIViewer displays the API of the Qooxdoo framework, plus of any code
   written with the Qooxdoo framework
 
-- **[Playground](apps://playground)**
+- **[Playground](https://qooxdoo.org/qxl.playground)**
   ([Code](https://github.com/qooxdoo/qxl.playground)):  
   The Playground allows to run and test Qooxdoo code snippets interactively.
 
-- **[Demobrowser](apps://demobrowser)**
+- **[Demobrowser](https://qooxdoo.org/qxl.demobrowser)**
   ([Code](https://github.com/qooxdoo/qxl.demobrowser)):  
   The demobrowser lets you look at common GUI application use cases and how they
   are solved using Qooxdoo.
 
-- **[Widgetbrowser](apps://widgetbrowser)**
+- **[Widgetbrowser](https://qooxdoo.org/qxl.widgetbrowser)**
   ([Code](https://github.com/qooxdoo/qxl.widgetbrowser)): The widget browser
   showcases the full portfolio of GUI widgets provided by the Qooxdoo framework.
 
-- **[Mobileshowcase](apps://mobileshowcase)**
+- **[Mobileshowcase](https://qooxdoo.org/qxl.mobileshowcase)**
   ([Code](https://github.com/qooxdoo/qxl.mobileshowcase)): The mobileshowcase
   showcases the full portfolio of GUI widgets provided by the Qooxdoo framework
   for mobile apps. Included is a demo how to use OpenStreetMap data together
@@ -40,7 +40,7 @@ with the framework. The applications are:
   ([Code](https://github.com/qooxdoo/qxl.testrunner)): A special testrunner for
   the framework unit tests.
   
-- [**Qooxdoo tutorial app**](http://www.qooxdoo.org/qxl.tutorial)
+- **[Qooxdoo tutorial app]**(http://www.qooxdoo.org/qxl.tutorial)
   ([Code](https://github.com/qooxdoo/qxl.tutorial)): An application that teaches you how to 
   code with Qooxdoo.
 
