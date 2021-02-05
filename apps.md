@@ -40,7 +40,7 @@ with the framework. The applications are:
   ([Code](https://github.com/qooxdoo/qxl.testrunner)): A special testrunner for
   the framework unit tests.
   
-- **[Qooxdoo tutorial app]**(http://www.qooxdoo.org/qxl.tutorial)
+- **[Qooxdoo tutorial app](http://www.qooxdoo.org/qxl.tutorial)**
   ([Code](https://github.com/qooxdoo/qxl.tutorial)): An application that teaches you how to 
   code with Qooxdoo.
 
