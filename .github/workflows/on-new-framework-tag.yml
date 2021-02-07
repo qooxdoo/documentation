@@ -21,8 +21,7 @@ jobs:
           path: 'documentation'
       - id: get_dest_dir
         run: |
-          echo '${{ toJson(github.event) }}'
-          ref=${{ github.event.ref }}
+          ref=${{ github.event.client_payload.ref }}
           echo "REF=$ref"
           dir=documentation/$(echo "$ref" | cut -d / -f 3 | cut -d . -f 1-2)
           echo "DIR=$dir"
