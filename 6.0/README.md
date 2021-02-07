@@ -156,16 +156,3 @@ first.
 
 If you ever get stuck, feel free to open the chat window by pressing the button
 in the bottom right hand corner of the documentation.
-
-## How to edit this manual
-
-You can help improve this manual by fixing individual pages (Click on the "Edit
-this page on GitHub" button). For more extensive changes that involve more than
-one page, please clone
-[the documentation repository](https://github.com/qooxdoo/documentation) and do
-your edits. Before creating a PR with your changes, make sure to `npm install`
-and `npm test`. This will check your markdown and enforce certain style rules.
-
-If you move or rename pages, make sure to add a redirection
-in the [alias.js](/alias.js) file, so that internal links
-and especially external links to them are not broken.
