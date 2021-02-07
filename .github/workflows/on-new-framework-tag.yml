@@ -12,7 +12,7 @@ jobs:
         name: Checkout Framework
         with:
           repository: qooxdoo/qooxdoo
-          ref: ${{  github.event.ref }}
+          ref: ${{ github.event.client_payload.ref }}
           path: 'qooxdoo'
       - uses: actions/checkout@v2
         name: Checkout published docs
