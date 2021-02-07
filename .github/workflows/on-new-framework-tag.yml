@@ -1,0 +1,35 @@
+name: Publish new version of documentation
+on:
+  repository_dispatch:
+    types:
+      - push-tag
+jobs:
+  publish_docs:
+    name: Publish tagged documentation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout Framework
+        with:
+          repository: qooxdoo/qooxdoo
+          ref: ${{  github.event.inputs.ref }}
+          path: 'qooxdoo'
+      - uses: actions/checkout@v2
+        name: Checkout published docs
+        with:
+          ref: gh_pages
+          path: 'documentation'
+      - id: get_dest_dir
+        run: |
+          dir=documentation/$(echo "${{  github.event.inputs.ref }}" | cut -d / -f 3 | cut -d . -f 1-2)
+          echo "::set-output name=destination_dir::$dir"
+      - id: debug
+        run: echo "Destination dir is ${{ steps.get_dest_dir.outputs.destination_dir }}"
+#      - name: Deploy to GH page
+#        uses: peaceiris/actions-gh-pages@v3
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          publish_dir: ./qooxdoo/docs
+#          destination_dir: ${{ steps.get_dest_dir.outputs.destination_dir }}
+
+
