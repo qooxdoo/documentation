@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v2
         name: Checkout published docs
         with:
-          ref: gh_pages
+          ref: gh-pages
           path: 'documentation'
       - id: get_dest_dir
         run: |
