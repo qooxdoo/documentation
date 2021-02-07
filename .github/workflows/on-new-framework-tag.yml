@@ -22,17 +22,14 @@ jobs:
       - id: get_dest_dir
         run: |
           ref=${{ github.event.client_payload.ref }}
-          echo "REF=$ref"
-          dir=documentation/$(echo "$ref" | cut -d / -f 3 | cut -d . -f 1-2)
-          echo "DIR=$dir"
+          dir=$(echo "$ref" | cut -d / -f 3 | cut -d . -f 1-2)
           echo "::set-output name=destination_dir::$dir"
-      - id: debug
-        run: echo "Destination dir is ${{ steps.get_dest_dir.outputs.destination_dir }}"
-#      - name: Deploy to GH page
-#        uses: peaceiris/actions-gh-pages@v3
-#        with:
-#          github_token: ${{ secrets.GITHUB_TOKEN }}
-#          publish_dir: ./qooxdoo/docs
-#          destination_dir: ${{ steps.get_dest_dir.outputs.destination_dir }}
+
+      - name: Deploy to GH page
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./qooxdoo/docs
+          destination_dir: ${{ steps.get_dest_dir.outputs.destination_dir }}
 
 
