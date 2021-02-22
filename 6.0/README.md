@@ -56,7 +56,7 @@ $ qx
 
 Both the compiler and the Qooxdoo framework are evolving, so if you are writing
 a large application which you may have to maintain for months and years to come,
-you will probably be better of to install Qooxdoo together with the application
+you will probably be better off to install Qooxdoo together with the application
 code.
 
 ```bash
