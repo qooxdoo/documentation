@@ -24,9 +24,9 @@ Qooxdoo provides the following themes ready to use:
     ![Indigo theme](theming/window_indigo_theme.png)
 
 While those four themes run out-of-the-box, it is easy to create your own
-themes. Those custom themes can either be created by extending existing ones
-desktop/ui_custom_themes.md#extending_themes or they can be created from scratch
-desktop/ui_custom_themes.md#custom_themes.
+themes. Those custom themes can either be created by 
+[extending existing ones](themes?id=extending-themes)
+or they can be [created from scratch](themes?id=define-custom-themes).
 
 A complete theme (a so-called _meta theme_) consists of several special themes,
 each designed to play a dedicated role and to setup the different parts of the
