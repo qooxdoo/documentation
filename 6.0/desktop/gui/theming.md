@@ -25,8 +25,8 @@ Qooxdoo provides the following themes ready to use:
 
 While those four themes run out-of-the-box, it is easy to create your own
 themes. Those custom themes can either be created by 
-[extending existing ones](themes?id=extending-themes)
-or they can be [created from scratch](themes?id=define-custom-themes).
+[extending existing ones](themes#extending-themes)
+or they can be [created from scratch](themes#define-custom-themes).
 
 A complete theme (a so-called _meta theme_) consists of several special themes,
 each designed to play a dedicated role and to setup the different parts of the
