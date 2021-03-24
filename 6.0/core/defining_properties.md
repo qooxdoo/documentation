@@ -1,7 +1,7 @@
 # Properties in more detail
 
 
-> :memo: Please take a look at `property_features` first to get an compact overview of
+> :memo: Please take a look at `property_features` first, to get a compact overview of
 > the available features.
 
 ## Declaration
