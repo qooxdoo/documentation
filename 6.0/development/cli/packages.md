@@ -44,7 +44,6 @@ Commands:
                                available libraries to the latest compatible
                                version, otherwise upgrade only the package
                                identified by the URI.
-  migrate                      migrates the package system to a newer version.
 
 ```
 
@@ -63,7 +62,7 @@ The package system works like this:
 
 1.  A Qooxdoo library is maintained as public repository on GitHub with the
     [GitHub topic](https://help.github.com/articles/about-topics/)
-    `Qooxdoo-package`
+    `qooxdoo-package` (see [other repos with that topic](https://github.com/topics/qooxdoo-package)).
 
 2.  The library author/maintainer
     [creates a release of the library](https://help.github.com/articles/creating-releases/)
@@ -128,33 +127,40 @@ current project depends on and filters the list of available packages
 accordingly. The list displays the names of the repositories and the names of
 the contained packages that will be installed. It has the following options:
 
+Here are the most relevant options (execute `qx pkg list --help` for a 
+complete list):
+
 ```
-Options:
-  --all, -a        Show all versions, including incompatible ones
-  --json, -j       Output list as JSON literal
-  --installed, -i  Show only installed libraries
-  --match, -m      Filter by regular expression (case-insensitive)
-  --namespace, -n  Display library namespace
-  --libraries, -l  List libraries only (no repositories)
-  --short, -s      Omit title and description to make list more compact
-  --noheaders, -H  Omit header and footer
+  --all, -a              Show all versions, including incompatible ones
+  --json, -j             Output list as JSON literal
+  --installed, -i        Show only installed libraries
+  --namespace, -n        Display library namespace
+  --match, -m            Filter by regular expression (case-insensitive)
+  --libraries, -l        List libraries only (no repositories)
+  --short, -s            Omit title and description to make list more compact
+  --noheaders, -H        Omit header and footer
+  --prereleases, -p      Include prereleases into latest compatible releases
+  --uris-only, -u        Output only the GitHub URIs of the packages which are
+                         used to install the packages. Implies --noheaders and
+                         --libraries.
+  --qx-version           A semver string. If given, the qooxdoo version for
+                         which to generate the listings
 ```
 
 ### Install a library
 
 You can then install any package from this list by executing
-`qx package install <URI>`. It has the following options:
+`qx package install <URI>`. Its most relevant options are:
 
 ```
-  --release, -r    Use a specific release tag instead of the tag of the latest
-                   compatible release [string]
-  --ignore, -i     Ignore unmatch of Qooxdoo
-  --verbose, -v    Verbose logging
-  --quiet, -q      No output
-  --save, -s       Save the libraries as permanent dependencies
-                    [default: true]
-  --from-path, -p  Install a library/the given library from a local path
-
+  --release, -r          Use a specific release tag instead of the tag of the
+                         latest compatible release                      [string]
+  --ignore, -i           Ignore unmatch of qooxdoo
+  --save, -s             Save the libraries as permanent dependencies
+                                                                 [default: true]
+  --from-path, -p        Install a library/the given library from a local path
+  --qx-version           A semver string. If given, the maximum qooxdoo version
+                         for which to install a package
 ```
 
 The URI takes the form `github_user/repository[/path]`: the first part is the
@@ -169,7 +175,7 @@ version compatible with your Qooxdoo version. If you want to install a specific
 version (or in fact, any
 ["tree-ish" expression](https://stackoverflow.com/questions/4044368/what-does-tree-ish-mean-in-git)
 that GitHub supports, you can use the `--release` parameter or add the version
-with an '@' sign like so
+with an '@' sign like so:
 
 ```bash
 qx install qooxdoo/qxl.apiviewer --release v1.1.0
@@ -224,10 +230,18 @@ dependencies via `qx package install` (without arguments).
 ### Upgrade your dependencies
 
 You can upgrade the packages listed in the lockfile to the latest avalable
-release compatible with your Qooxdoo version with
+release compatible with your Qooxdoo version with `qx package upgrade`. Its 
+most relevant options are: 
 
 ```bash
-qx package upgrade
+  --releases-only, -r    Upgrade regular releases only (this leaves versions
+                         based on branches, commits etc. untouched)
+                                                                 [default: true]
+  --reinstall, -R        Do not upgrade, reinstall current version
+  --prereleases, -p      Use prereleases if available
+  --dry-run, -d          Show result only, do not actually upgrade
+  --qx-version           A semver string. If given, the qooxdoo version for
+                         which to upgrade the package
 ```
 
 If you only want to upgrade one of the libraries, use
@@ -295,7 +309,6 @@ the `Manifest.json` - for example:
     class: "source/class",
     resource: "source/resource",
     translation: "source/translation",
-    type: "add-in",
     application: {
       class: "apiviewer.Application",
       theme: "apiviewer.Theme",
@@ -320,19 +333,23 @@ changes to your code and pushing them to the master branch of your repo, you can
 execute `qx package publish`. The command has the following options:
 
 ```
-  --type, -t            Set the release type
+  --type, -t             Set the release type
            [string] [choices: "major", "premajor", "minor", "preminor", "patch",
                                     "prepatch", "prerelease"] [default: "patch"]
-  --noninteractive, -I  Do not prompt user
-  --version, -V         Use given version number
-  --quiet, -q           No output
-  --message, -m         Set commit/release message
-  --dryrun              Show result only, do not publish to GitHub
-  --verbose, -v         Verbose logging
-  --force, -f           Ignore warnings (such as demo check)
-  --create-index, -i    Create an index file (Qooxdoo.json) with paths to
-                        Manifest.json files
-
+  --noninteractive, -I   Do not prompt user                            [boolean]
+  --use-version, -V      Use given version number                       [string]
+  --prerelease, -p       Publish as a prerelease (as opposed to a stable
+                         release)                                      [boolean]
+  --message, -m          Set commit/release message                     [string]
+  --dryrun, -d           Show result only, do not publish to GitHub    [boolean]
+  --create-index, -i     Create an index file (qooxdoo.json) with paths to
+                         Manifest.json files                           [boolean]
+  --qx-version           A semver string. If given, the qooxdoo version for
+                         which to publish the package                   [string]
+  --breaking             Do not create a backwards-compatible release, i.e.
+                         allow compatibility with current version only [boolean]
+  --qx-version-range     A semver range. If given, it overrides --qx-version and
+                         --breaking and sets this specific version range[string]
 ```
 
 You need to supply a valid GitHub token which has permissions to publish your
@@ -340,10 +357,9 @@ repo - if you're provided one before it will have been stored, and you can find
 out what the token is and set a new one with these commands:
 
 ```bash
-   $ qx config set github.token 0123456789abcdef0123456789abcdef0123456789abcdef
-   $ qx config get github.token
-   github.token=0123456789abcdef0123456789abcdef0123456789abcdef
-   $
+$ qx config set github.token 0123456789abcdef0123456789abcdef0123456789abcdef
+$ qx config get github.token
+github.token=0123456789abcdef0123456789abcdef0123456789abcdef
 ```
 
 Please **make sure to [run `qx lint`](./commands.md#lint) before publishing your
@@ -351,15 +367,38 @@ package**. This insures code quality and lets you spot small bugs that might
 otherwise go unnoticed.
 
 The command takes care of incrementing the version of your application. By
-default, the patch version number is increased, but you can choose among the
-release types stated above. The command will then commit the version bump and
-push it to the master branch before releasing the new version.
+default, the "patch" version number is increased. If you add a new feature,
+use `--type=minor`, if your code is backwards-incompatible because of a
+breaking change, use `--type=major`. The command will figure out the correct
+next version, commit the version bump and push it to the master branch
+before releasing the new version. However, you can also override this
+mechanism and determine the version manually, by using `--use-version=x.y.z`.
+
+The command is interactive: it will prompt you the enter the
+necessary information and will ask for a confirmation before
+doing anything definitive. To be absolutely sure, you can also do a `--dry-run`
+first. In contrast, if you know what you are doing, you can provide all necessary
+information on the command line and tell the command to be `--noninteractive`.
+
+> Before releasing a package, it is important to think about compatibility
+with previous qooxdoo versions. If you upgrade your qooxdoo version to a new
+breaking (major) release, for example from 7.1.3 to 8.0.0, and this dependency
+is simply copied into the `requires.@qooxdoo/framework` key of `Manifest.json`,
+`qx package list` will no longer show this package to applications that use
+previous versions of qooxdoo, because it is considered incompatible. This
+is why, by default, `qx package publish` will add the the new major version
+to the range rather than replace the previous one. However, if your package
+relies on a new feature or has been modified to work with a breaking change
+in the new qooxdoo version, making it incompatible with a previous one,
+you need to add the `--breaking` option. This will make the new qooxdoo version a 
+strict dependency and remove the compatibility with earlier versions. 
+
 
 ### How to get your package listed
 
 - The repository **must** have a
   [GitHub topic](https://help.github.com/articles/about-topics/)
-  `Qooxdoo-package` in order to be found and listed.
+  `qooxdoo-package` in order to be found and listed.
 
 - The tool will only show
   **[releases](https://help.github.com/articles/about-releases/)** . The
@@ -457,28 +496,22 @@ the version with a breaking change (which increments the major version). For
 example, a package that depends on `"@qooxdoo/framework":"^6.0.0-alpha"` will be
 considered compatible with all 6.x versions, but not with v7.x.
 
-In addition, the previous, now deprecated `info.Qooxdoo-versions` entry is
-supported, which takes an array of version numbers. You need to specify each and
-every version that you want to support, and any new Qooxdoo version will break
-compatibility. Support for this will be removed in version 7.
-
 ### qx package and NPM
 
-There are two ways in which the package system and the NPM package manager
-relate to each other: a) the general question why packages aren't distributed as
-NPM packages, as the compiler is, and b) how NPM-specific information is handled
-by the compiler.
+There are two ways in which the package system and the NPM
+package manager relate to each other: a) the general question why
+packages aren't distributed as NPM packages, as the compiler is,
+and b) how NPM-specific information is handled by the compiler.
 
-a) Since the compiler is an NPM module, one might ask why we aren't using NPM
-for Qooxdoo packages. Why create an additional package system? Qooxdoo packages
-work similarly to NPM, but without storing releases in a centralized repository.
-They are (currently) downloaded directly from GitHub releases because that is
-where most Qooxdoo code is developed and published.
+a) Since the compiler is an NPM module, one might ask why we aren't using
+NPM for Qooxdoo packages. Why create an additional package system? Qooxdoo
+packages work similarly to NPM, but without storing releases in a centralized
+repository. They are (currently) downloaded directly from GitHub releases
+because that is where most Qooxdoo code is developed and published.
 
-b) Under normal circumstances, a package does not need to use NPM or maintain a
-`package.json` file. In particular, neither the `@qooxdoo/compiler` nor the
-`@qooxdoo/framework` npm packages should be NPM dependencies of the package.
-Instead, they are installed either at the level of the application or globally
-(see the [docs on installation](../README.md)). You might want to use NPM for
-development-time task such as transpiling your code, but all NPM-related
-information in the package will be ignored by the compiler.
+b) Under normal circumstances, a package does not need to use NPM or
+maintain a `package.json` file. In particular, the `@qooxdoo/framework`
+npm package should not be NPM dependency of the package, unless the
+package contains a standalone application. You might want to use
+NPM for development-time task such as transpiling your code, but all
+NPM-related information in the package will be ignored by the compiler.
