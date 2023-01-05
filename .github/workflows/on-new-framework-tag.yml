@@ -3,6 +3,9 @@ on:
   repository_dispatch:
     types:
       - push-tag
+      
+  workflow_dispatch:
+  
 jobs:
   publish_docs:
     name: Publish tagged documentation
