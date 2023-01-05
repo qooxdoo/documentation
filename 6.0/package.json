@@ -1,0 +1,34 @@
+{
+  "name": "@qooxdoo/documentation",
+  "version": "1.0.0",
+  "description": "The online documentation for Qooxdoo (qooxdoo.org)",
+  "scripts": {
+    "test": ".github/workflows/markdown-lint lint $1",
+    "fix": ".github/workflows/markdown-lint fix $1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qooxdoo/documentation.git"
+  },
+  "keywords": [
+    "qooxdoo",
+    "documentation"
+  ],
+  "author": "The Qooxdoo developers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qooxdoo/documentation/issues"
+  },
+  "homepage": "https://github.com/qooxdoo/documentation#readme",
+  "dependencies": {
+    "glob": "^7.1.6",
+    "prettier": "^2.0.5",
+    "remark": "^12.0.0",
+    "remark-lint-no-dead-urls": "^1.0.2",
+    "remark-normalize-headings": "^2.0.0",
+    "remark-parse": "^8.0.2",
+    "remark-stringify": "^8.0.0",
+    "remark-validate-links": "^10.0.0",
+    "vfile-reporter": "^6.0.1"
+  }
+}
